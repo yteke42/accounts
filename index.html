@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Browse League of Legends accounts with skins. Filter by champion, region, and search for specific skins.">
-    <meta name="keywords" content="League of Legends, LoL, skins, accounts, champions">
+        content="League of Legends hesaplarını ve kostümlerini inceleyin. Şampiyon, bölge ve kostüm adına göre filtreleyin.">
+    <meta name="keywords" content="League of Legends, LoL, kostümler, hesaplar, şampiyonlar, handmade accounts">
 
-    <title>LoL Account Browser</title>
+    <title>Handmade Accounts</title>
 
     <!-- Favicon (optional - add your own) -->
     <link rel="icon" type="image/png"
@@ -29,9 +29,9 @@
         <div class="header-content">
             <div class="logo">
                 <span class="logo-icon">⚔️</span>
-                <h1>LoL Account Browser</h1>
+                <h1>Handmade Accounts</h1>
             </div>
-            <p class="tagline">Find accounts with your favorite skins</p>
+            <p class="tagline">Favori kostümlerinizle dolu hesapları keşfedin</p>
         </div>
     </header>
 
@@ -40,17 +40,17 @@
         <!-- ===== SIDEBAR (Filters) ===== -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <h2>Filters</h2>
-                <button id="reset-filters" class="reset-btn">Reset</button>
+                <h2>Filtreler</h2>
+                <button id="reset-filters" class="reset-btn">Sıfırla</button>
             </div>
 
             <!-- Search -->
             <div class="filter-group">
-                <label for="search-input">Search Skins</label>
+                <label for="search-input">Kostüm Ara</label>
                 <div class="search-container">
-                    <input type="text" id="search-input" class="search-input" placeholder="e.g., Dark Star..."
+                    <input type="text" id="search-input" class="search-input" placeholder="Örn: Sonsuz Karanlık..."
                         autocomplete="off">
-                    <button id="clear-search" class="clear-search" title="Clear search" style="display: none;">
+                    <button id="clear-search" class="clear-search" title="Aramayı Temizle" style="display: none;">
                         ✕
                     </button>
                 </div>
@@ -58,45 +58,41 @@
 
             <!-- Region Filter -->
             <div class="filter-group">
-                <label for="region-filter">Region</label>
+                <label for="region-filter">Sunucu</label>
                 <select id="region-filter" class="filter-select">
-                    <option value="">All Regions</option>
+                    <option value="">Tüm Sunucular</option>
                 </select>
+                <div class="checkbox-container" style="margin-top: 8px;">
+                    <input type="checkbox" id="rr-filter">
+                    <label for="rr-filter" style="display: inline; margin-bottom: 0;">Dereceli Hazır</label>
+                </div>
             </div>
 
             <!-- Champion Filter -->
             <div class="filter-group">
-                <label for="champion-filter">Champion</label>
+                <label for="champion-filter">Şampiyon</label>
                 <select id="champion-filter" class="filter-select">
-                    <option value="">All Champions</option>
+                    <option value="">Tüm Şampiyonlar</option>
                 </select>
             </div>
 
-            <!-- Status Filter -->
-            <div class="filter-group">
-                <label for="status-filter">Status</label>
-                <select id="status-filter" class="filter-select">
-                    <option value="">All</option>
-                    <option value="available">Available</option>
-                    <option value="in_use">In Use</option>
-                </select>
-            </div>
+
 
             <!-- Sort -->
             <div class="filter-group">
-                <label for="sort-select">Sort By</label>
+                <label for="sort-select">Sıralama</label>
                 <select id="sort-select" class="filter-select">
-                    <option value="level-desc">Level (High → Low)</option>
-                    <option value="level-asc">Level (Low → High)</option>
-                    <option value="skins-desc">Skins (Most)</option>
-                    <option value="skins-asc">Skins (Least)</option>
-                    <option value="id-asc">ID (Low → High)</option>
+                    <option value="level-desc">Seviye (Yüksek → Düşük)</option>
+                    <option value="level-asc">Seviye (Düşük → Yüksek)</option>
+                    <option value="skins-desc">Kostüm Sayısı (Çok -> Az)</option>
+                    <option value="skins-asc">Kostüm Sayısı (Az -> Çok)</option>
+                    <option value="id-asc">ID (Eski → Yeni)</option>
                 </select>
             </div>
 
             <!-- Results Count -->
             <div class="filter-stats">
-                <span id="results-count">Loading...</span>
+                <span id="results-count">Yükleniyor...</span>
             </div>
         </aside>
 
@@ -105,22 +101,22 @@
             <!-- ===== LOADING STATE ===== -->
             <div id="loading" class="loading">
                 <div class="spinner"></div>
-                <p>Loading accounts...</p>
+                <p>Hesaplar yükleniyor...</p>
             </div>
 
             <!-- ===== ERROR STATE ===== -->
             <div id="error" class="error" style="display: none;">
                 <div class="error-icon">⚠️</div>
-                <h3>Failed to load data</h3>
-                <p id="error-message">Please check your connection and try again.</p>
-                <button id="retry-btn" class="retry-btn">Retry</button>
+                <h3>Veriler yüklenemedi</h3>
+                <p id="error-message">Lütfen bağlantınızı kontrol edip tekrar deneyin.</p>
+                <button id="retry-btn" class="retry-btn">Tekrar Dene</button>
             </div>
 
             <!-- ===== EMPTY STATE ===== -->
             <div id="empty" class="empty" style="display: none;">
                 <div class="empty-icon">🔍</div>
-                <h3>No accounts found</h3>
-                <p>Try adjusting your filters or search term.</p>
+                <h3>Hesap bulunamadı</h3>
+                <p>Filtreleri değiştirmeyi veya başka bir arama yapmayı deneyin.</p>
             </div>
 
             <!-- ===== ACCOUNTS LIST ===== -->
@@ -130,26 +126,25 @@
 
             <!-- ===== PAGINATION ===== -->
             <nav id="pagination" class="pagination" style="display: none;">
-                <button id="prev-page" class="page-btn" disabled>← Previous</button>
+                <button id="prev-page" class="page-btn" disabled>← Önceki</button>
                 <div id="page-numbers" class="page-numbers">
                     <!-- Page numbers rendered here -->
                 </div>
-                <button id="next-page" class="page-btn">Next →</button>
+                <button id="next-page" class="page-btn">Sonraki →</button>
             </nav>
         </main>
     </div>
 
     <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <p>Data is read-only. No personal information is displayed.</p>
-        <p class="footer-note">Built with 💜 for the community</p>
+        <p>© 2026 Handmade Accounts.</p>
     </footer>
 
     <!-- ===== SKIN MODAL (for viewing all skins) ===== -->
     <div id="skin-modal" class="modal" style="display: none;">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modal-title">Account Skins</h2>
+                <h2 id="modal-title">Hesap Kostümleri</h2>
                 <button id="modal-close" class="modal-close">✕</button>
             </div>
             <div id="modal-body" class="modal-body">

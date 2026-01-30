@@ -2,6 +2,7 @@
    LOL-PAGE: Main Application
    ================================================
    Fetches data from Supabase and renders the UI
+   With pagination support
    ================================================ */
 
 // ================================================
@@ -15,7 +16,7 @@ if (typeof SUPABASE_URL === 'undefined' || typeof SUPABASE_ANON_KEY === 'undefin
     document.getElementById('loading').style.display = 'none';
     document.getElementById('error').style.display = 'flex';
     document.getElementById('error-message').textContent =
-        'Configuration missing. Please set up config.js with your Supabase credentials.';
+        'Yapılandırma eksik. Lütfen Supabase bilgilerinizi config.js dosyasına ekleyin.';
 }
 
 // ================================================
@@ -23,6 +24,12 @@ if (typeof SUPABASE_URL === 'undefined' || typeof SUPABASE_ANON_KEY === 'undefin
 // ================================================
 
 const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// ================================================
+// CONSTANTS
+// ================================================
+
+const ACCOUNTS_PER_PAGE = 10;
 
 // ================================================
 // STATE MANAGEMENT
@@ -40,11 +47,15 @@ const state = {
         search: '',
         region: '',
         champion: '',
-        status: ''
+        rankedReady: false
     },
 
     // Current sort
     sort: 'level-desc',
+
+    // Pagination
+    currentPage: 1,
+    totalPages: 1,
 
     // Loading state
     isLoading: true,
@@ -60,14 +71,21 @@ const elements = {
     loading: document.getElementById('loading'),
     error: document.getElementById('error'),
     empty: document.getElementById('empty'),
-    accountsGrid: document.getElementById('accounts-grid'),
+    accountsList: document.getElementById('accounts-list'),
+
+    // Pagination
+    pagination: document.getElementById('pagination'),
+    prevPage: document.getElementById('prev-page'),
+    nextPage: document.getElementById('next-page'),
+    pageNumbers: document.getElementById('page-numbers'),
 
     // Filters
     searchInput: document.getElementById('search-input'),
     clearSearch: document.getElementById('clear-search'),
     regionFilter: document.getElementById('region-filter'),
     championFilter: document.getElementById('champion-filter'),
-    statusFilter: document.getElementById('status-filter'),
+    championFilter: document.getElementById('champion-filter'),
+    rrFilter: document.getElementById('rr-filter'), // New checkbox filter
     sortSelect: document.getElementById('sort-select'),
     resetFilters: document.getElementById('reset-filters'),
     resultsCount: document.getElementById('results-count'),
@@ -95,7 +113,7 @@ async function fetchAccounts() {
 
     if (error) {
         console.error('Error fetching accounts:', error);
-        throw new Error('Failed to load accounts: ' + error.message);
+        throw new Error('Hesaplar yüklenemedi: ' + error.message);
     }
 
     return data || [];
@@ -109,7 +127,7 @@ async function fetchSkins() {
 
     if (error) {
         console.error('Error fetching skins:', error);
-        throw new Error('Failed to load skins: ' + error.message);
+        throw new Error('Kostümler yüklenemedi: ' + error.message);
     }
 
     return data || [];
@@ -126,7 +144,10 @@ async function fetchRegions() {
         return [];
     }
 
-    return data?.map(r => r.region).filter(Boolean) || [];
+    // Get unique base regions (remove " RR" suffix)
+    const regions = data?.map(r => r.region).filter(Boolean) || [];
+    const uniqueBaseRegions = [...new Set(regions.map(r => r.replace(' RR', '')))];
+    return uniqueBaseRegions.sort();
 }
 
 /**
@@ -202,7 +223,7 @@ function groupSkinsByAccount() {
  * Applies all filters to the accounts list
  */
 function applyFilters() {
-    const { search, region, champion, status } = state.filters;
+    const { search, region, champion, rankedReady } = state.filters;
     const searchLower = search.toLowerCase().trim();
 
     state.filteredAccounts = state.accounts.filter(account => {
@@ -211,15 +232,24 @@ function applyFilters() {
             return false;
         }
 
-        // Region filter
-        if (region && account.region !== region) {
-            return false;
+        // Region filter (matches base region, e.g. "TR" matches "TR" and "TR RR")
+        if (region) {
+            const accountBaseRegion = account.region ? account.region.replace(' RR', '') : '';
+            if (accountBaseRegion !== region) {
+                return false;
+            }
         }
 
-        // Status filter
-        if (status && account.status !== status) {
-            return false;
+        // Ranked Ready filter
+        if (rankedReady) {
+            // Check if region ends with "RR"
+            // Note: account.region comes from server_info
+            if (!account.region || !account.region.endsWith(' RR')) {
+                return false;
+            }
         }
+
+
 
         // Champion filter - check if account has any skin of this champion
         if (champion) {
@@ -239,6 +269,13 @@ function applyFilters() {
 
         return true;
     });
+
+    // Reset to page 1 when filters change
+    state.currentPage = 1;
+
+    // Calculate total pages
+    state.totalPages = Math.ceil(state.filteredAccounts.length / ACCOUNTS_PER_PAGE);
+    if (state.totalPages === 0) state.totalPages = 1;
 }
 
 /**
@@ -272,6 +309,104 @@ function applyFiltersAndRender() {
 }
 
 // ================================================
+// PAGINATION
+// ================================================
+
+/**
+ * Gets accounts for current page
+ */
+function getPageAccounts() {
+    const start = (state.currentPage - 1) * ACCOUNTS_PER_PAGE;
+    const end = start + ACCOUNTS_PER_PAGE;
+    return state.filteredAccounts.slice(start, end);
+}
+
+/**
+ * Go to specific page
+ */
+function goToPage(page) {
+    if (page < 1 || page > state.totalPages) return;
+    state.currentPage = page;
+    render();
+    // Scroll to top of list
+    elements.accountsList.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/**
+ * Renders pagination controls
+ */
+function renderPagination() {
+    if (state.totalPages <= 1) {
+        elements.pagination.style.display = 'none';
+        return;
+    }
+
+    elements.pagination.style.display = 'flex';
+
+    // Update prev/next buttons
+    elements.prevPage.disabled = state.currentPage === 1;
+    elements.nextPage.disabled = state.currentPage === state.totalPages;
+
+    // Generate page numbers
+    const pageNumbersHtml = generatePageNumbers();
+    elements.pageNumbers.innerHTML = pageNumbersHtml;
+
+    // Add click listeners to page numbers
+    elements.pageNumbers.querySelectorAll('.page-number').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const page = parseInt(btn.dataset.page);
+            goToPage(page);
+        });
+    });
+}
+
+/**
+ * Generates page number buttons with ellipsis for large page counts
+ */
+function generatePageNumbers() {
+    const current = state.currentPage;
+    const total = state.totalPages;
+    const pages = [];
+
+    // Always show first page
+    pages.push(1);
+
+    // Calculate range around current page
+    let start = Math.max(2, current - 1);
+    let end = Math.min(total - 1, current + 1);
+
+    // Add ellipsis after first page if needed
+    if (start > 2) {
+        pages.push('...');
+    }
+
+    // Add pages in range
+    for (let i = start; i <= end; i++) {
+        if (!pages.includes(i)) {
+            pages.push(i);
+        }
+    }
+
+    // Add ellipsis before last page if needed
+    if (end < total - 1) {
+        pages.push('...');
+    }
+
+    // Always show last page (if more than 1 page)
+    if (total > 1 && !pages.includes(total)) {
+        pages.push(total);
+    }
+
+    // Generate HTML
+    return pages.map(page => {
+        if (page === '...') {
+            return '<span class="page-ellipsis">...</span>';
+        }
+        return `<button class="page-number ${page === current ? 'active' : ''}" data-page="${page}">${page}</button>`;
+    }).join('');
+}
+
+// ================================================
 // RENDERING
 // ================================================
 
@@ -282,7 +417,8 @@ function showLoading() {
     elements.loading.style.display = 'flex';
     elements.error.style.display = 'none';
     elements.empty.style.display = 'none';
-    elements.accountsGrid.innerHTML = '';
+    elements.accountsList.innerHTML = '';
+    elements.pagination.style.display = 'none';
 }
 
 /**
@@ -293,7 +429,8 @@ function showError(message) {
     elements.error.style.display = 'flex';
     elements.empty.style.display = 'none';
     elements.errorMessage.textContent = message;
-    elements.accountsGrid.innerHTML = '';
+    elements.accountsList.innerHTML = '';
+    elements.pagination.style.display = 'none';
 }
 
 /**
@@ -303,7 +440,8 @@ function showEmpty() {
     elements.loading.style.display = 'none';
     elements.error.style.display = 'none';
     elements.empty.style.display = 'flex';
-    elements.accountsGrid.innerHTML = '';
+    elements.accountsList.innerHTML = '';
+    elements.pagination.style.display = 'none';
 }
 
 /**
@@ -314,9 +452,15 @@ function render() {
     elements.error.style.display = 'none';
 
     // Update results count
-    const total = state.accounts.length;
-    const shown = state.filteredAccounts.length;
-    elements.resultsCount.textContent = `Showing ${shown} of ${total} accounts`;
+    const total = state.filteredAccounts.length;
+    const start = (state.currentPage - 1) * ACCOUNTS_PER_PAGE + 1;
+    const end = Math.min(state.currentPage * ACCOUNTS_PER_PAGE, total);
+
+    if (total === 0) {
+        elements.resultsCount.textContent = 'Hesap bulunamadı';
+    } else {
+        elements.resultsCount.textContent = `Toplam ${total} hesaptan ${start}-${end} arası gösteriliyor`;
+    }
 
     // Show empty state if no results
     if (state.filteredAccounts.length === 0) {
@@ -326,20 +470,26 @@ function render() {
 
     elements.empty.style.display = 'none';
 
-    // Render account cards
-    const html = state.filteredAccounts.map(account => renderAccountCard(account)).join('');
-    elements.accountsGrid.innerHTML = html;
+    // Get accounts for current page
+    const pageAccounts = getPageAccounts();
+
+    // Render account rows
+    const html = pageAccounts.map(account => renderAccountRow(account)).join('');
+    elements.accountsList.innerHTML = html;
+
+    // Render pagination
+    renderPagination();
 
     // Attach event listeners to "more skins" buttons
     attachSkinModalListeners();
 }
 
 /**
- * Renders a single account card
+ * Renders a single account row
  */
-function renderAccountCard(account) {
+function renderAccountRow(account) {
     const searchTerm = state.filters.search.toLowerCase();
-    const MAX_SKINS_SHOWN = 8;
+    const MAX_SKINS_SHOWN = 15;
 
     // Get skins to display (limited)
     const displaySkins = account.skins.slice(0, MAX_SKINS_SHOWN);
@@ -353,37 +503,34 @@ function renderAccountCard(account) {
 
     // More skins button
     const moreSkinsBtnHtml = remainingSkins > 0
-        ? `<button class="more-skins" data-account-id="${account.id}">+${remainingSkins} more</button>`
+        ? `<button class="more-skins" data-account-id="${account.id}">+${remainingSkins} tane daha</button>`
         : '';
 
     // Status class
-    const statusClass = account.status === 'in_use' ? 'in_use' : '';
-    const statusText = account.status === 'in_use' ? 'In Use' : 'Available';
+    const statusClass = '';
+    const statusText = 'Unranked';
 
     return `
-        <article class="account-card" data-account-id="${account.id}">
-            <header class="card-header">
-                <div class="account-info">
-                    <h2 class="account-name">Account #${account.id}</h2>
-                    <span class="account-id">ID: ${account.id}</span>
+        <article class="account-row" data-account-id="${account.id}">
+            <header class="row-header">
+                <div class="account-id-badge">
+                    <span class="id-label">ID</span>
+                    <span class="id-value">#${account.id}</span>
                 </div>
-                <div class="account-level">
-                    <span class="level-label">Level</span>
-                    <span class="level-value">${account.level || 1}</span>
+                
+                <div class="account-meta">
+                    <span class="meta-item level">⭐ Seviye ${account.level || 1}</span>
+                    <span class="meta-item region">
+                        📍 ${escapeHtml(account.region || 'Bilinmiyor')}
+                        ${(account.region && account.region.endsWith(' RR')) ? '<span class="rr-badge">RR</span>' : ''}
+                    </span>
+                    <span class="meta-item status ${statusClass}">● ${statusText}</span>
+                    <span class="meta-item skin-count">🎨 ${account.skins.length} kostüm</span>
                 </div>
             </header>
             
-            <div class="card-meta">
-                <span class="meta-badge region">📍 ${escapeHtml(account.region || 'Unknown')}</span>
-                <span class="meta-badge status ${statusClass}">● ${statusText}</span>
-                <span class="meta-badge skins">🎨 ${account.skins.length} skins</span>
-            </div>
-            
-            <div class="card-body">
-                <div class="skins-label">
-                    <span>Skins</span>
-                </div>
-                <div class="skins-list">
+            <div class="row-body">
+                <div class="skins-container">
                     ${skinTagsHtml}
                     ${moreSkinsBtnHtml}
                 </div>
@@ -397,11 +544,11 @@ function renderAccountCard(account) {
  */
 function populateFilters() {
     // Regions
-    elements.regionFilter.innerHTML = '<option value="">All Regions</option>' +
+    elements.regionFilter.innerHTML = '<option value="">Tüm Sunucular</option>' +
         state.regions.map(r => `<option value="${escapeHtml(r)}">${escapeHtml(r)}</option>`).join('');
 
     // Champions
-    elements.championFilter.innerHTML = '<option value="">All Champions</option>' +
+    elements.championFilter.innerHTML = '<option value="">Tüm Şampiyonlar</option>' +
         state.champions.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
 }
 
@@ -429,12 +576,12 @@ function showSkinModal(accountId) {
     const account = state.accounts.find(a => a.id === accountId);
     if (!account) return;
 
-    elements.modalTitle.textContent = `Account #${account.id} - All Skins (${account.skins.length})`;
+    elements.modalTitle.textContent = `Hesap #${account.id} - Tüm Kostümler (${account.skins.length})`;
 
     const skinsHtml = account.skins.map(skin => `
         <div class="modal-skin-item">
             <span class="modal-skin-name">${escapeHtml(skin.name)}</span>
-            <span class="modal-skin-champion">${escapeHtml(skin.champion || 'Unknown')}</span>
+            <span class="modal-skin-champion">${escapeHtml(skin.champion || 'Bilinmiyor')}</span>
         </div>
     `).join('');
 
@@ -485,15 +632,16 @@ function resetFilters() {
         search: '',
         region: '',
         champion: '',
-        status: ''
+        rankedReady: false
     };
     state.sort = 'level-desc';
+    state.currentPage = 1;
 
     elements.searchInput.value = '';
     elements.clearSearch.style.display = 'none';
     elements.regionFilter.value = '';
     elements.championFilter.value = '';
-    elements.statusFilter.value = '';
+    if (elements.rrFilter) elements.rrFilter.checked = false; // Reset checkbox
     elements.sortSelect.value = 'level-desc';
 
     applyFiltersAndRender();
@@ -528,16 +676,21 @@ function setupEventListeners() {
         applyFiltersAndRender();
     });
 
-    // Status filter
-    elements.statusFilter.addEventListener('change', (e) => {
-        state.filters.status = e.target.value;
-        applyFiltersAndRender();
-    });
+
+
+    // Ranked Ready filter
+    if (elements.rrFilter) {
+        elements.rrFilter.addEventListener('change', (e) => {
+            state.filters.rankedReady = e.target.checked;
+            applyFiltersAndRender();
+        });
+    }
 
     // Sort
     elements.sortSelect.addEventListener('change', (e) => {
         state.sort = e.target.value;
         sortAccounts();
+        state.currentPage = 1; // Reset to first page on sort change
         render();
     });
 
@@ -546,6 +699,15 @@ function setupEventListeners() {
 
     // Retry button
     elements.retryBtn.addEventListener('click', loadData);
+
+    // Pagination
+    elements.prevPage.addEventListener('click', () => {
+        goToPage(state.currentPage - 1);
+    });
+
+    elements.nextPage.addEventListener('click', () => {
+        goToPage(state.currentPage + 1);
+    });
 
     // Modal close
     elements.modalClose.addEventListener('click', closeModal);
