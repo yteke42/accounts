@@ -1,0 +1,17 @@
+# Ignore config.js (contains credentials)
+config.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (if using npm later)
+node_modules/

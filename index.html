@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse League of Legends accounts with skins. Filter by champion, region, and search for specific skins.">
+    <meta name="keywords" content="League of Legends, LoL, skins, accounts, champions">
+
+    <title>LoL Account Browser</title>
+
+    <!-- Favicon (optional - add your own) -->
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">⚔️</span>
+                <h1>LoL Account Browser</h1>
+            </div>
+            <p class="tagline">Find accounts with your favorite skins</p>
+        </div>
+    </header>
+
+    <!-- ===== MAIN LAYOUT ===== -->
+    <div class="layout">
+        <!-- ===== SIDEBAR (Filters) ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Filters</h2>
+                <button id="reset-filters" class="reset-btn">Reset</button>
+            </div>
+
+            <!-- Search -->
+            <div class="filter-group">
+                <label for="search-input">Search Skins</label>
+                <div class="search-container">
+                    <input type="text" id="search-input" class="search-input" placeholder="e.g., Dark Star..."
+                        autocomplete="off">
+                    <button id="clear-search" class="clear-search" title="Clear search" style="display: none;">
+                        ✕
+                    </button>
+                </div>
+            </div>
+
+            <!-- Region Filter -->
+            <div class="filter-group">
+                <label for="region-filter">Region</label>
+                <select id="region-filter" class="filter-select">
+                    <option value="">All Regions</option>
+                </select>
+            </div>
+
+            <!-- Champion Filter -->
+            <div class="filter-group">
+                <label for="champion-filter">Champion</label>
+                <select id="champion-filter" class="filter-select">
+                    <option value="">All Champions</option>
+                </select>
+            </div>
+
+            <!-- Status Filter -->
+            <div class="filter-group">
+                <label for="status-filter">Status</label>
+                <select id="status-filter" class="filter-select">
+                    <option value="">All</option>
+                    <option value="available">Available</option>
+                    <option value="in_use">In Use</option>
+                </select>
+            </div>
+
+            <!-- Sort -->
+            <div class="filter-group">
+                <label for="sort-select">Sort By</label>
+                <select id="sort-select" class="filter-select">
+                    <option value="level-desc">Level (High → Low)</option>
+                    <option value="level-asc">Level (Low → High)</option>
+                    <option value="skins-desc">Skins (Most)</option>
+                    <option value="skins-asc">Skins (Least)</option>
+                    <option value="id-asc">ID (Low → High)</option>
+                </select>
+            </div>
+
+            <!-- Results Count -->
+            <div class="filter-stats">
+                <span id="results-count">Loading...</span>
+            </div>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main">
+            <!-- ===== LOADING STATE ===== -->
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Loading accounts...</p>
+            </div>
+
+            <!-- ===== ERROR STATE ===== -->
+            <div id="error" class="error" style="display: none;">
+                <div class="error-icon">⚠️</div>
+                <h3>Failed to load data</h3>
+                <p id="error-message">Please check your connection and try again.</p>
+                <button id="retry-btn" class="retry-btn">Retry</button>
+            </div>
+
+            <!-- ===== EMPTY STATE ===== -->
+            <div id="empty" class="empty" style="display: none;">
+                <div class="empty-icon">🔍</div>
+                <h3>No accounts found</h3>
+                <p>Try adjusting your filters or search term.</p>
+            </div>
+
+            <!-- ===== ACCOUNTS LIST ===== -->
+            <div id="accounts-list" class="accounts-list">
+                <!-- Account rows will be rendered here -->
+            </div>
+
+            <!-- ===== PAGINATION ===== -->
+            <nav id="pagination" class="pagination" style="display: none;">
+                <button id="prev-page" class="page-btn" disabled>← Previous</button>
+                <div id="page-numbers" class="page-numbers">
+                    <!-- Page numbers rendered here -->
+                </div>
+                <button id="next-page" class="page-btn">Next →</button>
+            </nav>
+        </main>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>Data is read-only. No personal information is displayed.</p>
+        <p class="footer-note">Built with 💜 for the community</p>
+    </footer>
+
+    <!-- ===== SKIN MODAL (for viewing all skins) ===== -->
+    <div id="skin-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Account Skins</h2>
+                <button id="modal-close" class="modal-close">✕</button>
+            </div>
+            <div id="modal-body" class="modal-body">
+                <!-- Skins list rendered here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- Supabase JS SDK (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Configuration (you need to create this) -->
+    <script src="config.js"></script>
+
+    <!-- Main Application -->
+    <script src="app.js"></script>
+</body>
+
+</html>
