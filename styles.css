@@ -81,6 +81,30 @@
     --sidebar-width: 350px;
 }
 
+/* ===== LIGHT THEME ===== */
+[data-theme="light"] {
+    --color-bg-primary: #e8e8ed;
+    --color-bg-secondary: #f5f5f7;
+    --color-bg-tertiary: #ffffff;
+    --color-bg-card: #f0f0f5;
+    --color-bg-card-hover: #e8e8f0;
+
+    --color-text-primary: #1a1a2e;
+    --color-text-secondary: #4a4a5a;
+    --color-text-muted: #7a7a8a;
+
+    --color-border: #c5c5d0;
+    --color-border-hover: #a0a0b0;
+
+    --gradient-card: linear-gradient(180deg, rgba(200, 155, 60, 0.1) 0%, transparent 100%);
+    --gradient-glow: radial-gradient(ellipse at center, rgba(200, 155, 60, 0.08) 0%, transparent 70%);
+
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.18);
+    --shadow-glow: 0 0 20px rgba(200, 155, 60, 0.25);
+}
+
 /* ===== RESET & BASE ===== */
 *,
 *::before,
@@ -563,22 +587,28 @@ body::before {
     display: inline-block;
     padding: var(--spacing-xs) var(--spacing-sm);
     font-size: var(--font-size-xs);
-    color: var(--color-text-secondary);
-    background: var(--color-bg-tertiary);
-    border: 1px solid var(--color-border);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(10, 203, 230, 0.15) 100%);
+    border: 1px solid rgba(168, 85, 247, 0.4);
     border-radius: var(--radius-sm);
     transition: all var(--transition-fast);
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
 }
 
 .skin-tag:hover {
-    color: var(--color-text-primary);
-    border-color: var(--color-accent-primary);
+    color: #fff;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(10, 203, 230, 0.3) 100%);
+    border-color: var(--color-accent-tertiary);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+    transform: translateY(-1px);
 }
 
 .skin-tag.highlight {
-    background: rgba(200, 155, 60, 0.15);
+    background: linear-gradient(135deg, rgba(200, 155, 60, 0.25) 0%, rgba(200, 155, 60, 0.15) 100%);
     border-color: var(--color-accent-primary);
     color: var(--color-accent-primary);
+    text-shadow: 0 0 10px rgba(200, 155, 60, 0.4);
 }
 
 .more-skins {
@@ -916,4 +946,74 @@ body::before {
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(200, 155, 60, 0.4);
     vertical-align: middle;
+    cursor: help;
+    position: relative;
+}
+
+.rr-badge::after {
+    content: 'Dereceli Hazır';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 10px;
+    background: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast);
+    z-index: 100;
+    margin-bottom: 6px;
+}
+
+.rr-badge:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    font-size: 18px;
+    position: absolute;
+    right: var(--spacing-xl);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.theme-toggle:hover {
+    border-color: var(--color-accent-primary);
+    box-shadow: var(--shadow-glow);
+}
+
+[data-theme="light"] .theme-toggle .icon-sun {
+    display: none;
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+    display: block;
+}
+
+.theme-toggle .icon-moon {
+    display: none;
+}
+
+.theme-toggle .icon-sun {
+    display: block;
 }
