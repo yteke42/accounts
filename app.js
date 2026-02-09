@@ -682,7 +682,7 @@ function renderAccountRow(account) {
                     <span class="meta-item blue-essence" title="Mavi Öz"><img src="/src/images/blue_essences_icon.png" class="essence-icon" alt="BE"> ${formatNumber(account.blue_essence || 0)}</span>
                     <span class="meta-item orange-essence" title="Turuncu Öz"><img src="/src/images/orange_essences_icon.png" class="essence-icon" alt="OE"> ${formatNumber(account.orange_essence || 0)}</span>
                     <span class="meta-item riot-points" title="Riot Points"><img src="/src/images/riot_points_icon.png" class="essence-icon" alt="RP"> 0</span>
-                    <span class="meta-item last-played" title="Son Oynama">📅 Son Oynama: ${formatDate(account.last_played)}</span>
+                    <span class="meta-item last-played" title="Son Oyun Tarihi">📅 Son Oynama: ${formatDate(account.last_played)}</span>
                 </div>
                 
                 <button class="share-btn" data-account-id="${account.id}" title="Linki Kopyala">🔗</button>
