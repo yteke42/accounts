@@ -51,7 +51,7 @@ const state = {
     },
 
     // Current sort
-    sort: 'level-desc',
+    sort: 'skins-desc',
 
     // Pagination
     currentPage: 1,
@@ -213,7 +213,7 @@ function initSkinHoverTooltip() {
         const tooltip = document.createElement('div');
         tooltip.id = 'skin-hover-tooltip';
         tooltip.className = 'skin-hover-tooltip';
-        tooltip.innerHTML = '<img src="" alt="Skin Preview">';
+        tooltip.innerHTML = '<img src="" alt="Skin Preview"><span class="skin-name"></span>';
         document.body.appendChild(tooltip);
     }
 }
@@ -226,6 +226,7 @@ function attachSkinHoverListeners() {
     if (!tooltip) return;
 
     const tooltipImg = tooltip.querySelector('img');
+    const tooltipName = tooltip.querySelector('.skin-name');
 
     document.querySelectorAll('.skin-tag').forEach(tag => {
         tag.addEventListener('mouseenter', (e) => {
@@ -234,6 +235,7 @@ function attachSkinHoverListeners() {
 
             if (splashFile) {
                 tooltipImg.src = `/src/splash/${splashFile}`;
+                tooltipName.textContent = tag.textContent.trim();
                 tooltip.classList.add('visible');
 
                 // Position tooltip

@@ -1227,7 +1227,7 @@ body::before {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-xl);
     padding: 8px;
-    max-width: 470px;
+    max-width: 670px;
 }
 
 .skin-hover-tooltip.visible {
@@ -1237,9 +1237,18 @@ body::before {
 
 .skin-hover-tooltip img {
     display: block;
-    width: 450px;
+    width: 620px;
     height: auto;
     border-radius: var(--radius-md);
+}
+
+.skin-hover-tooltip .skin-name {
+    display: block;
+    text-align: center;
+    padding: 8px 4px 4px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-primary);
 }
 
 /* Make skin tags show pointer cursor to indicate hover action */
