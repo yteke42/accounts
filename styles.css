@@ -1,5 +1,5 @@
 /* ================================================
-   LOL-PAGE: Styles (Sidebar Layout)
+   Styles (Sidebar Layout)
    ================================================
    Sidebar filters + single-column accounts list
    ================================================ */
@@ -13,7 +13,7 @@
     --color-bg-card: #15151f;
     --color-bg-card-hover: #1c1c28;
 
-    /* Accent Colors (LoL Gold/Blue theme) */
+    /* Accent Colors (Gold/Blue theme) */
     --color-accent-primary: #c89b3c;
     /* Gold */
     --color-accent-secondary: #0acbe6;

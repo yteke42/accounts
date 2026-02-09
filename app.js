@@ -11,7 +11,7 @@
 
 // Check if config exists (config.js should define SUPABASE_URL and SUPABASE_ANON_KEY)
 if (typeof SUPABASE_URL === 'undefined' || typeof SUPABASE_ANON_KEY === 'undefined') {
-    console.error('❌ Missing Supabase configuration!');
+    console.error('Missing Supabase configuration!');
     console.error('Please create a config.js file with SUPABASE_URL and SUPABASE_ANON_KEY');
     document.getElementById('loading').style.display = 'none';
     document.getElementById('error').style.display = 'flex';
