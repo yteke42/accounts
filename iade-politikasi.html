@@ -4,71 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Handmade Accounts - İletişim">
-
-    <title>İletişim - Handmade Accounts</title>
-
-    <!-- Favicon -->
+    <meta name="description" content="Handmade Accounts - Cayma Hakkı & İade Politikası">
+    <title>Cayma Hakkı & İade Politikası - Handmade Accounts</title>
     <link rel="icon" type="image/png" href="/src/handmade_accounts.png">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
-
     <style>
-        .contact-container {
-            max-width: 600px;
+        .legal-container {
+            max-width: 800px;
             margin: var(--spacing-2xl) auto;
             padding: var(--spacing-xl);
             background: var(--color-bg-card);
             border: 1px solid var(--color-border);
             border-radius: var(--radius-lg);
-            text-align: center;
         }
 
-        .contact-title {
+        .legal-title {
             font-size: var(--font-size-2xl);
-            margin-bottom: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
             color: var(--color-accent-primary);
         }
 
-        .contact-description {
+        .legal-content {
             color: var(--color-text-secondary);
-            margin-bottom: var(--spacing-xl);
+            line-height: 1.8;
         }
 
-        .contact-methods {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-md);
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--spacing-sm);
-            padding: var(--spacing-md) var(--spacing-lg);
-            background: var(--color-bg-tertiary);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-md);
+        .legal-content h2 {
             color: var(--color-text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all var(--transition-base);
+            margin-top: var(--spacing-xl);
+            margin-bottom: var(--spacing-sm);
         }
 
-        .contact-link:hover {
-            border-color: var(--color-accent-primary);
-            background: rgba(200, 155, 60, 0.1);
-        }
-
-        .contact-link .icon {
-            font-size: 24px;
+        .legal-content p {
+            margin-bottom: var(--spacing-md);
         }
 
         .back-link {
@@ -94,35 +65,25 @@
                     <h1>Handmade Accounts</h1>
                 </a>
             </div>
-            <p class="tagline">İletişim</p>
+            <p class="tagline">Cayma Hakkı & İade Politikası</p>
         </div>
-        <button class="theme-toggle" id="theme-toggle" title="Tema Değiştir">
-            <span class="icon-sun">☀️</span>
-            <span class="icon-moon">🌙</span>
-        </button>
+        <div class="header-actions">
+            <button class="theme-toggle" id="theme-toggle" title="Tema Değiştir">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </button>
+        </div>
     </header>
 
-    <!-- ===== CONTACT CONTENT ===== -->
+    <!-- ===== CONTENT ===== -->
     <main class="main" style="display: flex; justify-content: center; padding: var(--spacing-xl);">
-        <div class="contact-container">
-            <h1 class="contact-title">İletişim</h1>
-            <p class="contact-description">
-                Hesaplarla ilgili sorularınız veya satın alma talepleriniz için bizimle iletişime geçin.
-            </p>
-
-            <div class="contact-methods">
-                <!-- Add your contact methods here -->
-                <a href="#" class="contact-link">
-                    <span class="icon">💬</span>
-                    <span>Discord</span>
-                </a>
-                <a href="https://www.itemsatis.com/p/HandmadeAccounts" target="_blank" class="contact-link">
-                    <span class="icon">📱</span>
-                    <span>Itemsatış</span>
-                </a>
+        <div class="legal-container">
+            <h1 class="legal-title">Cayma Hakkı & İade Politikası</h1>
+            <div class="legal-content">
+                <!-- İçeriği buraya ekleyin -->
+                <p>Bu sayfa yakında güncellenecektir.</p>
             </div>
-
-            <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+            <a href="/" class="back-link">← Ana Sayfaya Dön</a>
         </div>
     </main>
 
@@ -137,7 +98,6 @@
     </footer>
 
     <script>
-        // Theme toggle
         function initTheme() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme) {
