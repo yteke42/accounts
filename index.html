@@ -9,9 +9,8 @@
 
     <title>Handmade Accounts</title>
 
-    <!-- Favicon (optional - add your own) -->
-    <link rel="icon" type="image/png"
-        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/handmade_accounts.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,15 +26,18 @@
     <header class="header">
         <div class="header-content">
             <div class="logo">
-                <span class="logo-icon">⚔️</span>
+                <img src="/src/handmade_accounts.png" alt="Logo" class="logo-icon-img">
                 <h1>Handmade Accounts</h1>
             </div>
             <p class="tagline">Favori kostümlerinizle dolu hesapları keşfedin</p>
         </div>
-        <button class="theme-toggle" id="theme-toggle" title="Tema Değiştir">
-            <span class="icon-sun">☀️</span>
-            <span class="icon-moon">🌙</span>
-        </button>
+        <div class="header-actions">
+            <a href="contact.html" class="header-contact" title="İletişim">İletişim</a>
+            <button class="theme-toggle" id="theme-toggle" title="Tema Değiştir">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </button>
+        </div>
     </header>
 
     <!-- ===== MAIN LAYOUT ===== -->
@@ -101,10 +103,59 @@
 
         <!-- ===== MAIN CONTENT ===== -->
         <main class="main">
-            <!-- ===== LOADING STATE ===== -->
-            <div id="loading" class="loading">
-                <div class="spinner"></div>
-                <p>Hesaplar yükleniyor...</p>
+            <!-- ===== LOADING STATE (Skeleton) ===== -->
+            <div id="loading" class="skeleton-container">
+                <div class="skeleton-card">
+                    <div class="skeleton-header">
+                        <div class="skeleton-badge"></div>
+                        <div class="skeleton-meta">
+                            <div class="skeleton-line short"></div>
+                            <div class="skeleton-line short"></div>
+                            <div class="skeleton-line short"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-body">
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                    </div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-header">
+                        <div class="skeleton-badge"></div>
+                        <div class="skeleton-meta">
+                            <div class="skeleton-line short"></div>
+                            <div class="skeleton-line short"></div>
+                            <div class="skeleton-line short"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-body">
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                    </div>
+                </div>
+                <div class="skeleton-card">
+                    <div class="skeleton-header">
+                        <div class="skeleton-badge"></div>
+                        <div class="skeleton-meta">
+                            <div class="skeleton-line short"></div>
+                            <div class="skeleton-line short"></div>
+                            <div class="skeleton-line short"></div>
+                        </div>
+                    </div>
+                    <div class="skeleton-body">
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                        <div class="skeleton-tag"></div>
+                    </div>
+                </div>
             </div>
 
             <!-- ===== ERROR STATE ===== -->

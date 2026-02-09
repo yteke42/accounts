@@ -86,8 +86,8 @@
     --color-bg-primary: #e8e8ed;
     --color-bg-secondary: #f5f5f7;
     --color-bg-tertiary: #ffffff;
-    --color-bg-card: #f0f0f5;
-    --color-bg-card-hover: #e8e8f0;
+    --color-bg-card: #ffffff;
+    --color-bg-card-hover: #f8f8fc;
 
     --color-text-primary: #1a1a2e;
     --color-text-secondary: #4a4a5a;
@@ -190,6 +190,13 @@ body::before {
     filter: drop-shadow(0 0 8px rgba(200, 155, 60, 0.5));
 }
 
+.logo-icon-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(200, 155, 60, 0.5));
+}
+
 .logo h1 {
     font-size: var(--font-size-xl);
     font-weight: 700;
@@ -203,6 +210,42 @@ body::before {
 .tagline {
     color: var(--color-text-secondary);
     font-size: var(--font-size-sm);
+}
+
+/* Header Actions (Contact + Theme Toggle) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    position: absolute;
+    right: var(--spacing-xl);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-accent-primary);
+    text-decoration: none;
+    border: 1px solid var(--color-accent-primary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.header-contact:hover {
+    background: var(--color-accent-primary);
+    color: var(--color-bg-primary);
+}
+
+.theme-toggle {
+    position: static;
+    transform: none;
 }
 
 /* ===== MAIN LAYOUT ===== */
@@ -492,12 +535,59 @@ body::before {
 }
 
 .account-row:hover {
-    border-color: var(--color-border-hover);
-    box-shadow: var(--shadow-md);
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 8px 25px rgba(200, 155, 60, 0.25), var(--shadow-lg);
+    transform: translateY(-3px);
 }
 
 .account-row:hover::before {
     opacity: 1;
+}
+
+/* Highlighted state for shared account links */
+.account-row.highlighted {
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 30px rgba(200, 155, 60, 0.5);
+    animation: highlightPulse 1s ease-in-out 3;
+}
+
+@keyframes highlightPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(200, 155, 60, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(200, 155, 60, 0.6);
+    }
+}
+
+/* Share button */
+.share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    margin-left: auto;
+}
+
+.share-btn:hover {
+    border-color: var(--color-accent-secondary);
+    background: rgba(10, 203, 230, 0.15);
+}
+
+.share-btn.copied {
+    background: var(--color-accent-success);
+    border-color: var(--color-accent-success);
+    color: white;
 }
 
 /* Row Header */
@@ -831,9 +921,120 @@ body::before {
     color: var(--color-text-muted);
 }
 
+.footer-contact {
+    display: inline-block;
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-accent-primary);
+    text-decoration: none;
+    border: 1px solid var(--color-accent-primary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-base);
+}
+
+.footer-contact:hover {
+    background: var(--color-accent-primary);
+    color: var(--color-bg-primary);
+}
+
 .footer-note {
     margin-top: var(--spacing-sm);
     font-size: var(--font-size-xs);
+}
+
+/* ===== SKELETON LOADING ===== */
+.skeleton-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.skeleton-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.skeleton-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--gradient-card);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.skeleton-badge {
+    width: 80px;
+    height: 50px;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.skeleton-line {
+    height: 28px;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-line.short {
+    width: 80px;
+}
+
+.skeleton-body {
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.skeleton-tag {
+    width: 100px;
+    height: 24px;
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shimmer animation */
+.skeleton-badge::after,
+.skeleton-line::after,
+.skeleton-tag::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(200, 155, 60, 0.1),
+            transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 /* ===== SCROLLBAR ===== */
@@ -990,11 +1191,6 @@ body::before {
     cursor: pointer;
     transition: all var(--transition-base);
     font-size: 18px;
-    position: absolute;
-    right: var(--spacing-xl);
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
 }
 
 .theme-toggle:hover {
@@ -1016,4 +1212,37 @@ body::before {
 
 .theme-toggle .icon-sun {
     display: block;
+}
+
+/* ===== SKIN HOVER TOOLTIP ===== */
+.skin-hover-tooltip {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease, visibility 0.15s ease;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    padding: 8px;
+    max-width: 470px;
+}
+
+.skin-hover-tooltip.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.skin-hover-tooltip img {
+    display: block;
+    width: 450px;
+    height: auto;
+    border-radius: var(--radius-md);
+}
+
+/* Make skin tags show pointer cursor to indicate hover action */
+.skin-tag {
+    cursor: pointer;
 }

@@ -59,7 +59,13 @@ const state = {
 
     // Loading state
     isLoading: true,
-    error: null
+    error: null,
+
+    // Shared account URL
+    sharedAccountId: null,
+
+    // Skin name to splash image mapping
+    skinMapping: {}
 };
 
 // ================================================
@@ -165,6 +171,107 @@ async function fetchChampions() {
 }
 
 /**
+ * Loads skin mapping from txt file for hover previews
+ */
+async function loadSkinMapping() {
+    try {
+        const response = await fetch('/src/skin_mapping_with_nums.txt');
+        if (!response.ok) {
+            console.warn('Could not load skin mapping file');
+            return;
+        }
+
+        const text = await response.text();
+        const lines = text.split('\n');
+
+        for (const line of lines) {
+            const trimmed = line.trim();
+            if (!trimmed) continue;
+
+            // Format: Turkish Name, English Name, filename.jpg
+            const parts = trimmed.split(',').map(p => p.trim());
+            if (parts.length >= 3) {
+                const turkishName = parts[0];
+                const splashFile = parts[2];
+                // Map Turkish name to splash file
+                state.skinMapping[turkishName.toLowerCase()] = splashFile;
+            }
+        }
+
+        console.log(`Loaded ${Object.keys(state.skinMapping).length} skin mappings`);
+    } catch (error) {
+        console.warn('Error loading skin mapping:', error);
+    }
+}
+
+/**
+ * Creates the skin hover tooltip element
+ */
+function initSkinHoverTooltip() {
+    // Create tooltip if it doesn't exist
+    if (!document.getElementById('skin-hover-tooltip')) {
+        const tooltip = document.createElement('div');
+        tooltip.id = 'skin-hover-tooltip';
+        tooltip.className = 'skin-hover-tooltip';
+        tooltip.innerHTML = '<img src="" alt="Skin Preview">';
+        document.body.appendChild(tooltip);
+    }
+}
+
+/**
+ * Attaches hover listeners to skin tags for splash preview
+ */
+function attachSkinHoverListeners() {
+    const tooltip = document.getElementById('skin-hover-tooltip');
+    if (!tooltip) return;
+
+    const tooltipImg = tooltip.querySelector('img');
+
+    document.querySelectorAll('.skin-tag').forEach(tag => {
+        tag.addEventListener('mouseenter', (e) => {
+            const skinName = tag.textContent.trim().toLowerCase();
+            const splashFile = state.skinMapping[skinName];
+
+            if (splashFile) {
+                tooltipImg.src = `/src/splash/${splashFile}`;
+                tooltip.classList.add('visible');
+
+                // Position tooltip
+                const x = e.clientX + 15;
+                const y = e.clientY + 15;
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            }
+        });
+
+        tag.addEventListener('mousemove', (e) => {
+            if (tooltip.classList.contains('visible')) {
+                // Keep tooltip near cursor, but check screen bounds
+                let x = e.clientX + 15;
+                let y = e.clientY + 15;
+
+                // Adjust if tooltip would go off screen
+                const tooltipRect = tooltip.getBoundingClientRect();
+                if (x + tooltipRect.width > window.innerWidth) {
+                    x = e.clientX - tooltipRect.width - 15;
+                }
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 15;
+                }
+
+                tooltip.style.left = `${x}px`;
+                tooltip.style.top = `${y}px`;
+            }
+        });
+
+        tag.addEventListener('mouseleave', () => {
+            tooltip.classList.remove('visible');
+            tooltipImg.src = '';
+        });
+    });
+}
+
+/**
  * Loads all initial data
  */
 async function loadData() {
@@ -172,12 +279,13 @@ async function loadData() {
     state.error = null;
 
     try {
-        // Fetch all data in parallel
+        // Fetch all data in parallel (including skin mapping for hover preview)
         const [accounts, skins, regions, champions] = await Promise.all([
             fetchAccounts(),
             fetchSkins(),
             fetchRegions(),
-            fetchChampions()
+            fetchChampions(),
+            loadSkinMapping() // Load in parallel, but we don't need to await its result
         ]);
 
         state.accounts = accounts;
@@ -190,6 +298,9 @@ async function loadData() {
 
         // Populate filter dropdowns
         populateFilters();
+
+        // Check for shared account in URL
+        handleSharedAccountUrl();
 
         // Apply initial filters and render
         applyFiltersAndRender();
@@ -482,6 +593,15 @@ function render() {
 
     // Attach event listeners to "more skins" buttons
     attachSkinModalListeners();
+
+    // Attach hover listeners for skin splash preview
+    attachSkinHoverListeners();
+
+    // Attach event listeners to share buttons
+    attachShareListeners();
+
+    // Scroll to shared account if URL has ?account= parameter
+    scrollToSharedAccount();
 }
 
 /**
@@ -527,6 +647,8 @@ function renderAccountRow(account) {
                     <span class="meta-item status ${statusClass}">● ${statusText}</span>
                     <span class="meta-item skin-count">🎨 ${account.skins.length} kostüm</span>
                 </div>
+                
+                <button class="share-btn" data-account-id="${account.id}" title="Linki Kopyala">🔗</button>
             </header>
             
             <div class="row-body">
@@ -567,6 +689,71 @@ function attachSkinModalListeners() {
             showSkinModal(accountId);
         });
     });
+}
+
+/**
+ * Attaches click listeners to share buttons
+ */
+function attachShareListeners() {
+    document.querySelectorAll('.share-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const accountId = btn.dataset.accountId;
+            copyShareLink(accountId);
+        });
+    });
+}
+
+/**
+ * Copies share link to clipboard
+ */
+function copyShareLink(accountId) {
+    const url = `${window.location.origin}${window.location.pathname}?account=${accountId}`;
+    navigator.clipboard.writeText(url).then(() => {
+        // Show brief feedback
+        const btn = document.querySelector(`.share-btn[data-account-id="${accountId}"]`);
+        if (btn) {
+            const originalText = btn.textContent;
+            btn.textContent = '✓';
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.classList.remove('copied');
+            }, 1500);
+        }
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+    });
+}
+
+/**
+ * Handles shared account URL parameter
+ */
+function handleSharedAccountUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const sharedAccountId = urlParams.get('account');
+
+    if (sharedAccountId) {
+        state.sharedAccountId = parseInt(sharedAccountId);
+    }
+}
+
+/**
+ * Scrolls to and highlights shared account
+ */
+function scrollToSharedAccount() {
+    if (!state.sharedAccountId) return;
+
+    const row = document.querySelector(`.account-row[data-account-id="${state.sharedAccountId}"]`);
+    if (row) {
+        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        row.classList.add('highlighted');
+        setTimeout(() => {
+            row.classList.remove('highlighted');
+        }, 3000);
+        // Clear the shared account ID after highlighting
+        state.sharedAccountId = null;
+    }
 }
 
 /**
@@ -786,6 +973,7 @@ function setupThemeToggle() {
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     setupThemeToggle();
+    initSkinHoverTooltip(); // Create hover tooltip element
     setupEventListeners();
     loadData();
 });
