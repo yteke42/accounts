@@ -1,5 +1,5 @@
 /* ================================================
-   LOL-PAGE: Main Application
+   ACCOUNTS: Main Application
    ================================================
    Fetches data from Supabase and renders the UI
    With pagination support

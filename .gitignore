@@ -1,5 +1,5 @@
-# Ignore config.js (contains credentials)
-config.js
+# Database folder (contains SQL schema - not needed for website)
+database/
 
 # OS files
 .DS_Store
