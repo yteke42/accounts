@@ -108,6 +108,26 @@ const elements = {
 };
 
 // ================================================
+// HELPER FUNCTIONS
+// ================================================
+
+/**
+ * Formats a number with thousands separators
+ */
+function formatNumber(num) {
+    return num.toLocaleString('tr-TR');
+}
+
+/**
+ * Formats a date in Turkish locale
+ */
+function formatDate(dateStr) {
+    if (!dateStr) return 'Bilinmiyor';
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+// ================================================
 // DATA FETCHING
 // ================================================
 
@@ -648,6 +668,10 @@ function renderAccountRow(account) {
                     </span>
                     <span class="meta-item status ${statusClass}">● ${statusText}</span>
                     <span class="meta-item skin-count">🎨 ${account.skins.length} kostüm</span>
+                    <span class="meta-item blue-essence" title="Mavi Öz"><img src="/src/images/blue_essences_icon.png" class="essence-icon" alt="BE"> ${formatNumber(account.blue_essence || 0)}</span>
+                    <span class="meta-item orange-essence" title="Turuncu Öz"><img src="/src/images/orange_essences_icon.png" class="essence-icon" alt="OE"> ${formatNumber(account.orange_essence || 0)}</span>
+                    <span class="meta-item riot-points" title="Riot Points"><img src="/src/images/riot_points_icon.png" class="essence-icon" alt="RP"> 0</span>
+                    <span class="meta-item last-played" title="Son Oynama">📅 Son Oynama: ${formatDate(account.last_played)}</span>
                 </div>
                 
                 <button class="share-btn" data-account-id="${account.id}" title="Linki Kopyala">🔗</button>
@@ -707,25 +731,64 @@ function attachShareListeners() {
 }
 
 /**
- * Copies share link to clipboard
+ * Copies share link to clipboard (with fallback for non-HTTPS)
  */
 function copyShareLink(accountId) {
     const url = `${window.location.origin}${window.location.pathname}?account=${accountId}`;
-    navigator.clipboard.writeText(url).then(() => {
-        // Show brief feedback
-        const btn = document.querySelector(`.share-btn[data-account-id="${accountId}"]`);
-        if (btn) {
-            const originalText = btn.textContent;
-            btn.textContent = '✓';
-            btn.classList.add('copied');
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.classList.remove('copied');
-            }, 1500);
-        }
-    }).catch(err => {
-        console.error('Failed to copy:', err);
-    });
+
+    // Try modern clipboard API first
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(url).then(() => {
+            showCopyFeedback(accountId);
+        }).catch(err => {
+            console.error('Clipboard API failed:', err);
+            fallbackCopy(url, accountId);
+        });
+    } else {
+        // Fallback for non-HTTPS contexts (like 192.168.x.x)
+        fallbackCopy(url, accountId);
+    }
+}
+
+/**
+ * Fallback copy using textarea and execCommand
+ */
+function fallbackCopy(text, accountId) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+        document.execCommand('copy');
+        showCopyFeedback(accountId);
+    } catch (err) {
+        console.error('Fallback copy failed:', err);
+        // Last resort: prompt user to copy manually
+        prompt('Linki kopyalayın:', text);
+    }
+
+    document.body.removeChild(textArea);
+}
+
+/**
+ * Shows visual feedback when link is copied
+ */
+function showCopyFeedback(accountId) {
+    const btn = document.querySelector(`.share-btn[data-account-id="${accountId}"]`);
+    if (btn) {
+        const originalText = btn.textContent;
+        btn.textContent = '✓';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.classList.remove('copied');
+        }, 1500);
+    }
 }
 
 /**
