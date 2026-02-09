@@ -47,7 +47,8 @@ const state = {
         search: '',
         region: '',
         champion: '',
-        rankedReady: false
+        rankedReady: false,
+        blueEssenceMin: 0
     },
 
     // Current sort
@@ -92,6 +93,7 @@ const elements = {
     championFilter: document.getElementById('champion-filter'),
     championFilter: document.getElementById('champion-filter'),
     rrFilter: document.getElementById('rr-filter'), // New checkbox filter
+    beFilter: document.getElementById('be-filter'), // Blue essence filter
     sortSelect: document.getElementById('sort-select'),
     resetFilters: document.getElementById('reset-filters'),
     resultsCount: document.getElementById('results-count'),
@@ -400,6 +402,13 @@ function applyFilters() {
             if (!matchesSkin) return false;
         }
 
+        // Blue Essence minimum filter
+        if (state.filters.blueEssenceMin > 0) {
+            if ((account.blue_essence || 0) < state.filters.blueEssenceMin) {
+                return false;
+            }
+        }
+
         return true;
     });
 
@@ -424,6 +433,8 @@ function sortAccounts() {
                 return (a.level - b.level) * multiplier;
             case 'skins':
                 return (a.skins.length - b.skins.length) * multiplier;
+            case 'be':
+                return ((a.blue_essence || 0) - (b.blue_essence || 0)) * multiplier;
             case 'id':
                 return (a.id - b.id) * multiplier;
             default:
@@ -884,17 +895,19 @@ function resetFilters() {
         search: '',
         region: '',
         champion: '',
-        rankedReady: false
+        rankedReady: false,
+        blueEssenceMin: 0
     };
-    state.sort = 'level-desc';
+    state.sort = 'skins-desc';
     state.currentPage = 1;
 
     elements.searchInput.value = '';
     elements.clearSearch.style.display = 'none';
     elements.regionFilter.value = '';
     elements.championFilter.value = '';
-    if (elements.rrFilter) elements.rrFilter.checked = false; // Reset checkbox
-    elements.sortSelect.value = 'level-desc';
+    if (elements.rrFilter) elements.rrFilter.checked = false;
+    if (elements.beFilter) elements.beFilter.value = '';
+    elements.sortSelect.value = 'skins-desc';
 
     applyFiltersAndRender();
 }
@@ -945,6 +958,14 @@ function setupEventListeners() {
         state.currentPage = 1; // Reset to first page on sort change
         render();
     });
+
+    // Blue Essence filter
+    if (elements.beFilter) {
+        elements.beFilter.addEventListener('change', (e) => {
+            state.filters.blueEssenceMin = parseInt(e.target.value) || 0;
+            applyFiltersAndRender();
+        });
+    }
 
     // Reset filters
     elements.resetFilters.addEventListener('click', resetFilters);

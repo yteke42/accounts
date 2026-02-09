@@ -1246,7 +1246,7 @@ body::before {
     display: block;
     text-align: center;
     padding: 8px 4px 4px;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-lg);
     font-weight: 600;
     color: var(--color-text-primary);
 }
