@@ -139,14 +139,14 @@ function formatDate(dateStr) {
 // ================================================
 
 const RARITY_CONFIG = {
-    kExalted: { label: 'Ulu', icon: '/src/images/hasmetli-exalted.png' },
-    kTranscendent: { label: 'Haşmetli', icon: '/src/images/ulu-transcendent.png' },
-    kMythic: { label: 'İhtişamlı', icon: '/src/images/ihtisamli-mythic.png' },
-    kUltimate: { label: 'Ebedi', icon: '/src/images/ebedi-ultimate.png' },
-    kLegendary: { label: 'Efsanevi', icon: '/src/images/efsanevi-legendary.png' },
-    kEpic: { label: 'Destansı', icon: '/src/images/destansi-epic.png' },
-    kNoRarity: { label: 'Normal', icon: '/src/images/normal-regular.png' },
-    kRare: { label: 'Normal', icon: '/src/images/normal-regular.png' },
+    kExalted: { label: 'Ulu', icon: 'src/images/hasmetli-exalted.png' },
+    kTranscendent: { label: 'Haşmetli', icon: 'src/images/ulu-transcendent.png' },
+    kMythic: { label: 'İhtişamlı', icon: 'src/images/ihtisamli-mythic.png' },
+    kUltimate: { label: 'Ebedi', icon: 'src/images/ebedi-ultimate.png' },
+    kLegendary: { label: 'Efsanevi', icon: 'src/images/efsanevi-legendary.png' },
+    kEpic: { label: 'Destansı', icon: 'src/images/destansi-epic.png' },
+    kNoRarity: { label: 'Normal', icon: 'src/images/normal-regular.png' },
+    kRare: { label: 'Normal', icon: 'src/images/normal-regular.png' },
 };
 
 /**
@@ -250,7 +250,7 @@ function getAllChampions() {
  */
 async function loadSkinMapping() {
     try {
-        const response = await fetch('/src/skin_mapping_with_nums_rarity.txt');
+        const response = await fetch('src/skin_mapping_with_nums_rarity.txt');
         if (!response.ok) {
             console.warn('Could not load skin mapping file');
             return;
@@ -321,7 +321,7 @@ function attachSkinHoverListeners() {
             const splashFile = state.skinMapping[skinName];
 
             if (splashFile) {
-                tooltipImg.src = `/src/splash/${splashFile}`;
+                tooltipImg.src = `src/splash/${splashFile}`;
                 // Add rarity icon before skin name
                 const rarity = state.skinRarityMapping[skinName] || 'kNoRarity';
                 tooltipName.innerHTML = getRarityIcon(rarity) + skinDisplayName;
@@ -756,9 +756,9 @@ function renderAccountRow(account) {
                     </span>
                     <span class="meta-item status ${statusClass}">● ${statusText}</span>
                     <span class="meta-item skin-count">🎨 ${account.skins.length} kostüm</span>
-                    <span class="meta-item blue-essence" title="Mavi Öz"><img src="/src/images/blue_essences_icon.png" class="essence-icon" alt="BE"> ${formatNumber(account.blue_essence || 0)}</span>
-                    <span class="meta-item orange-essence" title="Turuncu Öz"><img src="/src/images/orange_essences_icon.png" class="essence-icon" alt="OE"> ${formatNumber(account.orange_essence || 0)}</span>
-                    <span class="meta-item riot-points" title="Riot Points"><img src="/src/images/riot_points_icon.png" class="essence-icon" alt="RP"> 0</span>
+                    <span class="meta-item blue-essence" title="Mavi Öz"><img src="src/images/blue_essences_icon.png" class="essence-icon" alt="BE"> ${formatNumber(account.blue_essence || 0)}</span>
+                    <span class="meta-item orange-essence" title="Turuncu Öz"><img src="src/images/orange_essences_icon.png" class="essence-icon" alt="OE"> ${formatNumber(account.orange_essence || 0)}</span>
+                    <span class="meta-item riot-points" title="Riot Points"><img src="src/images/riot_points_icon.png" class="essence-icon" alt="RP"> 0</span>
                     <span class="meta-item last-played" title="Son Oyun Tarihi">📅 Son Oynama: ${formatDate(account.last_played)}</span>
                 </div>
                 
