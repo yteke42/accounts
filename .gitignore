@@ -17,6 +17,6 @@ npm-debug.log*
 node_modules/
 
 generate_skin_mapping_with_nums.py
-#contact.html
-#iade-politikasi.html
-#hizmet-kosullari.html
+contact.html
+iade-politikasi.html
+hizmet-kosullari.html
