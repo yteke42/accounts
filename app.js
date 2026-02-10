@@ -215,17 +215,34 @@ async function fetchRegions() {
 }
 
 /**
- * Fetches unique champions for the filter dropdown
+ * Returns the full list of all champions (hardcoded)
  */
-async function fetchChampions() {
-    const { data, error } = await supabaseClient.rpc('get_champions');
-
-    if (error) {
-        console.error('Error fetching champions:', error);
-        return [];
-    }
-
-    return data?.map(c => c.champion).filter(Boolean) || [];
+function getAllChampions() {
+    return [
+        'Aatrox', 'Ahri', 'Akali', 'Akshan', 'Alistar', 'Ambessa', 'Amumu', 'Anivia', 'Annie',
+        'Aphelios', 'Ashe', 'Aurelion Sol', 'Aurora', 'Azir', 'Bard', "Bel'veth", 'Blitzcrank',
+        'Brand', 'Braum', 'Briar', 'Caitlyn', 'Camille', 'Cassiopeia', "Cho'gath",
+        'Corki', 'Darius', 'Diana', 'Dr. Mundo', 'Draven', 'Ekko', 'Elise', 'Evelynn',
+        'Ezreal', 'Fiddlesticks', 'Fiora', 'Fizz', 'Galio', 'Gangplank', 'Garen',
+        'Gnar', 'Gragas', 'Graves', 'Gwen', 'Hecarim', 'Heimerdinger', 'Hwei',
+        'Illaoi', 'Irelia', 'Ivern', 'Janna', 'Jarvan IV', 'Jax', 'Jayce', 'Jhin',
+        'Jinx', "Kai'Sa", 'Kalista', 'Karma', 'Karthus', 'Kassadin', 'Katarina',
+        'Kayle', 'Kayn', 'Kennen', "Kha'zix", 'Kindred', 'Kled', "Kog'Maw", 'LeBlanc',
+        'Lee Sin', 'Leona', 'Lillia', 'Lissandra', 'Lucian', 'Lulu', 'Lux',
+        'Malphite', 'Malzahar', 'Maokai', 'Master Yi', 'Mel', 'Milio', 'Miss Fortune',
+        'Mordekaiser', 'Morgana', 'Naafiri', 'Nami', 'Nasus', 'Nautilus', 'Neeko',
+        'Nidalee', 'Nilah', 'Nocturne', 'Nunu', 'Olaf', 'Orianna', 'Ornn', 'Pantheon',
+        'Poppy', 'Pyke', 'Qiyana', 'Quinn', 'Rakan', 'Rammus', "Rek'Sai", 'Rell',
+        'Renata Glasc', 'Renekton', 'Rengar', 'Riven', 'Rumble', 'Ryze', 'Samira',
+        'Sejuani', 'Senna', 'Seraphine', 'Sett', 'Shaco', 'Shen', 'Shyvana', 'Singed',
+        'Sion', 'Sivir', 'Skarner', 'Smolder', 'Sona', 'Soraka', 'Swain', 'Sylas',
+        'Syndra', 'Tahm Kench', 'Taliyah', 'Talon', 'Taric', 'Teemo', 'Thresh',
+        'Tristana', 'Trundle', 'Tryndamere', 'Twisted Fate', 'Twitch', 'Udyr',
+        'Urgot', 'Varus', 'Vayne', 'Veigar', "Vel'koz", 'Vex', 'Vi', 'Viego', 'Viktor',
+        'Vladimir', 'Volibear', 'Warwick', 'Wukong', 'Xayah', 'Xerath', 'Xin Zhao',
+        'Yasuo', 'Yone', 'Yorick', 'Yuumi', 'Yunara', 'Zaahen', 'Zac', 'Zed', 'Zeri',
+        'Ziggs', 'Zilean', 'Zoe', 'Zyra'
+    ];
 }
 
 /**
@@ -354,18 +371,17 @@ async function loadData() {
 
     try {
         // Fetch all data in parallel (including skin mapping for hover preview)
-        const [accounts, skins, regions, champions] = await Promise.all([
+        const [accounts, skins, regions] = await Promise.all([
             fetchAccounts(),
             fetchSkins(),
             fetchRegions(),
-            fetchChampions(),
             loadSkinMapping() // Load in parallel, but we don't need to await its result
         ]);
 
         state.accounts = accounts;
         state.skins = skins;
         state.regions = regions;
-        state.champions = champions;
+        state.champions = getAllChampions();
 
         // Group skins by account
         groupSkinsByAccount();
@@ -1110,16 +1126,14 @@ function escapeHtml(str) {
 // ================================================
 
 /**
- * Initializes theme based on localStorage or system preference
+ * Initializes theme based on localStorage, defaults to dark
  */
 function initTheme() {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
     } else {
-        // Check system preference
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', 'dark');
     }
 }
 

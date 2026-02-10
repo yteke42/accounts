@@ -243,6 +243,12 @@ body::before {
     color: var(--color-bg-primary);
 }
 
+.itemsatis-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
 .theme-toggle {
     position: static;
     transform: none;
@@ -687,7 +693,7 @@ body::before {
 }
 
 .skin-tag:hover {
-    color: #fff;
+    color: var(--color-text-primary);
     background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(10, 203, 230, 0.3) 100%);
     border-color: var(--color-accent-tertiary);
     box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
