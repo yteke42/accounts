@@ -15,3 +15,5 @@ npm-debug.log*
 
 # Dependencies (if using npm later)
 node_modules/
+
+generate_skin_mapping_with_nums.py

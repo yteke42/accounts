@@ -1235,7 +1235,7 @@ body::before {
     visibility: visible;
 }
 
-.skin-hover-tooltip img {
+.skin-hover-tooltip>img {
     display: block;
     width: 620px;
     height: auto;
@@ -1249,6 +1249,12 @@ body::before {
     font-size: var(--font-size-lg);
     font-weight: 600;
     color: var(--color-text-primary);
+}
+
+.skin-hover-tooltip .skin-name .rarity-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
 }
 
 /* Make skin tags show pointer cursor to indicate hover action */
@@ -1295,4 +1301,118 @@ body::before {
 
 .footer-sep {
     color: var(--color-text-muted);
+}
+
+/* Rarity filter icon buttons */
+.rarity-filter-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+    justify-content: center;
+}
+
+.rarity-filter-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 6px 8px;
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    flex: 0 0 calc(50% - 3px);
+    box-sizing: border-box;
+}
+
+.rarity-filter-btn img {
+    width: 36px;
+    height: 36px;
+    transition: transform var(--transition-fast);
+}
+
+.rarity-filter-btn span {
+    font-size: 12px;
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+.rarity-filter-btn:hover {
+    border-color: var(--color-accent-primary);
+    background: rgba(168, 85, 247, 0.1);
+    transform: translateY(-1px);
+}
+
+.rarity-filter-btn:hover img {
+    transform: scale(1.15);
+}
+
+.rarity-filter-btn.active {
+    border-color: var(--color-accent-primary);
+    background: rgba(168, 85, 247, 0.2);
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+.rarity-filter-btn.active span {
+    color: var(--color-accent-primary);
+}
+
+/* Rarity icon styling */
+.rarity-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    margin-right: 2px;
+    filter: drop-shadow(0 0 2px rgba(168, 85, 247, 0.3));
+}
+
+/* Rarity-specific skin tag borders */
+.skin-tag.rarity-kExalted {
+    border-color: rgba(255, 215, 0, 0.8);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 140, 0, 0.15) 100%);
+}
+
+.skin-tag.rarity-kTranscendent {
+    border-color: rgba(255, 140, 0, 0.8);
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.15) 0%, rgba(255, 69, 0, 0.15) 100%);
+}
+
+.skin-tag.rarity-kMythic {
+    border-color: rgba(168, 85, 247, 0.8);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(128, 0, 255, 0.15) 100%);
+}
+
+.skin-tag.rarity-kUltimate {
+    border-color: rgba(255, 0, 100, 0.8);
+    background: linear-gradient(135deg, rgba(255, 0, 100, 0.15) 0%, rgba(200, 0, 200, 0.15) 100%);
+}
+
+.skin-tag.rarity-kLegendary {
+    border-color: rgba(255, 50, 50, 0.8);
+    background: linear-gradient(135deg, rgba(255, 50, 50, 0.15) 0%, rgba(255, 100, 50, 0.15) 100%);
+}
+
+.skin-tag.rarity-kEpic {
+    border-color: rgba(10, 180, 230, 0.8);
+    background: linear-gradient(135deg, rgba(10, 180, 230, 0.15) 0%, rgba(10, 203, 230, 0.15) 100%);
+}
+
+.skin-tag.rarity-kNoRarity,
+.skin-tag.rarity-kRare {
+    border-color: rgba(168, 85, 247, 0.4);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(10, 203, 230, 0.15) 100%);
+}
+
+/* Modal rarity label */
+.modal-skin-rarity {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.modal-skin-item .rarity-icon {
+    width: 16px;
+    height: 16px;
 }

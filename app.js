@@ -29,7 +29,7 @@ const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_
 // CONSTANTS
 // ================================================
 
-const ACCOUNTS_PER_PAGE = 10;
+const ACCOUNTS_PER_PAGE = 6;
 
 // ================================================
 // STATE MANAGEMENT
@@ -48,7 +48,8 @@ const state = {
         region: '',
         champion: '',
         rankedReady: false,
-        blueEssenceMin: 0
+        blueEssenceMin: 0,
+        rarity: ''
     },
 
     // Current sort
@@ -66,7 +67,10 @@ const state = {
     sharedAccountId: null,
 
     // Skin name to splash image mapping
-    skinMapping: {}
+    skinMapping: {},
+
+    // Skin name to rarity mapping
+    skinRarityMapping: {}
 };
 
 // ================================================
@@ -94,6 +98,7 @@ const elements = {
     championFilter: document.getElementById('champion-filter'),
     rrFilter: document.getElementById('rr-filter'), // New checkbox filter
     beFilter: document.getElementById('be-filter'), // Blue essence filter
+    rarityFilterIcons: document.getElementById('rarity-filter-icons'), // Rarity icon buttons
     sortSelect: document.getElementById('sort-select'),
     resetFilters: document.getElementById('reset-filters'),
     resultsCount: document.getElementById('results-count'),
@@ -127,6 +132,37 @@ function formatDate(dateStr) {
     if (!dateStr) return 'Bilinmiyor';
     const date = new Date(dateStr);
     return date.toLocaleDateString('tr-TR', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+// ================================================
+// RARITY HELPERS
+// ================================================
+
+const RARITY_CONFIG = {
+    kExalted: { label: 'Ulu', icon: '/src/images/hasmetli-exalted.png' },
+    kTranscendent: { label: 'Haşmetli', icon: '/src/images/ulu-transcendent.png' },
+    kMythic: { label: 'İhtişamlı', icon: '/src/images/ihtisamli-mythic.png' },
+    kUltimate: { label: 'Ebedi', icon: '/src/images/ebedi-ultimate.png' },
+    kLegendary: { label: 'Efsanevi', icon: '/src/images/efsanevi-legendary.png' },
+    kEpic: { label: 'Destansı', icon: '/src/images/destansi-epic.png' },
+    kNoRarity: { label: 'Normal', icon: '/src/images/normal-regular.png' },
+    kRare: { label: 'Normal', icon: '/src/images/normal-regular.png' },
+};
+
+/**
+ * Gets the rarity icon HTML for a skin
+ */
+function getRarityIcon(rarity) {
+    const config = RARITY_CONFIG[rarity] || RARITY_CONFIG.kNoRarity;
+    return `<img src="${config.icon}" class="rarity-icon" alt="${config.label}" title="${config.label}"> `;
+}
+
+/**
+ * Gets the Turkish rarity label
+ */
+function getRarityLabel(rarity) {
+    const config = RARITY_CONFIG[rarity] || RARITY_CONFIG.kNoRarity;
+    return config.label;
 }
 
 // ================================================
@@ -197,7 +233,7 @@ async function fetchChampions() {
  */
 async function loadSkinMapping() {
     try {
-        const response = await fetch('/src/skin_mapping_with_nums.txt');
+        const response = await fetch('/src/skin_mapping_with_nums_rarity.txt');
         if (!response.ok) {
             console.warn('Could not load skin mapping file');
             return;
@@ -210,12 +246,19 @@ async function loadSkinMapping() {
             const trimmed = line.trim();
             if (!trimmed) continue;
 
-            // Format: Turkish Name, English Name, filename.jpg
+            // Format: Turkish Name, English Name, filename.jpg, kRarity
             const parts = trimmed.split(',').map(p => p.trim());
-            if (parts.length >= 3) {
+            if (parts.length >= 4) {
                 const turkishName = parts[0];
                 const splashFile = parts[2];
+                const rarity = parts[3];
                 // Map Turkish name to splash file
+                state.skinMapping[turkishName.toLowerCase()] = splashFile;
+                // Map Turkish name to rarity
+                state.skinRarityMapping[turkishName.toLowerCase()] = rarity;
+            } else if (parts.length >= 3) {
+                const turkishName = parts[0];
+                const splashFile = parts[2];
                 state.skinMapping[turkishName.toLowerCase()] = splashFile;
             }
         }
@@ -252,12 +295,19 @@ function attachSkinHoverListeners() {
 
     document.querySelectorAll('.skin-tag').forEach(tag => {
         tag.addEventListener('mouseenter', (e) => {
-            const skinName = tag.textContent.trim().toLowerCase();
+            // Get only text nodes (skip img alt text)
+            const skinDisplayName = Array.from(tag.childNodes)
+                .filter(n => n.nodeType === Node.TEXT_NODE)
+                .map(n => n.textContent)
+                .join('').trim();
+            const skinName = skinDisplayName.toLowerCase();
             const splashFile = state.skinMapping[skinName];
 
             if (splashFile) {
                 tooltipImg.src = `/src/splash/${splashFile}`;
-                tooltipName.textContent = tag.textContent.trim();
+                // Add rarity icon before skin name
+                const rarity = state.skinRarityMapping[skinName] || 'kNoRarity';
+                tooltipName.innerHTML = getRarityIcon(rarity) + skinDisplayName;
                 tooltip.classList.add('visible');
 
                 // Position tooltip
@@ -407,6 +457,15 @@ function applyFilters() {
             if ((account.blue_essence || 0) < state.filters.blueEssenceMin) {
                 return false;
             }
+        }
+
+        // Rarity filter - check if account has any skin of this rarity
+        if (state.filters.rarity) {
+            const hasRarity = account.skins.some(skin => {
+                const skinRarity = state.skinRarityMapping[skin.name.toLowerCase()] || 'kNoRarity';
+                return skinRarity === state.filters.rarity;
+            });
+            if (!hasRarity) return false;
         }
 
         return true;
@@ -648,10 +707,12 @@ function renderAccountRow(account) {
     const displaySkins = account.skins.slice(0, MAX_SKINS_SHOWN);
     const remainingSkins = account.skins.length - MAX_SKINS_SHOWN;
 
-    // Render skin tags with highlighting
+    // Render skin tags with highlighting and rarity icons
     const skinTagsHtml = displaySkins.map(skin => {
         const isHighlight = searchTerm && skin.name.toLowerCase().includes(searchTerm);
-        return `<span class="skin-tag ${isHighlight ? 'highlight' : ''}">${escapeHtml(skin.name)}</span>`;
+        const skinRarity = state.skinRarityMapping[skin.name.toLowerCase()] || 'kNoRarity';
+        const rarityIcon = getRarityIcon(skinRarity);
+        return `<span class="skin-tag ${isHighlight ? 'highlight' : ''} rarity-${skinRarity}">${rarityIcon}${escapeHtml(skin.name)}</span>`;
     }).join('');
 
     // More skins button
@@ -841,12 +902,18 @@ function showSkinModal(accountId) {
 
     elements.modalTitle.textContent = `Hesap #${account.id} - Tüm Kostümler (${account.skins.length})`;
 
-    const skinsHtml = account.skins.map(skin => `
-        <div class="modal-skin-item">
-            <span class="modal-skin-name">${escapeHtml(skin.name)}</span>
+    const skinsHtml = account.skins.map(skin => {
+        const skinRarity = state.skinRarityMapping[skin.name.toLowerCase()] || 'kNoRarity';
+        const rarityIcon = getRarityIcon(skinRarity);
+        const rarityLabel = getRarityLabel(skinRarity);
+        return `
+        <div class="modal-skin-item rarity-${skinRarity}">
+            <span class="modal-skin-name">${rarityIcon}${escapeHtml(skin.name)}</span>
+            <span class="modal-skin-rarity">${rarityLabel}</span>
             <span class="modal-skin-champion">${escapeHtml(skin.champion || 'Bilinmiyor')}</span>
         </div>
-    `).join('');
+    `;
+    }).join('');
 
     elements.modalBody.innerHTML = `<div class="modal-skins-list">${skinsHtml}</div>`;
     elements.modal.style.display = 'flex';
@@ -896,7 +963,8 @@ function resetFilters() {
         region: '',
         champion: '',
         rankedReady: false,
-        blueEssenceMin: 0
+        blueEssenceMin: 0,
+        rarity: ''
     };
     state.sort = 'skins-desc';
     state.currentPage = 1;
@@ -907,6 +975,9 @@ function resetFilters() {
     elements.championFilter.value = '';
     if (elements.rrFilter) elements.rrFilter.checked = false;
     if (elements.beFilter) elements.beFilter.value = '';
+    if (elements.rarityFilterIcons) {
+        elements.rarityFilterIcons.querySelectorAll('.rarity-filter-btn').forEach(btn => btn.classList.remove('active'));
+    }
     elements.sortSelect.value = 'skins-desc';
 
     applyFiltersAndRender();
@@ -964,6 +1035,26 @@ function setupEventListeners() {
         elements.beFilter.addEventListener('change', (e) => {
             state.filters.blueEssenceMin = parseInt(e.target.value) || 0;
             applyFiltersAndRender();
+        });
+    }
+
+    // Rarity filter (icon buttons)
+    if (elements.rarityFilterIcons) {
+        elements.rarityFilterIcons.querySelectorAll('.rarity-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const rarity = btn.dataset.rarity;
+                // Toggle: if already active, deselect
+                if (state.filters.rarity === rarity) {
+                    state.filters.rarity = '';
+                    btn.classList.remove('active');
+                } else {
+                    // Remove active from all, add to clicked
+                    elements.rarityFilterIcons.querySelectorAll('.rarity-filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    state.filters.rarity = rarity;
+                }
+                applyFiltersAndRender();
+            });
         });
     }
 
