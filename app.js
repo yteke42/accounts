@@ -49,7 +49,10 @@ const state = {
         champion: '',
         rankedReady: false,
         blueEssenceMin: 0,
-        rarity: ''
+        rankedReady: false,
+        blueEssenceMin: 0,
+        rarity: '',
+        id: ''
     },
 
     // Current sort
@@ -280,7 +283,7 @@ async function loadSkinMapping() {
             }
         }
 
-        console.log(`Loaded ${Object.keys(state.skinMapping).length} skin mappings`);
+        //console.log(`Loaded ${Object.keys(state.skinMapping).length} skin mappings`);
     } catch (error) {
         console.warn('Error loading skin mapping:', error);
     }
@@ -479,6 +482,13 @@ function applyFilters() {
         // Only show accounts with skins
         if (account.skins.length === 0) {
             return false;
+        }
+
+        // ID filter
+        if (state.filters.id) {
+            if (!String(account.id).includes(state.filters.id)) {
+                return false;
+            }
         }
 
         // Region filter (matches base region, e.g. "TR" matches "TR" and "TR RR")
@@ -1028,12 +1038,15 @@ function resetFilters() {
         champion: '',
         rankedReady: false,
         blueEssenceMin: 0,
-        rarity: ''
+        rarity: '',
+        id: ''
     };
     state.sort = 'skins-desc';
     state.currentPage = 1;
 
     elements.searchInput.value = '';
+    const idInput = document.getElementById('id-search-input');
+    if (idInput) idInput.value = '';
     elements.clearSearch.style.display = 'none';
     elements.regionFilter.value = '';
     elements.championFilter.value = '';
@@ -1055,6 +1068,15 @@ function setupEventListeners() {
     elements.searchInput.addEventListener('input', (e) => {
         handleSearch(e.target.value);
     });
+
+    // ID Search
+    const idSearchInput = document.getElementById('id-search-input');
+    if (idSearchInput) {
+        idSearchInput.addEventListener('input', (e) => {
+            state.filters.id = e.target.value.trim();
+            applyFiltersAndRender();
+        });
+    }
 
     // Clear search
     elements.clearSearch.addEventListener('click', () => {

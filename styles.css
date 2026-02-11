@@ -271,7 +271,7 @@ body::before {
     padding: var(--spacing-lg);
     position: sticky;
     top: 0;
-    height: 100vh;
+    height: 150vh;
     overflow-y: auto;
 }
 
@@ -1435,4 +1435,20 @@ body::before {
         width: 100%;
         height: auto;
     }
+
+    .main {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* Hide number input spinners */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
