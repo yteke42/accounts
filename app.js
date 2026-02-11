@@ -443,8 +443,19 @@ async function loadData() {
         // Check for shared account in URL
         handleSharedAccountUrl();
 
-        // Apply initial filters and render
-        applyFiltersAndRender();
+        // Apply initial filters and sort
+        applyFilters();
+        sortAccounts();
+
+        // If we have a shared account, go to its page
+        if (state.sharedAccountId) {
+            const index = state.filteredAccounts.findIndex(a => a.id === state.sharedAccountId);
+            if (index !== -1) {
+                state.currentPage = Math.ceil((index + 1) / ACCOUNTS_PER_PAGE);
+            }
+        }
+
+        render();
 
     } catch (error) {
         console.error('Failed to load data:', error);
