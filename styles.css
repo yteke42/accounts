@@ -1439,7 +1439,18 @@ body::before {
     .main {
         padding: var(--spacing-xl) 0;
     }
+
+    .sidebar {
+        margin-top: 15px;
+    }
 }
+
+@media (max-width: 440px) {
+    .theme-toggle {
+        display: none;
+    }
+}
+
 
 /* Hide number input spinners */
 input[type=number]::-webkit-inner-spin-button,
