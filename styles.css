@@ -677,6 +677,7 @@ body::before {
     flex-wrap: wrap;
     gap: var(--spacing-xs);
     align-items: center;
+    justify-content: center;
 }
 
 .skin-tag {
