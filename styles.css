@@ -1423,3 +1423,16 @@ body::before {
     width: 16px;
     height: 16px;
 }
+
+@media (max-width: 900px) {
+    .skin-hover-tooltip {
+        max-width: 90vw;
+        width: 90vw;
+        /* Force width to be consistent */
+    }
+
+    .skin-hover-tooltip>img {
+        width: 100%;
+        height: auto;
+    }
+}

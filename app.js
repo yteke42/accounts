@@ -297,6 +297,14 @@ function initSkinHoverTooltip() {
         tooltip.className = 'skin-hover-tooltip';
         tooltip.innerHTML = '<img src="" alt="Skin Preview"><span class="skin-name"></span>';
         document.body.appendChild(tooltip);
+
+        // Hide tooltip on scroll (for mobile mostly)
+        window.addEventListener('scroll', () => {
+            if (tooltip.classList.contains('visible')) {
+                tooltip.classList.remove('visible');
+                tooltip.querySelector('img').src = '';
+            }
+        }, { passive: true });
     }
 }
 
@@ -310,48 +318,88 @@ function attachSkinHoverListeners() {
     const tooltipImg = tooltip.querySelector('img');
     const tooltipName = tooltip.querySelector('.skin-name');
 
-    document.querySelectorAll('.skin-tag').forEach(tag => {
-        tag.addEventListener('mouseenter', (e) => {
-            // Get only text nodes (skip img alt text)
-            const skinDisplayName = Array.from(tag.childNodes)
-                .filter(n => n.nodeType === Node.TEXT_NODE)
-                .map(n => n.textContent)
-                .join('').trim();
-            const skinName = skinDisplayName.toLowerCase();
-            const splashFile = state.skinMapping[skinName];
+    // Helper to show and position tooltip
+    const showTooltip = (e, tag) => {
+        // Get only text nodes (skip img alt text)
+        const skinDisplayName = Array.from(tag.childNodes)
+            .filter(n => n.nodeType === Node.TEXT_NODE)
+            .map(n => n.textContent)
+            .join('').trim();
+        const skinName = skinDisplayName.toLowerCase();
+        const splashFile = state.skinMapping[skinName];
 
-            if (splashFile) {
-                tooltipImg.src = `src/splash/${splashFile}`;
-                // Add rarity icon before skin name
-                const rarity = state.skinRarityMapping[skinName] || 'kNoRarity';
-                tooltipName.innerHTML = getRarityIcon(rarity) + skinDisplayName;
-                tooltip.classList.add('visible');
+        if (splashFile) {
+            tooltipImg.src = `src/splash/${splashFile}`;
+            // Add rarity icon before skin name
+            const rarity = state.skinRarityMapping[skinName] || 'kNoRarity';
+            tooltipName.innerHTML = getRarityIcon(rarity) + skinDisplayName;
+            tooltip.classList.add('visible');
 
-                // Position tooltip
+            // Position tooltip
+            if (window.innerWidth < 900) {
+                tooltip.style.left = '50%';
+                tooltip.style.transform = 'translateX(-50%)';
+
+                let y = e.clientY + 20;
+                const tooltipRect = tooltip.getBoundingClientRect();
+                if (y + tooltipRect.height > window.innerHeight) {
+                    y = e.clientY - tooltipRect.height - 20;
+                }
+                tooltip.style.top = `${y}px`;
+            } else {
+                tooltip.style.transform = 'none';
                 const x = e.clientX + 15;
                 const y = e.clientY + 15;
                 tooltip.style.left = `${x}px`;
                 tooltip.style.top = `${y}px`;
             }
-        });
+        }
+    };
+
+    document.querySelectorAll('.skin-tag').forEach(tag => {
+        // Handle both hover and click (for mobile re-opening)
+        tag.addEventListener('mouseenter', (e) => showTooltip(e, tag));
+        tag.addEventListener('click', (e) => showTooltip(e, tag));
 
         tag.addEventListener('mousemove', (e) => {
             if (tooltip.classList.contains('visible')) {
-                // Keep tooltip near cursor, but check screen bounds
-                let x = e.clientX + 15;
-                let y = e.clientY + 15;
+                // Check screen width
+                if (window.innerWidth < 900) {
+                    // Mobile: Center horizontally, position below cursor
+                    tooltip.style.left = '50%';
+                    tooltip.style.transform = 'translateX(-50%)';
 
-                // Adjust if tooltip would go off screen
-                const tooltipRect = tooltip.getBoundingClientRect();
-                if (x + tooltipRect.width > window.innerWidth) {
-                    x = e.clientX - tooltipRect.width - 15;
-                }
-                if (y + tooltipRect.height > window.innerHeight) {
-                    y = e.clientY - tooltipRect.height - 15;
-                }
+                    // Position below cursor/finger
+                    let y = e.clientY + 20;
 
-                tooltip.style.left = `${x}px`;
-                tooltip.style.top = `${y}px`;
+                    // Check if it goes off bottom of screen
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    if (y + tooltipRect.height > window.innerHeight) {
+                        // If it goes off bottom, position ABOVE cursor instead
+                        y = e.clientY - tooltipRect.height - 20;
+                    }
+
+                    tooltip.style.top = `${y}px`;
+                } else {
+                    // Desktop: Standard cursor following
+                    tooltip.style.transform = 'none';
+
+                    // Keep tooltip near cursor, but check screen bounds
+                    let x = e.clientX + 15;
+                    let y = e.clientY + 15;
+
+                    // Adjust if tooltip would go off screen
+                    const tooltipRect = tooltip.getBoundingClientRect();
+                    if (x + tooltipRect.width > window.innerWidth) {
+                        x = e.clientX - tooltipRect.width - 15;
+                    }
+                    if (y + tooltipRect.height > window.innerHeight) {
+                        y = e.clientY - tooltipRect.height - 15;
+                    }
+
+                    tooltip.style.left = `${x}px`;
+                    tooltip.style.top = `${y}px`;
+                }
             }
         });
 
