@@ -581,6 +581,11 @@ function sortAccounts() {
                 return ((a.blue_essence || 0) - (b.blue_essence || 0)) * multiplier;
             case 'id':
                 return (a.id - b.id) * multiplier;
+            case 'date':
+                // Handle missing dates (put them at the bottom for desc, top for asc)
+                const dateA = a.last_played ? new Date(a.last_played).getTime() : 0;
+                const dateB = b.last_played ? new Date(b.last_played).getTime() : 0;
+                return (dateA - dateB) * multiplier;
             default:
                 return 0;
         }
