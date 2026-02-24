@@ -139,11 +139,13 @@ DRX Ashe, DRX Ashe, Ashe_63.jpg, kEpic
 Kristalis Motus Ashe, Crystalis Motus Ashe, Ashe_65.jpg, kMythic
 Zebani Ashe, Infernal Ashe, Ashe_67.jpg, kEpic
 Ruh Çiçeği Ashe, Spirit Blossom Ashe, Ashe_76.jpg, kLegendary
+Havai Fişek Ashe, Firecracker Ashe, Ashe_84.jpg, kEpic
 Alevlerin Hâkimi Aurelion Sol, Ashen Lord Aurelion Sol, AurelionSol_1.jpg, kEpic
 Meka Aurelion Sol, Mecha Aurelion Sol, AurelionSol_2.jpg, kEpic
 Fırtına Ejderi Aurelion Sol, Storm Dragon Aurelion Sol, AurelionSol_11.jpg, kEpic
 Gölgedövmeli Aurelion Sol, Inkshadow Aurelion Sol, AurelionSol_21.jpg, kEpic
 Porselen Muhafız Aurelion Sol, Porcelain Protector Aurelion Sol, AurelionSol_31.jpg, kLegendary
+Ulvi Mimar Porselen Aurelion Sol, Divine Architect Porcelain Aurelion Sol, AurelionSol_38.jpg, kMythic
 Savaş Tavşanı Aurora, Battle Bunny Aurora, Aurora_1.jpg, kEpic
 Mistik Aurora, Arcana Aurora, Aurora_11.jpg, kEpic
 Galaktik Azir, Galactic Azir, Azir_1.jpg, kNoRarity
@@ -221,6 +223,7 @@ Yürek Yakan Caitlyn, Heartthrob Caitlyn, Caitlyn_39.jpg, kEpic
 DRX Caitlyn, DRX Caitlyn, Caitlyn_48.jpg, kEpic
 Arcane: Komutan Caitlyn, Arcane Commander Caitlyn, Caitlyn_50.jpg, kEpic
 Prestij Arcane: Komutan Caitlyn, Prestige Arcane Commander Caitlyn, Caitlyn_51.jpg, kMythic
+Havai Fişek Caitlyn, Firecracker Caitlyn, Caitlyn_54.jpg, kEpic
 Robotik Camille, Program Camille, Camille_1.jpg, kEpic
 Cadılar Meclisi Camille, Coven Camille, Camille_2.jpg, kEpic
 iG Camille, iG Camille, Camille_10.jpg, kEpic
@@ -228,6 +231,7 @@ Mistik Camille, Arcana Camille, Camille_11.jpg, kEpic
 Harekât Kumandanı Camille, Strike Commander Camille, Camille_21.jpg, kEpic
 Kışın Seçilmişi Camille, Winterblessed Camille, Camille_31.jpg, kEpic
 Prestij Kışın Seçilmişi Camille, Prestige Winterblessed Camille, Camille_32.jpg, kMythic
+İlkbahar Yaprakları Camille, Petals of Spring Camille, Camille_44.jpg, kEpic
 Haydut Cassiopeia, Desperada Cassiopeia, Cassiopeia_1.jpg, kNoRarity
 Siren Cassiopeia, Siren Cassiopeia, Cassiopeia_2.jpg, kNoRarity
 Mitolojik Cassiopeia, Mythic Cassiopeia, Cassiopeia_3.jpg, kNoRarity
@@ -598,6 +602,7 @@ Rekabetin Doruğu Jayce, Zenith Games Jayce, Jayce_25.jpg, kEpic
 T1 Jayce, T1 Jayce, Jayce_34.jpg, kEpic
 Arcane: Felaketzede Jayce, Arcane Survivor Jayce, Jayce_35.jpg, kLegendary
 Prestij T1 Jayce, Prestige T1 Jayce, Jayce_36.jpg, kMythic
+İlkbahar Yaprakları Jayce, Petals of Spring Jayce, Jayce_38.jpg, kEpic
 Vahşi Batılı Jhin, High Noon Jhin, Jhin_1.jpg, kEpic
 Kanlı Ay Jhin, Blood Moon Jhin, Jhin_2.jpg, kEpic
 SKT T1 Jhin, SKT T1 Jhin, Jhin_3.jpg, kEpic
@@ -697,6 +702,7 @@ Periler Meclisi Katarina, Faerie Court Katarina, Katarina_47.jpg, kEpic
 Prestij Periler Meclisi Katarina, Prestige Faerie Court Katarina, Katarina_48.jpg, kMythic
 Kurt'un Seçilmişi Katarina, Chosen of the Wolf Katarina, Katarina_59.jpg, kEpic
 Prestij Kara Gül Balosu Katarina, Prestige Masque of the Black Rose Katarina, Katarina_60.jpg, kMythic
+İlkbahar Yaprakları Katarina, Petals of Spring Katarina, Katarina_70.jpg, kEpic
 Gümüş Kayle, Silver Kayle, Kayle_1.jpg, kNoRarity
 Zümrüt Kayle, Viridian Kayle, Kayle_2.jpg, kNoRarity
 Yüceler Yücesi Kayle, Transcended Kayle, Kayle_3.jpg, kNoRarity
@@ -823,6 +829,7 @@ Gecenin Tomurcuğu Lillia, Nightbringer Lillia, Lillia_10.jpg, kEpic
 Shan Hai Parşömenleri Lillia, Shan Hai Scrolls Lillia, Lillia_19.jpg, kEpic
 Periler Meclisi Lillia, Faerie Court Lillia, Lillia_28.jpg, kEpic
 Bovling Ligi Lillia, Bowling League Lillia, Lillia_37.jpg, kEpic
+İlkbahar Yaprakları Lillia, Petals of Spring Lillia, Lillia_46.jpg, kLegendary
 Kantaşı Lissandra, Bloodstone Lissandra, Lissandra_1.jpg, kNoRarity
 Bıçaklar Kraliçesi Lissandra, Blade Queen Lissandra, Lissandra_2.jpg, kEpic
 Robotik Lissandra, Program Lissandra, Lissandra_3.jpg, kEpic
@@ -1144,6 +1151,7 @@ Hextech Poppy, Hextech Poppy, Poppy_15.jpg, kMythic
 Astronot Poppy, Astronaut Poppy, Poppy_16.jpg, kEpic
 Cadı Poppy, Bewitching Poppy, Poppy_24.jpg, kEpic
 Tatlı Pastane Poppy, Cafe Cuties Poppy, Poppy_33.jpg, kEpic
+Havai Fişek Poppy, Firecracker Poppy, Poppy_42.jpg, kEpic
 Kumların Hayaleti Pyke, Sand Wraith Pyke, Pyke_1.jpg, kEpic
 Kanlı Ay Pyke, Blood Moon Pyke, Pyke_9.jpg, kEpic
 KOD ADI: Pyke, PROJECT: Pyke, Pyke_16.jpg, kLegendary
@@ -1306,6 +1314,7 @@ Periler Meclisi Seraphine, Faerie Court Seraphine, Seraphine_24.jpg, kEpic
 Yıldız Muhafızı Seraphine, Star Guardian Seraphine, Seraphine_34.jpg, kEpic
 Savaş Güvercini Seraphine, Battle Dove Seraphine, Seraphine_43.jpg, kLegendary
 Minnoş Mantı Seraphine, Dumpling Darlings Seraphine, Seraphine_50.jpg, kEpic
+Havai Fişek Seraphine, Firecracker Seraphine, Seraphine_59.jpg, kEpic
 Meka Krallıkları Sett, Mecha Kingdoms Sett, Sett_1.jpg, kEpic
 Obsidiyen Ejder Sett, Obsidian Dragon Sett, Sett_8.jpg, kEpic
 Prestij Obsidiyen Ejder Sett, Prestige Obsidian Dragon Sett, Sett_9.jpg, kMythic
@@ -1775,6 +1784,7 @@ Prestij Gölgedövmeli Yasuo, Prestige Inkshadow Yasuo, Yasuo_57.jpg, kMythic
 Mukadder Yasuo, Foreseen Yasuo, Yasuo_68.jpg, kEpic
 Savaş Kurdu Yasuo, Battle Wolf Yasuo, Yasuo_77.jpg, kEpic
 Köken: Gecenin Kılıcı Yasuo, Genesis Nightbringer Yasuo, Yasuo_87.jpg, kMythic
+İlkbahar Yaprakları Yasuo, Petals of Spring Yasuo, Yasuo_88.jpg, kEpic
 Ruh Çiçeği Yone, Spirit Blossom Yone, Yone_1.jpg, kEpic
 Savaş Akademisi Yone, Battle Academia Yone, Yone_10.jpg, kEpic
 Şafağın Ruhu Yone, Dawnbringer Yone, Yone_19.jpg, kLegendary
@@ -1805,6 +1815,7 @@ Shiba Yuumi, Shiba Yuumi, Yuumi_39.jpg, kEpic
 Siber Kedi Yuumi, Cyber Cat Yuumi, Yuumi_49.jpg, kEpic
 Prestij Siber Kedi Yuumi, Prestige Cyber Cat Yuumi, Yuumi_50.jpg, kMythic
 Gecenin Patisi Yuumi, Nightbringer Yuumi, Yuumi_61.jpg, kEpic
+Havai Fişek Yuumi, Firecracker Yuumi, Yuumi_70.jpg, kEpic
 Yücelik Yolu Zaahen, Immortal Journey Zaahen, Zaahen_1.jpg, kEpic
 Özel Silah Zac, Special Weapon Zac, Zac_1.jpg, kNoRarity
 Havuz Partisi Zac, Pool Party Zac, Zac_2.jpg, kEpic
@@ -1843,6 +1854,7 @@ Uzay Serüveni Ziggs, Odyssey Ziggs, Ziggs_7.jpg, kEpic
 Hextech Ziggs, Hextech Ziggs, Ziggs_23.jpg, kMythic
 VIZZZiggs, BZZZiggs, Ziggs_24.jpg, kEpic
 İllüzyon Ziggs, La Ilusión Ziggs, Ziggs_33.jpg, kEpic
+Havai Fişek Ziggs, Firecracker Ziggs, Ziggs_43.jpg, kEpic
 Yaşlı Aziz Zilean, Old Saint Zilean, Zilean_1.jpg, kNoRarity
 Hippi Zilean, Groovy Zilean, Zilean_2.jpg, kNoRarity
 Shurima Çöllü Zilean, Shurima Desert Zilean, Zilean_3.jpg, kNoRarity
