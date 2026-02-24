@@ -16,7 +16,6 @@ npm-debug.log*
 # Dependencies (if using npm later)
 node_modules/
 
-generate_skin_mapping_nums_rarity.py
 contact.html
 iade-politikasi.html
 hizmet-kosullari.html
