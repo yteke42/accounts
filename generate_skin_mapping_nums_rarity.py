@@ -155,6 +155,9 @@ def generate_skin_mapping():
     splash_download_count = 0
     splash_fail_count = 0
 
+    # Cache actual cases of files in the splash directory
+    actual_splash_files = {f.name.lower(): f.name for f in splash_dir.iterdir() if f.is_file()}
+
     tr_files = sorted(tr_path.glob('*.json'))
     print(f"\nGenerating skin mappings for {len(tr_files)} champions...")
 
@@ -174,20 +177,25 @@ def generate_skin_mapping():
             en_name = en_skins.get(num)
 
             if tr_name and en_name:
-                jpg_filename = f"{champion_name}_{num}.jpg"
+                expected_jpg = f"{champion_name}_{num}.jpg"
+                jpg_lower = expected_jpg.lower()
                 rarity = rarity_lookup.get(en_name, 'kNoRarity')
 
-                # Download splash if missing
-                splash_file = splash_dir / jpg_filename
-                if not splash_file.exists():
+                # Use actual casing from disk if it exists, otherwise expected casing
+                if jpg_lower in actual_splash_files:
+                    final_jpg_name = actual_splash_files[jpg_lower]
+                else:
+                    final_jpg_name = expected_jpg
+                    splash_file = splash_dir / expected_jpg
                     url = SPLASH_URL.format(champion=champion_name, num=num)
-                    print(f"  ↓ Downloading {jpg_filename}...")
-                    if download_file(url, splash_file, jpg_filename):
+                    print(f"  ↓ Downloading {expected_jpg}...")
+                    if download_file(url, splash_file, expected_jpg):
                         splash_download_count += 1
+                        actual_splash_files[jpg_lower] = expected_jpg
                     else:
                         splash_fail_count += 1
 
-                output_lines.append(f"{tr_name}, {en_name}, {jpg_filename}, {rarity}")
+                output_lines.append(f"{tr_name}, {en_name}, {final_jpg_name}, {rarity}")
             elif tr_name:
                 print(f"  ⚠ No English name for skin num={num} ({tr_name})")
             elif en_name:

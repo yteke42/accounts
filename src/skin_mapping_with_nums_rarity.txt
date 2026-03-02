@@ -375,18 +375,18 @@ HEARTSTEEL Ezreal, HEARTSTEEL Ezreal, Ezreal_43.jpg, kEpic
 Semavipullu Ezreal, Heavenscale Ezreal, Ezreal_44.jpg, kEpic
 Prestij Semavipullu Ezreal, Prestige Heavenscale Ezreal, Ezreal_54.jpg, kMythic
 Kara Gül Balosu Ezreal, Masque of the Black Rose Ezreal, Ezreal_65.jpg, kEpic
-Hayalet Fiddlesticks, Spectral Fiddlesticks, Fiddlesticks_1.jpg, kNoRarity
-İngiliz Fiddlesticks, Union Jack Fiddlesticks, Fiddlesticks_2.jpg, kNoRarity
-Eşkıya Fiddlesticks, Bandito Fiddlesticks, Fiddlesticks_3.jpg, kNoRarity
-Balkabağı Fiddlesticks, Pumpkinhead Fiddlesticks, Fiddlesticks_4.jpg, kNoRarity
-Tahtabacak Fiddlesticks, Fiddle Me Timbers, Fiddlesticks_5.jpg, kNoRarity
-Parti Canavarı Fiddlesticks, Surprise Party Fiddlesticks, Fiddlesticks_6.jpg, kLegendary
-Acı Şeker Fiddlesticks, Dark Candy Fiddlesticks, Fiddlesticks_7.jpg, kNoRarity
+Hayalet Fiddlesticks, Spectral Fiddlesticks, FiddleSticks_1.jpg, kNoRarity
+İngiliz Fiddlesticks, Union Jack Fiddlesticks, FiddleSticks_2.jpg, kNoRarity
+Eşkıya Fiddlesticks, Bandito Fiddlesticks, FiddleSticks_3.jpg, kNoRarity
+Balkabağı Fiddlesticks, Pumpkinhead Fiddlesticks, FiddleSticks_4.jpg, kNoRarity
+Tahtabacak Fiddlesticks, Fiddle Me Timbers, FiddleSticks_5.jpg, kNoRarity
+Parti Canavarı Fiddlesticks, Surprise Party Fiddlesticks, FiddleSticks_6.jpg, kLegendary
+Acı Şeker Fiddlesticks, Dark Candy Fiddlesticks, FiddleSticks_7.jpg, kNoRarity
 Kumların Laneti Fiddlesticks, Risen Fiddlesticks, FiddleSticks_8.jpg, kEpic
-Praetorian Fiddlesticks, Praetorian Fiddlesticks, Fiddlesticks_9.jpg, kEpic
-Yıldız Düşmanı Fiddlesticks, Star Nemesis Fiddlesticks, Fiddlesticks_27.jpg, kEpic
-Kanlı Ay Fiddlesticks, Blood Moon Fiddlesticks, Fiddlesticks_37.jpg, kEpic
-Flora Fatalis Fiddlesticks, Flora Fatalis Fiddlesticks, Fiddlesticks_46.jpg, kEpic
+Praetorian Fiddlesticks, Praetorian Fiddlesticks, FiddleSticks_9.jpg, kEpic
+Yıldız Düşmanı Fiddlesticks, Star Nemesis Fiddlesticks, FiddleSticks_27.jpg, kEpic
+Kanlı Ay Fiddlesticks, Blood Moon Fiddlesticks, FiddleSticks_37.jpg, kEpic
+Flora Fatalis Fiddlesticks, Flora Fatalis Fiddlesticks, FiddleSticks_46.jpg, kEpic
 Kraliyet Muhafızı Fiora, Royal Guard Fiora, Fiora_1.jpg, kNoRarity
 Gecekuzgunu Fiora, Nightraven Fiora, Fiora_2.jpg, kNoRarity
 Müdire Fiora, Headmistress Fiora, Fiora_3.jpg, kNoRarity
