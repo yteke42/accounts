@@ -382,7 +382,7 @@ Balkabağı Fiddlesticks, Pumpkinhead Fiddlesticks, Fiddlesticks_4.jpg, kNoRarit
 Tahtabacak Fiddlesticks, Fiddle Me Timbers, Fiddlesticks_5.jpg, kNoRarity
 Parti Canavarı Fiddlesticks, Surprise Party Fiddlesticks, Fiddlesticks_6.jpg, kLegendary
 Acı Şeker Fiddlesticks, Dark Candy Fiddlesticks, Fiddlesticks_7.jpg, kNoRarity
-Kumların Laneti Fiddlesticks, Risen Fiddlesticks, Fiddlesticks_8.jpg, kEpic
+Kumların Laneti Fiddlesticks, Risen Fiddlesticks, FiddleSticks_8.jpg, kEpic
 Praetorian Fiddlesticks, Praetorian Fiddlesticks, Fiddlesticks_9.jpg, kEpic
 Yıldız Düşmanı Fiddlesticks, Star Nemesis Fiddlesticks, Fiddlesticks_27.jpg, kEpic
 Kanlı Ay Fiddlesticks, Blood Moon Fiddlesticks, Fiddlesticks_37.jpg, kEpic
