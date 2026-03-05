@@ -925,6 +925,7 @@ Miyavkai, Meowkai, Maokai_6.jpg, kEpic
 Dünyalar Yıkan Maokai, Worldbreaker Maokai, Maokai_16.jpg, kEpic
 Astronot Maokai, Astronaut Maokai, Maokai_24.jpg, kEpic
 DRX Maokai, DRX Maokai, Maokai_33.jpg, kEpic
+Yoz Petrisit Maokai, Corrupted Petricite Maokai, Maokai_35.jpg, kEpic
 Suikastçı Master Yi, Assassin Master Yi, MasterYi_1.jpg, kNoRarity
 Seçilmiş Kişi Master Yi, Chosen Master Yi, MasterYi_2.jpg, kNoRarity
 Ionia'lı Master Yi, Ionia Master Yi, MasterYi_3.jpg, kNoRarity
@@ -1423,6 +1424,7 @@ Yücelik Yolu Sona, Immortal Journey Sona, Sona_45.jpg, kEpic
 Prestij Yücelik Yolu Sona, Prestige Immortal Journey Sona, Sona_46.jpg, kMythic
 Şanlı Sona, Victorious Sona, Sona_56.jpg, kNoRarity
 Ruh Çiçeği Kaplıcası Sona, Spirit Blossom Springs Sona, Sona_66.jpg, kEpic
+Prestij Ağıt Sona, Prestige Requiem Sona, Sona_75.jpg, kMythic
 Orman Perisi Soraka, Dryad Soraka, Soraka_1.jpg, kNoRarity
 Kutsal Soraka, Divine Soraka, Soraka_2.jpg, kNoRarity
 Semavi Soraka, Celestine Soraka, Soraka_3.jpg, kNoRarity
@@ -1756,6 +1758,7 @@ Sonsuz Karanlık Xerath, Dark Star Xerath, Xerath_5.jpg, kEpic
 Mistik Xerath, Arcana Xerath, Xerath_12.jpg, kEpic
 Astronot Xerath, Astronaut Xerath, Xerath_21.jpg, kEpic
 Kristalis İndomitus Xerath, Crystalis Indomitus Xerath, Xerath_30.jpg, kMythic
+Yoz Petrisit Xerath, Corrupted Petricite Xerath, Xerath_32.jpg, kEpic
 Komando Xin Zhao, Commando Xin Zhao, XinZhao_1.jpg, kNoRarity
 İmparatorluk Askeri Xin Zhao, Imperial Xin Zhao, XinZhao_2.jpg, kNoRarity
 Gladyatör Xin Zhao, Viscero Xin Zhao, XinZhao_3.jpg, kNoRarity
