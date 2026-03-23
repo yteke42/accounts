@@ -1011,6 +1011,7 @@ Prestij Peçeli Hanım Morgana, Prestige Veiled Lady Morgana, Morgana_81.jpg, kM
 Ruh Dövüşçüsü Naafiri, Soul Fighter Naafiri, Naafiri_1.jpg, kEpic
 KOD ADI: Naafiri, PROJECT: Naafiri, Naafiri_11.jpg, kEpic
 Ekmek Arası Naafiri, Glizzy Naafiri, Naafiri_20.jpg, kEpic
+Harp Tazısı Naafiri, Warhound Naafiri, Naafiri_29.jpg, kEpic
 Japon Balığı Nami, Koi Nami, Nami_1.jpg, kNoRarity
 Irmak Ruhu Nami, River Spirit Nami, Nami_2.jpg, kNoRarity
 Manati Nami, Urf the Nami-tee, Nami_3.jpg, kNoRarity
@@ -1305,6 +1306,7 @@ Cadı Senna, Bewitching Senna, Senna_36.jpg, kEpic
 Yıldız Muhafızı Senna, Star Guardian Senna, Senna_46.jpg, kEpic
 Kışın Seçilmişi Senna, Winterblessed Senna, Senna_56.jpg, kLegendary
 Maskeli Adalet Senna, Masked Justice Senna, Senna_63.jpg, kEpic
+Harp Tazısı Senna, Warhound Senna, Senna_72.jpg, kEpic
 K/DA ALL OUT Seraphine Bağımsız, K/DA ALL OUT Seraphine Indie, Seraphine_1.jpg, kUltimate
 K/DA ALL OUT Seraphine Şöhret Yolu, K/DA ALL OUT Seraphine Rising Star, Seraphine_2.jpg, kNoRarity
 K/DA ALL OUT Seraphine Süperstar, K/DA ALL OUT Seraphine Superstar, Seraphine_3.jpg, kNoRarity
@@ -1353,7 +1355,7 @@ Zihin Harekâtçısı Shen, PsyOps Shen, Shen_22.jpg, kEpic
 Şokbıçak Shen, Shockblade Shen, Shen_40.jpg, kEpic
 Kül Muhafızı Shen, Ashen Guardian Shen, Shen_49.jpg, kMythic
 Üç Erdem Shen, Three Honors Shen, Shen_51.jpg, kNoRarity
-Demirpul Shyvana, Ironscale Shyvana, Shyvana_1.jpg, kNoRarity
+Demirpul Shyvana, Shyvana Ironscale, Shyvana_1.jpg, kNoRarity
 Kemikpençe Shyvana, Boneclaw Shyvana, Shyvana_2.jpg, kNoRarity
 Siyahalev Shyvana, Darkflame Shyvana, Shyvana_3.jpg, kNoRarity
 Buz Ejderi Shyvana, Ice Drake Shyvana, Shyvana_4.jpg, kNoRarity
@@ -1738,6 +1740,7 @@ Kadim İlah Warwick, Old God Warwick, Warwick_35.jpg, kEpic
 Kışın Seçilmişi Warwick, Winterblessed Warwick, Warwick_45.jpg, kEpic
 Prestij Kışın Seçilmişi Warwick, Prestige Winterblessed Warwick, Warwick_46.jpg, kMythic
 Arcane: Vander Warwick, Arcane Vander Warwick, Warwick_56.jpg, kEpic
+Harp Tazısı Warwick, Warhound Warwick, Warwick_58.jpg, kEpic
 Kozmik Gece Xayah, Cosmic Dusk Xayah, Xayah_1.jpg, kEpic
 Muhabbet Kuşu Xayah, Sweetheart Xayah, Xayah_2.jpg, kEpic
 SSG Xayah, SSG Xayah, Xayah_3.jpg, kEpic
