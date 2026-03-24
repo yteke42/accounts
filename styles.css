@@ -631,7 +631,7 @@ body::before {
 
 .account-meta {
     display: flex;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
     flex-wrap: wrap;
 }
 
