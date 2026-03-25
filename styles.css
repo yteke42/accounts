@@ -1088,6 +1088,14 @@ body::before {
 }
 
 @media (max-width: 600px) {
+    .row-header {
+        justify-content: center;
+    }
+
+    .share-btn {
+        display: none;
+    }
+
     .account-meta {
         width: 100%;
     }
