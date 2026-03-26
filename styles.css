@@ -1399,9 +1399,43 @@ body::before {
     background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(128, 0, 255, 0.15) 100%);
 }
 
+@property --orbit-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .skin-tag.rarity-kUltimate {
-    border-color: rgba(255, 0, 100, 0.8);
-    background: linear-gradient(135deg, rgba(255, 0, 100, 0.15) 0%, rgba(200, 0, 200, 0.15) 100%);
+    position: relative;
+    border-color: rgba(250, 200, 40, 0.2); /* very subtle fallback border */
+    background: linear-gradient(135deg, rgba(248, 244, 15, 0.15) 0%, rgba(233, 211, 17, 0.15) 100%);
+}
+
+.skin-tag.rarity-kUltimate::before {
+    content: '';
+    position: absolute;
+    inset: -1px; /* Covers the 1px border */
+    border-radius: inherit;
+    padding: 1px; /* Border width equivalent for mask carving */
+    background: conic-gradient(from var(--orbit-angle),
+        rgba(250, 200, 40, 0.6) 0%, 
+        rgba(250, 200, 40, 0.6) 60%, 
+        rgba(255, 255, 255, 0.8) 85%, 
+        #ffffff 96%, 
+        #ffffff 99%, 
+        rgba(250, 200, 40, 0.6) 100%
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    z-index: 0;
+    pointer-events: none;
+    animation: ultimate-border-orbit 2s linear infinite;
+}
+
+@keyframes ultimate-border-orbit {
+    to { --orbit-angle: 360deg; }
 }
 
 .skin-tag.rarity-kLegendary {
