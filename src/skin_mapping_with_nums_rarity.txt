@@ -181,6 +181,7 @@ Uzayın Ritmi Blitz ve Crank, Space Groove Blitz & Crank, Blitzcrank_29.jpg, kLe
 Şanlı Blitzcrank, Victorious Blitzcrank, Blitzcrank_36.jpg, kNoRarity
 Rekabetin Doruğu Blitzcrank, Zenith Games Blitzcrank, Blitzcrank_47.jpg, kEpic
 Bızzcrank, Beezcrank, Blitzcrank_56.jpg, kEpic
+Baloncuk Cümbüşü Blitzcrank, Bubble Bash Blitzcrank, Blitzcrank_66.jpg, kEpic
 Kıyamet Ateşi Brand, Apocalyptic Brand, Brand_1.jpg, kNoRarity
 Vandal Brand, Vandal Brand, Brand_2.jpg, kNoRarity
 Buz Alevi Brand, Cryocore Brand, Brand_3.jpg, kNoRarity
@@ -201,6 +202,7 @@ Suç Şehri Braum, Crime City Braum, Braum_11.jpg, kEpic
 Şeker Krizi Braum, Sugar Rush Braum, Braum_24.jpg, kEpic
 Havuz Partisi Braum, Pool Party Braum, Braum_33.jpg, kEpic
 Dönerci Braum, Grill Master Braum, Braum_42.jpg, kEpic
+Şanlı Braum, Victorious Braum, Braum_51.jpg, kNoRarity
 İblis Çetesi Briar, Street Demons Briar, Briar_1.jpg, kEpic
 Primordia'lı Briar, Primordian Briar, Briar_10.jpg, kEpic
 Savaş Akademisi Briar, Battle Academia Briar, Briar_20.jpg, kEpic
@@ -452,6 +454,7 @@ Meka Krallıkları Garen, Mecha Kingdoms Garen, Garen_22.jpg, kEpic
 Prestij Meka Krallıkları Garen, Prestige Mecha Kingdoms Garen, Garen_23.jpg, kMythic
 Savaş Akademisi Garen, Battle Academia Garen, Garen_24.jpg, kEpic
 Efsanebaz Garen, Mythmaker Garen, Garen_33.jpg, kEpic
+Penguş Garen, Pengu Garen, Garen_43.jpg, kNoRarity
 Yitmiş Yüce Kral Garen, Fallen God-King Garen, Garen_44.jpg, kMythic
 Düşmüşlerin Kehaneti Garen, Visions of the Fallen Garen, Garen_46.jpg, kEpic
 Dino Gnar, Dino Gnar, Gnar_1.jpg, kNoRarity
@@ -943,6 +946,7 @@ Prestij Ruh Çiçeği Master Yi, Prestige Spirit Blossom Master Yi, MasterYi_53.
 Gölgedövmeli Master Yi, Inkshadow Master Yi, MasterYi_89.jpg, kLegendary
 Semavipullu Master Yi, Heavenscale Master Yi, MasterYi_96.jpg, kEpic
 Şanlı Master Yi, Victorious Master Yi, MasterYi_106.jpg, kNoRarity
+KOD ADI: Komut Zinciri Yi, PROJECT: Command Line Yi, MasterYi_116.jpg, kMythic
 Arcane: Konsey Üyesi Mel, Arcane Councilor Mel, Mel_1.jpg, kEpic
 Prestij Kışın Seçilmişi Mel, Prestige Winterblessed Mel, Mel_10.jpg, kMythic
 Periler Meclisi Milio, Faerie Court Milio, Milio_1.jpg, kEpic
@@ -991,6 +995,7 @@ Vahşi Batılı Mordekaiser, High Noon Mordekaiser, Mordekaiser_32.jpg, kEpic
 Kül Mezarşövalyesi Mordekaiser, Ashen Graveknight Mordekaiser, Mordekaiser_42.jpg, kMythic
 Kadim İlah Mordekaiser, Old God Mordekaiser, Mordekaiser_44.jpg, kEpic
 Sahn-Uzal Mordekaiser, Sahn-Uzal Mordekaiser, Mordekaiser_54.jpg, kExalted
+Prestij Paragöz Mordekaiser, Prestige Money Miser Mordekaiser, Mordekaiser_55.jpg, kMythic
 Sürgün Morgana, Exiled Morgana, Morgana_1.jpg, kNoRarity
 Günahkâr Aşçı Morgana, Sinful Succulence Morgana, Morgana_2.jpg, kNoRarity
 Bıçakların Hanımı Morgana, Blade Mistress Morgana, Morgana_3.jpg, kNoRarity
@@ -1296,6 +1301,7 @@ Hextech Sejuani, Hextech Sejuani, Sejuani_15.jpg, kMythic
 KOD ADI: Sejuani, PROJECT: Sejuani, Sejuani_16.jpg, kEpic
 Kara Güneş Sejuani, Solar Eclipse Sejuani, Sejuani_26.jpg, kEpic
 Şanlı Sejuani, Victorious Sejuani, Sejuani_36.jpg, kNoRarity
+Pug Eğitmeni Sejuani, Pug Trainer Sejuani, Sejuani_48.jpg, kEpic
 True Damage Senna, True Damage Senna, Senna_1.jpg, kEpic
 Prestij True Damage Senna, Prestige True Damage Senna, Senna_9.jpg, kMythic
 Vahşi Batılı Senna, High Noon Senna, Senna_10.jpg, kLegendary
@@ -1403,6 +1409,7 @@ Efsanebaz Sivir, Mythmaker Sivir, Sivir_50.jpg, kEpic
 Prestij Efsanebaz Sivir, Prestige Mythmaker Sivir, Sivir_51.jpg, kMythic
 Vahşi Avcı Sivir, Primal Ambush Sivir, Sivir_61.jpg, kEpic
 Siveemo, Ann-Sivir-sary, Sivir_70.jpg, kMythic
+KOD ADI: Sivir, PROJECT: Sivir, Sivir_72.jpg, kEpic
 Kumbelası Skarner, Sandscourge Skarner, Skarner_1.jpg, kNoRarity
 Rünlütaş Skarner, Earthrune Skarner, Skarner_2.jpg, kNoRarity
 Savaş Makinesi Alfa Skarner, Battlecast Alpha Skarner, Skarner_3.jpg, kLegendary
@@ -1453,6 +1460,7 @@ Kristal Gül Swain, Crystal Rose Swain, Swain_12.jpg, kEpic
 Kışın Seçilmişi Swain, Winterblessed Swain, Swain_21.jpg, kEpic
 Kurt'un Seçilmişi Swain, Chosen of the Wolf Swain, Swain_32.jpg, kEpic
 Prestij Kurt'un Seçilmişi Swain, Prestige Chosen of the Wolf Swain, Swain_33.jpg, kMythic
+Çıtır Tavuk Kralı Swain, Fried Chicken King Swain, Swain_42.jpg, kEpic
 Ay İfriti Sylas, Lunar Wraith Sylas, Sylas_1.jpg, kEpic
 Freljord'lu Sylas, Freljord Sylas, Sylas_8.jpg, kEpic
 KOD ADI: Sylas, PROJECT: Sylas, Sylas_13.jpg, kEpic
@@ -1481,6 +1489,7 @@ Hazinedar Tahm Kench, Coin Emperor Tahm Kench, TahmKench_3.jpg, kEpic
 Mistik Tahm Kench, Arcana Tahm Kench, TahmKench_11.jpg, kEpic
 Vahşi Batılı Tahm Kench, High Noon Tahm Kench, TahmKench_20.jpg, kEpic
 Shan Hai Parşömenleri Tahm Kench, Shan Hai Scrolls Tahm Kench, TahmKench_30.jpg, kEpic
+Choncc Kench, Choncc Kench, TahmKench_39.jpg, kEpic
 Freljord'lu Taliyah, Freljord Taliyah, Taliyah_1.jpg, kEpic
 SSG Taliyah, SSG Taliyah, Taliyah_2.jpg, kEpic
 Havuz Partisi Taliyah, Pool Party Taliyah, Taliyah_3.jpg, kEpic
@@ -1674,6 +1683,7 @@ Bal'Koz, Bee'Koz, Velkoz_20.jpg, kEpic
 Şafağın Gölgesi Vex, Dawnbringer Vex, Vex_1.jpg, kEpic
 Arş Hükümdarı Vex, Empyrean Vex, Vex_10.jpg, kEpic
 Yıldız Gözlemcisi Vex, Stargazer Vex, Vex_20.jpg, kEpic
+Parti Canavarı Vex, Surprise Party Vex, Vex_29.jpg, kEpic
 Neon Patlaması Vi, Neon Strike Vi, Vi_1.jpg, kNoRarity
 Aynasız Vi, Officer Vi, Vi_2.jpg, kNoRarity
 Kazanova Vi, Debonair Vi, Vi_3.jpg, kNoRarity
@@ -1715,6 +1725,7 @@ Kozmik Sömürücü Vladimir, Cosmic Devourer Vladimir, Vladimir_21.jpg, kEpic
 Tatlı Pastane Vladimir, Cafe Cuties Vladimir, Vladimir_30.jpg, kEpic
 Bozulmuş Yemin Vladimir, Broken Covenant Vladimir, Vladimir_39.jpg, kEpic
 Kara Gül Balosu Vladimir, Masque of the Black Rose Vladimir, Vladimir_48.jpg, kNoRarity
+Zihin Harekâtçısı Vladimir, PsyOps Vladimir, Vladimir_49.jpg, kEpic
 Fırtınanın Efendisi Volibear, Thunder Lord Volibear, Volibear_1.jpg, kNoRarity
 Kuzey Fırtınası Volibear, Northern Storm Volibear, Volibear_2.jpg, kNoRarity
 Rünbekçisi Volibear, Runeguard Volibear, Volibear_3.jpg, kNoRarity
@@ -1829,6 +1840,7 @@ SKT T1 Zac, SKT T1 Zac, Zac_6.jpg, kEpic
 Savaş Makinesi Zac, Battlecast Zac, Zac_7.jpg, kEpic
 Arş Hükümdarı Zac, Empyrean Zac, Zac_14.jpg, kEpic
 Parçalı Peynir Sosu Zac, Zesty Dip Zac, Zac_24.jpg, kEpic
+Uzayın Ritmi Zac, Space Groove Zac, Zac_33.jpg, kEpic
 Şokbıçak Zed, Shockblade Zed, Zed_1.jpg, kNoRarity
 SKT T1 Zed, SKT T1 Zed, Zed_2.jpg, kNoRarity
 KOD ADI: Zed, PROJECT: Zed, Zed_3.jpg, kEpic

@@ -19,7 +19,7 @@ import os
 import sys
 import urllib.request
 from pathlib import Path
-
+import time
 
 # ─── URLs ───────────────────────────────────────────────────────────────────
 VERSIONS_URL = "https://ddragon.leagueoflegends.com/api/versions.json"
@@ -118,6 +118,10 @@ def get_champion_skins(json_path: Path) -> tuple[str, dict[int, str]]:
     for skin in champion_data['skins']:
         if skin['num'] == 0 or skin['name'].lower() == 'default':
             continue
+        # Skip chromas – they have a parentSkin field and share
+        # the base skin's splash art (no separate splash on ddragon)
+        if 'parentSkin' in skin:
+            continue
         skins[skin['num']] = skin['name']
 
     return champion_name, skins
@@ -181,19 +185,19 @@ def generate_skin_mapping():
                 jpg_lower = expected_jpg.lower()
                 rarity = rarity_lookup.get(en_name, 'kNoRarity')
 
-                # Use actual casing from disk if it exists, otherwise expected casing
                 if jpg_lower in actual_splash_files:
                     final_jpg_name = actual_splash_files[jpg_lower]
                 else:
-                    final_jpg_name = expected_jpg
-                    splash_file = splash_dir / expected_jpg
-                    url = SPLASH_URL.format(champion=champion_name, num=num)
-                    print(f"  ↓ Downloading {expected_jpg}...")
-                    if download_file(url, splash_file, expected_jpg):
+                    # Download the missing splash image
+                    splash_url = SPLASH_URL.format(champion=champion_name, num=num)
+                    dest_file = splash_dir / expected_jpg
+                    if download_file(splash_url, dest_file, expected_jpg):
                         splash_download_count += 1
                         actual_splash_files[jpg_lower] = expected_jpg
+                        final_jpg_name = expected_jpg
                     else:
                         splash_fail_count += 1
+                        continue  # skip this skin if download failed
 
                 output_lines.append(f"{tr_name}, {en_name}, {final_jpg_name}, {rarity}")
             elif tr_name:
