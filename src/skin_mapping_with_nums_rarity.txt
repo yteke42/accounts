@@ -3,7 +3,7 @@ Meka Aatrox, Mecha Aatrox, Aatrox_2.jpg, kEpic
 Denizlerin Avcısı Aatrox, Sea Hunter Aatrox, Aatrox_3.jpg, kNoRarity
 Kanlı Ay Aatrox, Blood Moon Aatrox, Aatrox_7.jpg, kEpic
 Prestij Kanlı Ay Aatrox, Prestige Blood Moon Aatrox, Aatrox_8.jpg, kMythic
-Şanlı Aatrox, Victorious Aatrox, Aatrox_9.jpg, kNoRarity
+Şanlı Aatrox, Victorious Aatrox, Aatrox_9.jpg, kRare
 Uzay Serüveni Aatrox, Odyssey Aatrox, Aatrox_11.jpg, kEpic
 Prestij Kanlı Ay Aatrox (2022), Prestige Blood Moon Aatrox (2022), Aatrox_20.jpg, kMythic
 Kara Ay Aatrox, Lunar Eclipse Aatrox, Aatrox_21.jpg, kEpic
@@ -55,6 +55,7 @@ Ruh Çiçeği Akali, Spirit Blossom Akali, Akali_92.jpg, kEpic
 Siber Pop Akshan, Cyber Pop Akshan, Akshan_1.jpg, kEpic
 Kristal Gül Akshan, Crystal Rose Akshan, Akshan_10.jpg, kEpic
 Üç Erdem Akshan, Three Honors Akshan, Akshan_20.jpg, kNoRarity
+Vahşi Batılı Akshan, High Noon Akshan, Akshan_21.jpg, kEpic
 Kara Alistar, Black Alistar, Alistar_1.jpg, kNoRarity
 Altın Alistar, Golden Alistar, Alistar_2.jpg, kNoRarity
 Matador Alistar, Matador Alistar, Alistar_3.jpg, kNoRarity
@@ -70,7 +71,9 @@ Yenilmez Alistar, Conqueror Alistar, Alistar_20.jpg, kRare
 Kara Buz Alistar, Blackfrost Alistar, Alistar_22.jpg, kEpic
 Ay Canavarı Alistar, Lunar Beast Alistar, Alistar_29.jpg, kEpic
 Ağaç Ata Alistar, Elderwood Alistar, Alistar_40.jpg, kEpic
+Kara Alistar Modern, Black Alistar Modern, Alistar_49.jpg, kNoRarity
 Kurt'un Seçilmişi Ambessa, Chosen of the Wolf Ambessa, Ambessa_1.jpg, kLegendary
+T1 Ambessa, T1 Ambessa, Ambessa_8.jpg, kEpic
 Firavun Amumu, Pharaoh Amumu, Amumu_1.jpg, kNoRarity
 Vancouver'lı Amumu, Vancouver Amumu, Amumu_2.jpg, kNoRarity
 Emomu, Emumu, Amumu_3.jpg, kNoRarity
@@ -114,6 +117,8 @@ Tatlı Pastane Annie, Cafe Cuties Annie, Annie_22.jpg, kEpic
 Dehşet Gecesi Annie, Fright Night Annie, Annie_31.jpg, kEpic
 Kışın Seçilmişi Annie, Winterblessed Annie, Annie_40.jpg, kEpic
 Savaş Prensesi Annie, Battle Princess Annie, Annie_50.jpg, kEpic
+Kara Kâbus Annie, Pandemonium Annie, Annie_59.jpg, kEpic
+Gotik Annie Modern, Goth Annie Modern, Annie_60.jpg, kNoRarity
 Gecenin Silahı Aphelios, Nightbringer Aphelios, Aphelios_1.jpg, kEpic
 Ay Canavarı Aphelios, Lunar Beast Aphelios, Aphelios_9.jpg, kEpic
 EDG Aphelios, EDG Aphelios, Aphelios_18.jpg, kEpic
@@ -148,6 +153,7 @@ Porselen Muhafız Aurelion Sol, Porcelain Protector Aurelion Sol, AurelionSol_31
 Ulvi Mimar Porselen Aurelion Sol, Divine Architect Porcelain Aurelion Sol, AurelionSol_38.jpg, kMythic
 Savaş Tavşanı Aurora, Battle Bunny Aurora, Aurora_1.jpg, kEpic
 Mistik Aurora, Arcana Aurora, Aurora_11.jpg, kEpic
+Bozulmuş Yemin Aurora, Broken Covenant Aurora, Aurora_20.jpg, kEpic
 Galaktik Azir, Galactic Azir, Azir_1.jpg, kNoRarity
 Ölülerin Efendisi Azir, Gravelord Azir, Azir_2.jpg, kEpic
 SKT T1 Azir, SKT T1 Azir, Azir_3.jpg, kNoRarity
@@ -178,10 +184,12 @@ Jeton Düşmanı Blitzcrank, Battle Boss Blitzcrank, Blitzcrank_11.jpg, kEpic
 Erdem Mızrağı Blitzcrank, Lancer Paragon Blitzcrank, Blitzcrank_21.jpg, kEpic
 Cadı Kazanı Blitzcrank, Witch's Brew Blitzcrank, Blitzcrank_22.jpg, kEpic
 Uzayın Ritmi Blitz ve Crank, Space Groove Blitz & Crank, Blitzcrank_29.jpg, kLegendary
-Şanlı Blitzcrank, Victorious Blitzcrank, Blitzcrank_36.jpg, kNoRarity
+Şanlı Blitzcrank, Victorious Blitzcrank, Blitzcrank_36.jpg, kRare
 Rekabetin Doruğu Blitzcrank, Zenith Games Blitzcrank, Blitzcrank_47.jpg, kEpic
 Bızzcrank, Beezcrank, Blitzcrank_56.jpg, kEpic
 Baloncuk Cümbüşü Blitzcrank, Bubble Bash Blitzcrank, Blitzcrank_66.jpg, kEpic
+Daha Paslı Blitzcrank, Rustier Blitzcrank, Blitzcrank_75.jpg, kNoRarity
+En Paslı Blitzcrank, Rustiest Blitzcrank, Blitzcrank_76.jpg, kNoRarity
 Kıyamet Ateşi Brand, Apocalyptic Brand, Brand_1.jpg, kNoRarity
 Vandal Brand, Vandal Brand, Brand_2.jpg, kNoRarity
 Buz Alevi Brand, Cryocore Brand, Brand_3.jpg, kNoRarity
@@ -194,6 +202,7 @@ Kazanova Brand, Debonair Brand, Brand_21.jpg, kEpic
 Prestij Kazanova Brand, Prestige Debonair Brand, Brand_22.jpg, kMythic
 İblis Çetesi Brand, Street Demons Brand, Brand_33.jpg, kEpic
 Arş Hükümdarı Brand, Empyrean Brand, Brand_42.jpg, kEpic
+Kavurucu Kumsal Brand, Sinful Shores Brand, Brand_53.jpg, kEpic
 Ejderkatili Braum, Dragonslayer Braum, Braum_1.jpg, kNoRarity
 Ringlerin Kaplanı Braum, El Tigre Braum, Braum_2.jpg, kEpic
 Aslan Yürekli Braum, Braum Lionheart, Braum_3.jpg, kNoRarity
@@ -294,6 +303,8 @@ Kışın Seçilmişi Diana, Winterblessed Diana, Diana_47.jpg, kLegendary
 Semavipullu Diana, Heavenscale Diana, Diana_54.jpg, kEpic
 Kozmik Karanlık Diana, Dark Cosmic Diana, Diana_64.jpg, kEpic
 Prestij Kozmik Karanlık Diana, Prestige Dark Cosmic Diana, Diana_65.jpg, kMythic
+Sonsuzluğun Sureti Diana, Eternal Aspect Diana, Diana_76.jpg, kLegendary
+Tutulma Sonsuzluğun Sureti Diana, Eclipse Eternal Aspect Diana, Diana_77.jpg, kMythic
 Ruh Söken Draven, Soul Reaver Draven, Draven_1.jpg, kEpic
 Gladyatör Draven, Gladiator Draven, Draven_2.jpg, kNoRarity
 Yorumcu Draven, Primetime Draven, Draven_3.jpg, kLegendary
@@ -332,7 +343,7 @@ Prestij Yıldız Muhafızı Ekko, Prestige Star Guardian Ekko, Ekko_46.jpg, kMyt
 Başkaldırı True Damage Ekko, Breakout True Damage Ekko, Ekko_56.jpg, kMythic
 Arcane: Son Umut Ekko, Arcane Last Stand Ekko, Ekko_57.jpg, kEpic
 Ölüm Çiçeği Elise, Death Blossom Elise, Elise_1.jpg, kNoRarity
-Şanlı Elise, Victorious Elise, Elise_2.jpg, kNoRarity
+Şanlı Elise, Victorious Elise, Elise_2.jpg, kRare
 Kanlı Ay Elise, Blood Moon Elise, Elise_3.jpg, kNoRarity
 SKT T1 Elise, SKT T1 Elise, Elise_4.jpg, kNoRarity
 Süper Galaksi Elise, Super Galaxy Elise, Elise_5.jpg, kEpic
@@ -428,6 +439,7 @@ Zebani Galio, Infernal Galio, Galio_13.jpg, kEpic
 Ejder Muhafız Galio, Dragon Guardian Galio, Galio_19.jpg, kEpic
 Efsanebaz Galio, Mythmaker Galio, Galio_28.jpg, kEpic
 Koruma Ünitesi Galio, Aegis Frame Galio, Galio_40.jpg, kLegendary
+T1 Galio, T1 Galio, Galio_47.jpg, kEpic
 Korkunç Gangplank, Spooky Gangplank, Gangplank_1.jpg, kNoRarity
 Nefer Gangplank, Minuteman Gangplank, Gangplank_2.jpg, kNoRarity
 Denizci Gangplank, Sailor Gangplank, Gangplank_3.jpg, kNoRarity
@@ -454,7 +466,6 @@ Meka Krallıkları Garen, Mecha Kingdoms Garen, Garen_22.jpg, kEpic
 Prestij Meka Krallıkları Garen, Prestige Mecha Kingdoms Garen, Garen_23.jpg, kMythic
 Savaş Akademisi Garen, Battle Academia Garen, Garen_24.jpg, kEpic
 Efsanebaz Garen, Mythmaker Garen, Garen_33.jpg, kEpic
-Penguş Garen, Pengu Garen, Garen_43.jpg, kNoRarity
 Yitmiş Yüce Kral Garen, Fallen God-King Garen, Garen_44.jpg, kMythic
 Düşmüşlerin Kehaneti Garen, Visions of the Fallen Garen, Garen_46.jpg, kEpic
 Dino Gnar, Dino Gnar, Gnar_1.jpg, kNoRarity
@@ -488,7 +499,7 @@ Riot Graves, Riot Graves, Graves_4.jpg, kNoRarity
 Havuz Partisi Graves, Pool Party Graves, Graves_5.jpg, kEpic
 Belalı Graves, Cutthroat Graves, Graves_6.jpg, kNoRarity
 Kartopu Savaşı Graves, Snow Day Graves, Graves_7.jpg, kEpic
-Şanlı Graves, Victorious Graves, Graves_14.jpg, kNoRarity
+Şanlı Graves, Victorious Graves, Graves_14.jpg, kRare
 Praetorian Graves, Praetorian Graves, Graves_18.jpg, kEpic
 Savaş Profesörü Graves, Battle Professor Graves, Graves_25.jpg, kEpic
 Işık Muhafızı Graves, Sentinel Graves, Graves_35.jpg, kLegendary
@@ -522,11 +533,13 @@ Balmerdinger, Heimerstinger, Heimerdinger_24.jpg, kEpic
 Arcane: Profesör Heimerdinger, Arcane Professor Heimerdinger, Heimerdinger_33.jpg, kEpic
 Kışın Seçilmişi Hwei, Winterblessed Hwei, Hwei_1.jpg, kEpic
 Ruh Çiçeği Hwei, Spirit Blossom Hwei, Hwei_11.jpg, kEpic
+Kavurucu Kumsal Hwei, Sinful Shores Hwei, Hwei_21.jpg, kEpic
 Hiçlik Getiren Illaoi, Void Bringer Illaoi, Illaoi_1.jpg, kEpic
 Direnişçi Illaoi, Resistance Illaoi, Illaoi_2.jpg, kEpic
 Kozmik Çağrı Illaoi, Cosmic Invoker Illaoi, Illaoi_10.jpg, kEpic
 Buzul Ay Illaoi, Snow Moon Illaoi, Illaoi_18.jpg, kEpic
 Savaş Ayısı Illaoi, Battle Bear Illaoi, Illaoi_27.jpg, kEpic
+Makarna Ustası Illaoi, Pasta Maker Illaoi, Illaoi_37.jpg, kEpic
 Gecekatili Irelia, Nightblade Irelia, Irelia_1.jpg, kNoRarity
 Havacı Irelia, Aviator Irelia, Irelia_2.jpg, kNoRarity
 Maskeli Irelia, Infiltrator Irelia, Irelia_3.jpg, kNoRarity
@@ -542,15 +555,372 @@ Prestij KOD ADI: Irelia (2022), Prestige PROJECT: Irelia (2022), Irelia_36.jpg, 
 Efsanebaz Irelia, Mythmaker Irelia, Irelia_37.jpg, kLegendary
 Porselen Irelia, Porcelain Irelia, Irelia_45.jpg, kEpic
 Ruh Çiçeği Irelia, Spirit Blossom Irelia, Irelia_55.jpg, kLegendary
+Galeta Ustası Irelia, Breadsticks Irelia, Irelia_63.jpg, kEpic
 Şeker Kral Ivern, Candy King Ivern, Ivern_1.jpg, kEpic
 Potanın Kralı Ivern, Dunkmaster Ivern, Ivern_2.jpg, kEpic
 Kadim İlah Ivern, Old God Ivern, Ivern_11.jpg, kEpic
 Astronot Ivern, Astronaut Ivern, Ivern_20.jpg, kEpic
 Ruh Çiçeği Ivern, Spirit Blossom Ivern, Ivern_30.jpg, kNoRarity
+Yağmur Çobanı Ivern, Rain Shepherd Ivern, Ivern_31.jpg, kEpic
+Hanedan Ahri, Dynasty Ahri, Jade_Ahri_1.jpg, kNoRarity
+Geceyarısı Ahri, Midnight Ahri, Jade_Ahri_2.jpg, kNoRarity
+Ruh Çiçeği Ahri, Spirit Blossom Ahri, Jade_Ahri_27.jpg, kLegendary
+K/DA ALL OUT Ahri, K/DA ALL OUT Ahri, Jade_Ahri_28.jpg, kEpic
+Ruh Çiçeği Kaplıcası Ahri, Spirit Blossom Springs Ahri, Jade_Ahri_88.jpg, kLegendary
+Mesai Sonrası Ruh Çiçeği Kaplıcası Ahri, After Hours Spirit Blossom Springs Ahri, Jade_Ahri_89.jpg, kMythic
+Klasik Ahri, Classic Ahri, Jade_Ahri_301.jpg, kNoRarity
+Kara Alistar, Black Alistar, Jade_Alistar_1.jpg, kNoRarity
+Yağmacı Alistar, Marauder Alistar, Jade_Alistar_8.jpg, kNoRarity
+Mö Mö Alistar, Moo Cow Alistar, Jade_Alistar_10.jpg, kNoRarity
+Hextech Alistar, Hextech Alistar, Jade_Alistar_19.jpg, kMythic
+Kara Buz Alistar, Blackfrost Alistar, Jade_Alistar_22.jpg, kEpic
+Ağaç Ata Alistar, Elderwood Alistar, Jade_Alistar_40.jpg, kEpic
+Kara Alistar Modern, Black Alistar Modern, Jade_Alistar_49.jpg, kNoRarity
+Klasik Alistar, Classic Alistar, Jade_Alistar_301.jpg, kNoRarity
+Emomu, Emumu, Jade_Amumu_3.jpg, kNoRarity
+Küçük Şövalye Amumu, Little Knight Amumu, Jade_Amumu_6.jpg, kNoRarity
+Zebani Amumu, Infernal Amumu, Jade_Amumu_17.jpg, kEpic
+Hextech Amumu, Hextech Amumu, Jade_Amumu_23.jpg, kMythic
+Porselen Amumu, Porcelain Amumu, Jade_Amumu_34.jpg, kEpic
+Minnoş Mantı Amumu, Dumpling Darlings Amumu, Jade_Amumu_53.jpg, kEpic
+Yırtıcı Kuş Anivia, Bird of Prey Anivia, Jade_Anivia_2.jpg, kNoRarity
+Kara Buz Anivia, Blackfrost Anivia, Jade_Anivia_5.jpg, kLegendary
+Karnaval Anivia, Festival Queen Anivia, Jade_Anivia_7.jpg, kNoRarity
+Ulvi Anka Anivia, Divine Phoenix Anivia, Jade_Anivia_27.jpg, kEpic
+Şanlı Anivia, Victorious Anivia, Jade_Anivia_46.jpg, kNoRarity
+Gotik Annie, Goth Annie, Jade_Annie_1.jpg, kNoRarity
+Buzateşi Annie, Frostfire Annie, Jade_Annie_5.jpg, kNoRarity
+Panda Annie, Panda Annie, Jade_Annie_8.jpg, kNoRarity
+Çocuk Kalbi Annie, Sweetheart Annie, Jade_Annie_9.jpg, kNoRarity
+Süper Galaksi Annie, Super Galaxy Annie, Jade_Annie_11.jpg, kEpic
+Annieemo, Annie-Versary, Jade_Annie_12.jpg, kMythic
+Tatlı Pastane Annie, Cafe Cuties Annie, Jade_Annie_22.jpg, kEpic
+Gotik Annie Modern, Goth Annie Modern, Jade_Annie_60.jpg, kNoRarity
+Klasik Annie, Classic Annie, Jade_Annie_301.jpg, kNoRarity
+Ametist Ashe, Amethyst Ashe, Jade_Ashe_5.jpg, kNoRarity
+Gönül Avcısı Ashe, Heartseeker Ashe, Jade_Ashe_6.jpg, kNoRarity
+Yağmacı Ashe, Marauder Ashe, Jade_Ashe_7.jpg, kNoRarity
+KOD ADI: Ashe, PROJECT: Ashe, Jade_Ashe_8.jpg, kLegendary
+Kozmik Kraliçe Ashe, Cosmic Queen Ashe, Jade_Ashe_11.jpg, kEpic
+Vahşi Batılı Ashe, High Noon Ashe, Jade_Ashe_17.jpg, kLegendary
+Kristalis Motus Ashe, Crystalis Motus Ashe, Jade_Ashe_65.jpg, kMythic
+Paslı Blitzcrank, Rusty Blitzcrank, Jade_Blitzcrank_1.jpg, kNoRarity
+Ben de İnsanım Blitzcrank, Definitely Not Blitzcrank, Jade_Blitzcrank_5.jpg, kNoRarity
+iBlitzcrank, iBlitzcrank, Jade_Blitzcrank_6.jpg, kEpic
+Riot Blitzcrank, Riot Blitzcrank, Jade_Blitzcrank_7.jpg, kNoRarity
+Uzayın Ritmi Blitz ve Crank, Space Groove Blitz & Crank, Jade_Blitzcrank_29.jpg, kLegendary
+Bızzcrank, Beezcrank, Jade_Blitzcrank_56.jpg, kEpic
+Daha Paslı Blitzcrank, Rustier Blitzcrank, Jade_Blitzcrank_75.jpg, kNoRarity
+En Paslı Blitzcrank, Rustiest Blitzcrank, Jade_Blitzcrank_76.jpg, kNoRarity
+Buz Alevi Brand, Cryocore Brand, Jade_Brand_3.jpg, kNoRarity
+Zombi Brand, Zombie Brand, Jade_Brand_4.jpg, kLegendary
+Kazanova Brand, Debonair Brand, Jade_Brand_21.jpg, kEpic
+Prestij Kazanova Brand, Prestige Debonair Brand, Jade_Brand_22.jpg, kMythic
+Arş Hükümdarı Brand, Empyrean Brand, Jade_Brand_42.jpg, kEpic
+Müzelik Cho'Gath, Jurassic Cho'Gath, Jade_Chogath_4.jpg, kNoRarity
+Savaş Makinesi Cho'Gath, Battlecast Prime Cho'Gath, Jade_Chogath_5.jpg, kLegendary
+Tarih Öncesi Cho'Gath, Prehistoric Cho'Gath, Jade_Chogath_6.jpg, kNoRarity
+Sonsuz Karanlık Cho'Gath, Dark Star Cho'Gath, Jade_Chogath_7.jpg, kMythic
+Okkalı Oyuncak Cho'Gath, Toy Terror Cho'Gath, Jade_Chogath_32.jpg, kEpic
+UFO Corki, UFO Corki, Jade_Corki_1.jpg, kNoRarity
+Urf Pilotu Corki, Urfrider Corki, Jade_Corki_5.jpg, kNoRarity
+Ejderkanat Corki, Dragonwing Corki, Jade_Corki_6.jpg, kNoRarity
+Arcade Corki, Arcade Corki, Jade_Corki_8.jpg, kEpic
+Kuçu Corki, Corgi Corki, Jade_Corki_18.jpg, kEpic
+Astronot Corki, Astronaut Corki, Jade_Corki_26.jpg, kEpic
+Mundo Vücut Şampiyonu, Mr. Mundoverse, Jade_DrMundo_2.jpg, kNoRarity
+İşadamı Mundo, Corporate Mundo, Jade_DrMundo_3.jpg, kLegendary
+Havuz Partisi Mundo, Pool Party Mundo, Jade_DrMundo_8.jpg, kRare
+İblis Çetesi Dr. Mundo, Street Demons Dr. Mundo, Jade_DrMundo_21.jpg, kEpic
+Klasik Dr. Mundo, Classic Dr. Mundo, Jade_DrMundo_301.jpg, kNoRarity
+Tangocu Evelynn, Tango Evelynn, Jade_Evelynn_3.jpg, kNoRarity
+K/DA Evelynn, K/DA Evelynn, Jade_Evelynn_6.jpg, kEpic
+Prestij K/DA Evelynn, Prestige K/DA Evelynn, Jade_Evelynn_7.jpg, kMythic
+Cadılar Meclisi Evelynn, Coven Evelynn, Jade_Evelynn_24.jpg, kLegendary
+Prestij K/DA Evelynn (2022), Prestige K/DA Evelynn (2022), Jade_Evelynn_31.jpg, kMythic
+Ruh Çiçeği Evelynn, Spirit Blossom Evelynn, Jade_Evelynn_32.jpg, kEpic
+Klasik Evelynn, Classic Evelynn, Jade_Evelynn_301.jpg, kNoRarity
+Buzul Ezreal, Frosted Ezreal, Jade_Ezreal_3.jpg, kNoRarity
+Pulsefire Ezreal, Pulsefire Ezreal, Jade_Ezreal_5.jpg, kUltimate
+HEARTSTEEL Ezreal, HEARTSTEEL Ezreal, Jade_Ezreal_43.jpg, kEpic
+Semavipullu Ezreal, Heavenscale Ezreal, Jade_Ezreal_44.jpg, kEpic
+Prestij Semavipullu Ezreal, Prestige Heavenscale Ezreal, Jade_Ezreal_54.jpg, kMythic
+Klasik Ezreal, Classic Ezreal, Jade_Ezreal_301.jpg, kNoRarity
+Eşkıya Fiddlesticks, Bandito Fiddlesticks, Jade_Fiddlesticks_3.jpg, kNoRarity
+Parti Canavarı Fiddlesticks, Surprise Party Fiddlesticks, Jade_Fiddlesticks_6.jpg, kLegendary
+Yıldız Düşmanı Fiddlesticks, Star Nemesis Fiddlesticks, Jade_Fiddlesticks_27.jpg, kEpic
+Flora Fatalis Fiddlesticks, Flora Fatalis Fiddlesticks, Jade_Fiddlesticks_46.jpg, kEpic
+Klasik Fiddlesticks, Classic Fiddlesticks, Jade_Fiddlesticks_301.jpg, kNoRarity
+Korkunç Gangplank, Spooky Gangplank, Jade_Gangplank_1.jpg, kNoRarity
+Özel Harekât Gangplank, Special Forces Gangplank, Jade_Gangplank_5.jpg, kNoRarity
+Kaptan Gangplank, Captain Gangplank, Jade_Gangplank_7.jpg, kNoRarity
+Dehşet Yıldızı Gangplank, Dreadnova Gangplank, Jade_Gangplank_8.jpg, kEpic
+Havuz Partisi Gangplank, Pool Party Gangplank, Jade_Gangplank_14.jpg, kEpic
+Klasik 2009 Gangplank, Classic 2009 Gangplank, Jade_Gangplank_301.jpg, kNoRarity
+Çetin Ceviz Garen, Rugged Garen, Jade_Garen_5.jpg, kNoRarity
+Yüce Kral Garen, God-King Garen, Jade_Garen_13.jpg, kLegendary
+Demacia Vice Garen, Demacia Vice Garen, Jade_Garen_14.jpg, kEpic
+Meka Krallıkları Garen, Mecha Kingdoms Garen, Jade_Garen_22.jpg, kEpic
+Prestij Meka Krallıkları Garen, Prestige Mecha Kingdoms Garen, Jade_Garen_23.jpg, kMythic
+Yitmiş Yüce Kral Garen, Fallen God-King Garen, Jade_Garen_44.jpg, kMythic
+Klasik Garen, Classic Garen, Jade_Garen_301.jpg, kNoRarity
+Zonta Gragas, Hillbilly Gragas, Jade_Gragas_2.jpg, kNoRarity
+Havalı Gragas, Gragas, Esq., Jade_Gragas_4.jpg, kNoRarity
+Fnatic Gragas, Fnatic Gragas, Jade_Gragas_8.jpg, kNoRarity
+Kutup Harekâtçısı Gragas, Arctic Ops Gragas, Jade_Gragas_10.jpg, kEpic
+Müzik Hayranı Gragas, Music Fan Gragas, Jade_Gragas_39.jpg, kEpic
+Atom Fizikçisi Heimerdinger, Hazmat Heimerdinger, Jade_Heimerdinger_5.jpg, kNoRarity
+Ejderha Terbiyecisi Heimerdinger, Dragon Trainer Heimerdinger, Jade_Heimerdinger_6.jpg, kLegendary
+Havuz Partisi Heimerdinger, Pool Party Heimerdinger, Jade_Heimerdinger_15.jpg, kEpic
+Balmerdinger, Heimerstinger, Jade_Heimerdinger_24.jpg, kEpic
+Klasik Heimerdinger, Classic Heimerdinger, Jade_Heimerdinger_301.jpg, kNoRarity
+Fırtına Janna, Tempest Janna, Jade_Janna_1.jpg, kNoRarity
+Muhabir Janna, Forecast Janna, Jade_Janna_5.jpg, kLegendary
+Kutsal Kılıç Janna, Sacred Sword Janna, Jade_Janna_8.jpg, kEpic
+Kristal Gül Janna, Crystal Rose Janna, Jade_Janna_36.jpg, kEpic
+Siber Hare Janna, Cyber Halo Janna, Jade_Janna_45.jpg, kEpic
+Prestij Siber Hare Janna, Prestige Cyber Halo Janna, Jade_Janna_46.jpg, kMythic
+Komando Jarvan IV, Commando Jarvan IV, Jade_JarvanIV_1.jpg, kNoRarity
+Savaş Ustası Jarvan IV, Warring Kingdoms Jarvan IV, Jade_JarvanIV_5.jpg, kEpic
+Fnatic Jarvan IV, Fnatic Jarvan IV, Jade_JarvanIV_6.jpg, kNoRarity
+Havuz Partisi Jarvan IV, Pool Party Jarvan IV, Jade_JarvanIV_11.jpg, kEpic
+Gecenin Kargısı Jarvan IV, Nightbringer Jarvan IV, Jade_JarvanIV_35.jpg, kEpic
+Vandal Jax, Vandal Jax, Jade_Jax_2.jpg, kNoRarity
+Oltalı Jax, Angler Jax, Jade_Jax_3.jpg, kNoRarity
+PAX Jax, PAX Jax, Jade_Jax_4.jpg, kNoRarity
+Yüce Asa Jax, God Staff Jax, Jade_Jax_13.jpg, kEpic
+Meka Krallıkları Jax, Mecha Kingdoms Jax, Jade_Jax_14.jpg, kLegendary
+Neo PAX Jax, Neo PAX Jax, Jade_Jax_32.jpg, kMythic
+Magma Ocağı Jax, Magma Chamber Jax, Jade_Jax_42.jpg, kNoRarity
+Klasik Jax, Classic Jax, Jade_Jax_301.jpg, kNoRarity
+Hayalet Karthus, Phantom Karthus, Jade_Karthus_1.jpg, kNoRarity
+Azrail Karthus, Grim Reaper Karthus, Jade_Karthus_3.jpg, kNoRarity
+Pentakill Karthus, Pentakill Karthus, Jade_Karthus_4.jpg, kNoRarity
+Işıkboğan Karthus, Karthus Lightsbane, Jade_Karthus_9.jpg, kNoRarity
+Pentakill III: Lost Chapter Karthus, Pentakill III: Lost Chapter Karthus, Jade_Karthus_17.jpg, kEpic
+Ağaç Ata Karthus, Elderwood Karthus, Jade_Karthus_26.jpg, kEpic
+Klasik Karthus, Classic Karthus, Jade_Karthus_301.jpg, kNoRarity
+Hiçlik Öncesi Kassadin, Pre-Void Kassadin, Jade_Kassadin_3.jpg, kNoRarity
+Ulak Kassadin, Harbinger Kassadin, Jade_Kassadin_4.jpg, kNoRarity
+Kozmik Bela Kassadin, Cosmic Reaver Kassadin, Jade_Kassadin_5.jpg, kEpic
+Hextech Kassadin, Hextech Kassadin, Jade_Kassadin_14.jpg, kMythic
+Şokbıçak Kassadin, Shockblade Kassadin, Jade_Kassadin_15.jpg, kEpic
+Klasik Kassadin, Classic Kassadin, Jade_Kassadin_301.jpg, kNoRarity
+Paralı Asker Katarina, Mercenary Katarina, Jade_Katarina_1.jpg, kNoRarity
+KOD ADI: Katarina, PROJECT: Katarina, Jade_Katarina_9.jpg, kEpic
+Savaş Kraliçesi Katarina, Battle Queen Katarina, Jade_Katarina_29.jpg, kLegendary
+Periler Meclisi Katarina, Faerie Court Katarina, Jade_Katarina_47.jpg, kEpic
+Prestij Periler Meclisi Katarina, Prestige Faerie Court Katarina, Jade_Katarina_48.jpg, kMythic
+Klasik Katarina, Classic Katarina, Jade_Katarina_301.jpg, kNoRarity
+Gümüş Kayle, Silver Kayle, Jade_Kayle_1.jpg, kNoRarity
+Zümrüt Kayle, Viridian Kayle, Jade_Kayle_2.jpg, kNoRarity
+Altın Kanat Kayle, Aether Wing Kayle, Jade_Kayle_6.jpg, kLegendary
+Riot Kayle, Riot Kayle, Jade_Kayle_7.jpg, kNoRarity
+Yücelik Yolu Kayle, Immortal Journey Kayle, Jade_Kayle_57.jpg, kEpic
+Gümüş Kayle Modern, Silver Kayle Modern, Jade_Kayle_88.jpg, kNoRarity
+Klasik 2012 Kayle, Classic 2012 Kayle, Jade_Kayle_302.jpg, kNoRarity
+Sevgi Kelebeği Kog'Maw, Monarch Kog'Maw, Jade_KogMaw_3.jpg, kNoRarity
+Pug'Maw, Pug'Maw, Jade_KogMaw_9.jpg, kNoRarity
+Kog'Bal, Bee'Maw, Jade_KogMaw_28.jpg, kEpic
+Cızz'Maw, Zap'Maw, Jade_KogMaw_37.jpg, kEpic
+Şanlı Kog'Maw, Victorious Kog'Maw, Jade_KogMaw_55.jpg, kNoRarity
+Muay Thai Lee Sin, Muay Thai Lee Sin, Jade_LeeSin_4.jpg, kNoRarity
+Yüce Yumruk Lee Sin, God Fist Lee Sin, Jade_LeeSin_11.jpg, kLegendary
+Gecenin Yumruğu Lee Sin, Nightbringer Lee Sin, Jade_LeeSin_27.jpg, kEpic
+Prestij Gecenin Yumruğu Lee Sin, Prestige Nightbringer Lee Sin, Jade_LeeSin_28.jpg, kMythic
+Prestij Gecenin Yumruğu Lee Sin (2022), Prestige Nightbringer Lee Sin (2022), Jade_LeeSin_39.jpg, kMythic
+Ejder Yumruk Lee Sin, Dragon Fist Lee Sin, Jade_LeeSin_40.jpg, kEpic
+Klasik Lee Sin, Classic Lee Sin, Jade_LeeSin_301.jpg, kNoRarity
+Havuz Partisi Leona, Pool Party Leona, Jade_Leona_4.jpg, kNoRarity
+Mangalcı Leona, Barbecue Leona, Jade_Leona_9.jpg, kNoRarity
+Meka Krallıkları Leona, Mecha Kingdoms Leona, Jade_Leona_12.jpg, kEpic
+Vahşi Batılı Leona, High Noon Leona, Jade_Leona_34.jpg, kLegendary
+Kristalis Motus Leona, Crystalis Motus Leona, Jade_Leona_50.jpg, kMythic
+Çılgın Lulu, Wicked Lulu, Jade_Lulu_2.jpg, kNoRarity
+Kozmik Büyücü Lulu, Cosmic Enchantress Lulu, Jade_Lulu_14.jpg, kEpic
+Canavar Terbiyecisi Lulu, Monster Tamer Lulu, Jade_Lulu_37.jpg, kEpic
+Tatlı Pastane Lulu, Cafe Cuties Lulu, Jade_Lulu_46.jpg, kEpic
+Mistik Lulu, Arcana Lulu, Jade_Lulu_55.jpg, kEpic
+Büyü Hırsızı Lux, Spellthief Lux, Jade_Lux_2.jpg, kNoRarity
+Kozmik Karanlık Lux, Dark Cosmic Lux, Jade_Lux_17.jpg, kLegendary
+Kozmik Lux, Cosmic Lux, Jade_Lux_18.jpg, kLegendary
+Periler Meclisi Lux, Faerie Court Lux, Jade_Lux_61.jpg, kEpic
+Panda Dostu Lux, Panda Pal Lux, Jade_Lux_72.jpg, kEpic
+Yonca Yeşili Malphite, Shamrock Malphite, Jade_Malphite_1.jpg, kNoRarity
+Buzdevi Malphite, Glacial Malphite, Jade_Malphite_5.jpg, kEpic
+Sonsuz Karanlık Malphite, Dark Star Malphite, Jade_Malphite_23.jpg, kEpic
+Prestij Sonsuz Karanlık Malphite, Prestige Dark Star Malphite, Jade_Malphite_24.jpg, kMythic
+Kadim İlah Malphite, Old God Malphite, Jade_Malphite_27.jpg, kEpic
+Havuz Partisi Malphite, Pool Party Malphite, Jade_Malphite_48.jpg, kEpic
+Gölge Prensi Malzahar, Shadow Prince Malzahar, Jade_Malzahar_2.jpg, kNoRarity
+Savaş Beyi Malzahar, Overlord Malzahar, Jade_Malzahar_4.jpg, kNoRarity
+Jeton Düşmanı Malzahar, Battle Boss Malzahar, Jade_Malzahar_6.jpg, kEpic
+Hextech Malzahar, Hextech Malzahar, Jade_Malzahar_7.jpg, kMythic
+Balzahar, Beezahar, Jade_Malzahar_18.jpg, kEpic
+Samuray Master Yi, Samurai Yi, Jade_MasterYi_4.jpg, kNoRarity
+KOD ADI: Yi, PROJECT: Yi, Jade_MasterYi_9.jpg, kLegendary
+Kozmik Kılıç Master Yi, Cosmic Blade Master Yi, Jade_MasterYi_10.jpg, kEpic
+Sonsuz Kılıç Yi, Eternal Sword Yi, Jade_MasterYi_11.jpg, kEpic
+Ruh Çiçeği Master Yi, Spirit Blossom Master Yi, Jade_MasterYi_52.jpg, kEpic
+Prestij Ruh Çiçeği Master Yi, Prestige Spirit Blossom Master Yi, Jade_MasterYi_53.jpg, kMythic
+Klasik Master Yi, Classic Master Yi, Jade_MasterYi_301.jpg, kNoRarity
+Suç Şehri Miss Fortune, Crime City Miss Fortune, Jade_MissFortune_6.jpg, kNoRarity
+Kaptan Fortune, Captain Fortune, Jade_MissFortune_8.jpg, kNoRarity
+Yıldız Muhafızı Miss Fortune, Star Guardian Miss Fortune, Jade_MissFortune_15.jpg, kEpic
+Savaş Tavşanı Miss Fortune, Battle Bunny Miss Fortune, Jade_MissFortune_31.jpg, kLegendary
+Amiral Savaş Tavşanı Miss Fortune, Admiral Battle Bunny Miss Fortune, Jade_MissFortune_32.jpg, kMythic
+Hayalet Gelin Morgana, Ghost Bride Morgana, Jade_Morgana_5.jpg, kNoRarity
+Cadı Morgana, Bewitching Morgana, Jade_Morgana_11.jpg, kNoRarity
+Haşmetli İmparatoriçe Morgana, Majestic Empress Morgana, Jade_Morgana_17.jpg, kEpic
+Cadılar Meclisi Morgana, Coven Morgana, Jade_Morgana_26.jpg, kLegendary
+Prestij Cadı Morgana, Prestige Bewitching Morgana, Jade_Morgana_41.jpg, kMythic
+Yıldız Düşmanı Morgana, Star Nemesis Morgana, Jade_Morgana_50.jpg, kEpic
+Klasik Morgana, Classic Morgana, Jade_Morgana_301.jpg, kNoRarity
+Firavun Nasus, Pharaoh Nasus, Jade_Nasus_2.jpg, kNoRarity
+Riot K-9 Köpeği Nasus, Riot K-9 Nasus, Jade_Nasus_4.jpg, kNoRarity
+Zebani Nasus, Infernal Nasus, Jade_Nasus_5.jpg, kLegendary
+Ay Muhafızı Nasus, Lunar Guardian Nasus, Jade_Nasus_11.jpg, kEpic
+Uzayın Ritmi Nasus, Space Groove Nasus, Jade_Nasus_25.jpg, kEpic
+Klasik Nasus, Classic Nasus, Jade_Nasus_301.jpg, kNoRarity
+Firavun Nidalee, Pharaoh Nidalee, Jade_Nidalee_4.jpg, kNoRarity
+Kelle Avcısı Nidalee, Headhunter Nidalee, Jade_Nidalee_6.jpg, kNoRarity
+Gözüpek Nidalee, Challenger Nidalee, Jade_Nidalee_8.jpg, kNoRarity
+Şafağın Mızrağı Nidalee, Dawnbringer Nidalee, Jade_Nidalee_11.jpg, kEpic
+Kedilee, Kittalee, Jade_Nidalee_39.jpg, kEpic
+Klasik Nidalee, Classic Nidalee, Jade_Nidalee_301.jpg, kNoRarity
+Nunu ve Willump Canavarı, Grungy Nunu & Willump, Jade_Nunu_3.jpg, kNoRarity
+Nunu ve Willump Bot, Nunu & Willump Bot, Jade_Nunu_4.jpg, kLegendary
+Nunu ve Balump, Nunu & Beelump, Jade_Nunu_26.jpg, kEpic
+Dehşet Gecesi Nunu ve Willump, Fright Night Nunu & Willump, Jade_Nunu_44.jpg, kEpic
+Klasik Nunu ve Willump, Classic Nunu & Willump, Jade_Nunu_301.jpg, kNoRarity
+Buzul Olaf, Glacial Olaf, Jade_Olaf_2.jpg, kNoRarity
+Brolaf, Brolaf, Jade_Olaf_3.jpg, kLegendary
+Kasap Olaf, Butcher Olaf, Jade_Olaf_6.jpg, kNoRarity
+Ejderkatili Olaf, Dragonslayer Olaf, Jade_Olaf_16.jpg, kEpic
+Lejyoner Pantheon, Myrmidon Pantheon, Jade_Pantheon_1.jpg, kNoRarity
+Ejderkatili Pantheon, Dragonslayer Pantheon, Jade_Pantheon_6.jpg, kEpic
+Fırıncı Pantheon, Baker Pantheon, Jade_Pantheon_8.jpg, kNoRarity
+Mahvolmuş Pantheon, Ruined Pantheon, Jade_Pantheon_25.jpg, kEpic
+Prestij Yükselmiş Pantheon, Prestige Ascended Pantheon, Jade_Pantheon_26.jpg, kMythic
+Kurt'un Seçilmişi Pantheon, Chosen of the Wolf Pantheon, Jade_Pantheon_38.jpg, kEpic
+Klasik Pantheon, Classic Pantheon, Jade_Pantheon_301.jpg, kNoRarity
+Kral Rammus, King Rammus, Jade_Rammus_1.jpg, kNoRarity
+Krom Rammus, Chrome Rammus, Jade_Rammus_2.jpg, kNoRarity
+Metal Zırhlı Rammus, Full Metal Rammus, Jade_Rammus_6.jpg, kNoRarity
+Astronot Rammus, Astronaut Rammus, Jade_Rammus_17.jpg, kEpic
+Durian Dostu Rammus, Durian Defender Rammus, Jade_Rammus_26.jpg, kEpic
+Baron Rammus, Baron Rammus, Jade_Rammus_35.jpg, kNoRarity
+Genç Ryze, Young Ryze, Jade_Ryze_1.jpg, kNoRarity
+Şanlı Ryze, Triumphant Ryze, Jade_Ryze_4.jpg, kNoRarity
+Zombi Ryze, Zombie Ryze, Jade_Ryze_6.jpg, kNoRarity
+Kara Kristal Ryze, Dark Crystal Ryze, Jade_Ryze_7.jpg, kNoRarity
+Aksakal Ryze, Ryze Whitebeard, Jade_Ryze_9.jpg, kNoRarity
+Mistik Ryze, Arcana Ryze, Jade_Ryze_20.jpg, kEpic
+Kanlı Ay Ryze, Blood Moon Ryze, Jade_Ryze_29.jpg, kEpic
+Klasik Ryze, Classic Ryze, Jade_Ryze_301.jpg, kNoRarity
+Deli Şapkacı Shaco, Mad Hatter Shaco, Jade_Shaco_1.jpg, kNoRarity
+Maskeli Shaco, Masked Shaco, Jade_Shaco_6.jpg, kNoRarity
+Ruh Dövüşçüsü Shaco, Soul Fighter Shaco, Jade_Shaco_43.jpg, kEpic
+Prestij Ruh Dövüşçüsü Shaco, Prestige Soul Fighter Shaco, Jade_Shaco_44.jpg, kMythic
+Kedi Kutusu Shaco, Cat-in-the-Box Shaco, Jade_Shaco_64.jpg, kLegendary
+Riot Singed, Riot Squad Singed, Jade_Singed_1.jpg, kNoRarity
+Hextech Singed, Hextech Singed, Jade_Singed_2.jpg, kNoRarity
+Güçlendirilmiş Singed, Augmented Singed, Jade_Singed_5.jpg, kNoRarity
+Kartopu Savaşı Singed, Snow Day Singed, Jade_Singed_6.jpg, kNoRarity
+Arıcı Singed, Beekeeper Singed, Jade_Singed_9.jpg, kEpic
+Astronot Singed, Astronaut Singed, Jade_Singed_19.jpg, kEpic
+Oduncu Sion, Lumberjack Sion, Jade_Sion_3.jpg, kNoRarity
+Meka Sıfır Sion, Mecha Zero Sion, Jade_Sion_5.jpg, kLegendary
+Kara Buz Sion, Blackfrost Sion, Jade_Sion_22.jpg, kEpic
+Vahşi Batılı Sion, High Noon Sion, Jade_Sion_30.jpg, kEpic
+Klasik Sion, Classic Sion, Jade_Sion_301.jpg, kNoRarity
+Haydut Sivir, Bandit Sivir, Jade_Sivir_4.jpg, kNoRarity
+PAX Sivir, PAX Sivir, Jade_Sivir_5.jpg, kNoRarity
+Neo PAX Sivir, Neo PAX Sivir, Jade_Sivir_9.jpg, kMythic
+Ayın Elemanı Sivir, Pizza Delivery Sivir, Jade_Sivir_10.jpg, kEpic
+Tatlı Pastane Sivir, Cafe Cuties Sivir, Jade_Sivir_34.jpg, kEpic
+Kara Güneş Sivir, Solar Eclipse Sivir, Jade_Sivir_43.jpg, kLegendary
+Rünlütaş Skarner, Earthrune Skarner, Jade_Skarner_2.jpg, kNoRarity
+Savaş Makinesi Alfa Skarner, Battlecast Alpha Skarner, Jade_Skarner_3.jpg, kLegendary
+Kumların Muhafızı Skarner, Guardian of the Sands Skarner, Jade_Skarner_4.jpg, kEpic
+Kozmik İğne Skarner, Cosmic Sting Skarner, Jade_Skarner_5.jpg, kEpic
+Klasik Skarner, Classic Skarner, Jade_Skarner_301.jpg, kNoRarity
+Müziğin Kalbi Sona, Sweetheart Sona, Jade_Sona_7.jpg, kNoRarity
+Yıldız Muhafızı Sona, Star Guardian Sona, Jade_Sona_35.jpg, kEpic
+Yücelik Yolu Sona, Immortal Journey Sona, Jade_Sona_45.jpg, kEpic
+Prestij Yücelik Yolu Sona, Prestige Immortal Journey Sona, Jade_Sona_46.jpg, kMythic
+Ruh Çiçeği Kaplıcası Sona, Spirit Blossom Springs Sona, Jade_Sona_66.jpg, kEpic
+Muz Güzeli Soraka, Order of the Banana Soraka, Jade_Soraka_5.jpg, kNoRarity
+Yıldız Muhafızı Soraka, Star Guardian Soraka, Jade_Soraka_7.jpg, kEpic
+Prestij Yıldız Muhafızı Soraka, Prestige Star Guardian Soraka, Jade_Soraka_17.jpg, kMythic
+Yücelik Yolu Soraka, Immortal Journey Soraka, Jade_Soraka_37.jpg, kLegendary
+Periler Meclisi Soraka, Faerie Court Soraka, Jade_Soraka_44.jpg, kEpic
+Klasik Soraka, Classic Soraka, Jade_Soraka_301.jpg, kNoRarity
+Beşinci Çağ Fedaisi Taric, Armor of the Fifth Age Taric, Jade_Taric_2.jpg, kNoRarity
+Kantaşı Taric, Bloodstone Taric, Jade_Taric_3.jpg, kNoRarity
+Havuz Partisi Taric, Pool Party Taric, Jade_Taric_4.jpg, kEpic
+Işık Kalkanı Taric, Taric Luminshield, Jade_Taric_9.jpg, kEpic
+Uzayın Ritmi Taric, Space Groove Taric, Jade_Taric_18.jpg, kEpic
+Klasik Taric, Classic Taric, Jade_Taric_301.jpg, kNoRarity
+Astronot Teemo, Astronaut Teemo, Jade_Teemo_4.jpg, kEpic
+Pofuduk Teemo, Cottontail Teemo, Jade_Teemo_5.jpg, kNoRarity
+Omega Timi Teemo, Omega Squad Teemo, Jade_Teemo_8.jpg, kLegendary
+Minik Şeytan Teemo, Little Devil Teemo, Jade_Teemo_14.jpg, kEpic
+Vızzmo, Beemo, Jade_Teemo_18.jpg, kEpic
+Ruh Çiçeği Teemo, Spirit Blossom Teemo, Jade_Teemo_25.jpg, kEpic
+Prestij Ruh Çiçeği Teemo, Prestige Spirit Blossom Teemo, Jade_Teemo_27.jpg, kMythic
+Klasik Teemo, Classic Teemo, Jade_Teemo_301.jpg, kNoRarity
+Roket Kız Tristana, Rocket Girl Tristana, Jade_Tristana_6.jpg, kNoRarity
+Ejderha Terbiyecisi Tristana, Dragon Trainer Tristana, Jade_Tristana_10.jpg, kLegendary
+Minik Şeytan Tristana, Little Demon Tristana, Jade_Tristana_24.jpg, kEpic
+Hextech Tristana, Hextech Tristana, Jade_Tristana_40.jpg, kMythic
+Ruh Çiçeği Tristana, Spirit Blossom Tristana, Jade_Tristana_51.jpg, kEpic
+Klasik Tristana, Classic Tristana, Jade_Tristana_301.jpg, kNoRarity
+Kral Tryndamere, King Tryndamere, Jade_Tryndamere_2.jpg, kNoRarity
+İbliskılıç Tryndamere, Demonblade Tryndamere, Jade_Tryndamere_4.jpg, kLegendary
+Kanlı Ay Tryndamere, Blood Moon Tryndamere, Jade_Tryndamere_10.jpg, kEpic
+Gecenin Hiddeti Tryndamere, Nightbringer Tryndamere, Jade_Tryndamere_18.jpg, kEpic
+Şanlı Tryndamere, Victorious Tryndamere, Jade_Tryndamere_27.jpg, kNoRarity
+PAX Twisted Fate, PAX Twisted Fate, Jade_TwistedFate_1.jpg, kNoRarity
+Tangocu Twisted Fate, Tango Twisted Fate, Jade_TwistedFate_4.jpg, kNoRarity
+Pulsefire Twisted Fate, Pulsefire Twisted Fate, Jade_TwistedFate_11.jpg, kEpic
+Suç Şehri Kâbusu Twisted Fate, Crime City Nightmare Twisted Fate, Jade_TwistedFate_25.jpg, kEpic
+Uzayın Ritmi Twisted Fate, Space Groove Twisted Fate, Jade_TwistedFate_36.jpg, kEpic
+Klasik Twisted Fate, Classic Twisted Fate, Jade_TwistedFate_301.jpg, kNoRarity
+Orta Çağlı Twitch, Medieval Twitch, Jade_Twitch_3.jpg, kNoRarity
+Suç Şehri Twitch, Crime City Twitch, Jade_Twitch_4.jpg, kNoRarity
+Gölge Adım Twitch, Twitch Shadowfoot, Jade_Twitch_27.jpg, kEpic
+Ejderkatili Twitch, Dragonslayer Twitch, Jade_Twitch_36.jpg, kEpic
+Vahşi Batılı Twitch, High Noon Twitch, Jade_Twitch_45.jpg, kEpic
+Klasik Twitch, Classic Twitch, Jade_Twitch_301.jpg, kNoRarity
+Gönül Avcısı Vayne, Heartseeker Vayne, Jade_Vayne_4.jpg, kNoRarity
+Işık Oku Vayne, Arclight Vayne, Jade_Vayne_6.jpg, kNoRarity
+Ruhsömüren Vayne, Soulstealer Vayne, Jade_Vayne_10.jpg, kMythic
+KOD ADI: Vayne, PROJECT: Vayne, Jade_Vayne_11.jpg, kLegendary
+Şafağın Arbaleti Vayne, Dawnbringer Vayne, Jade_Vayne_44.jpg, kEpic
+Cüce Cin Veigar, Leprechaun Veigar, Jade_Veigar_4.jpg, kNoRarity
+Bölüm Sonu Canavarı Veigar, Final Boss Veigar, Jade_Veigar_8.jpg, kLegendary
+Hiddetboynuz Cosplay'li Veigar, Furyhorn Cosplay Veigar, Jade_Veigar_23.jpg, kEpic
+Astronot Veigar, Astronaut Veigar, Jade_Veigar_32.jpg, kEpic
+Manati Urf, Urf the Manatee, Jade_Warwick_2.jpg, kNoRarity
+Ateşdiş Warwick, Firefang Warwick, Jade_Warwick_6.jpg, kNoRarity
+Urfwick, Urfwick, Jade_Warwick_9.jpg, kNoRarity
+Ay Muhafızı Warwick, Lunar Guardian Warwick, Jade_Warwick_10.jpg, kEpic
+KOD ADI: Warwick, PROJECT: Warwick, Jade_Warwick_16.jpg, kEpic
+Kadim İlah Warwick, Old God Warwick, Jade_Warwick_35.jpg, kEpic
+Klasik Warwick, Classic Warwick, Jade_Warwick_301.jpg, kNoRarity
+Yeşim Ejder Wukong, Jade Dragon Wukong, Jade_Wukong_3.jpg, kNoRarity
+Işık Fırtınası Wukong, Radiant Wukong, Jade_Wukong_5.jpg, kEpic
+Savaş Akademisi Wukong, Battle Academia Wukong, Jade_Wukong_7.jpg, kEpic
+Meka Krallıkları Wukong, Mecha Kingdoms Wukong, Jade_Wukong_26.jpg, kEpic
+Kanlı Ay Zilean, Blood Moon Zilean, Jade_Zilean_5.jpg, kNoRarity
+Şeker Krizi Zilean, Sugar Rush Zilean, Jade_Zilean_6.jpg, kEpic
+Kışın Seçilmişi Zilean, Winterblessed Zilean, Jade_Zilean_14.jpg, kEpic
+Mistik Zilean, Arcana Zilean, Jade_Zilean_24.jpg, kEpic
 Fırtına Janna, Tempest Janna, Janna_1.jpg, kNoRarity
 Hextech Janna, Hextech Janna, Janna_2.jpg, kNoRarity
 Buz Kraliçesi Janna, Frost Queen Janna, Janna_3.jpg, kNoRarity
-Şanlı Janna, Victorious Janna, Janna_4.jpg, kNoRarity
+Şanlı Janna, Victorious Janna, Janna_4.jpg, kRare
 Muhabir Janna, Forecast Janna, Janna_5.jpg, kLegendary
 Fnatic Janna, Fnatic Janna, Janna_6.jpg, kNoRarity
 Yıldız Muhafızı Janna, Star Guardian Janna, Janna_7.jpg, kEpic
@@ -566,7 +936,7 @@ Semavipullu Janna, Heavenscale Janna, Janna_56.jpg, kEpic
 Komando Jarvan IV, Commando Jarvan IV, JarvanIV_1.jpg, kNoRarity
 Ejderkatili Jarvan IV, Dragonslayer Jarvan IV, JarvanIV_2.jpg, kNoRarity
 Karazırh Jarvan IV, Darkforge Jarvan IV, JarvanIV_3.jpg, kNoRarity
-Şanlı Jarvan IV, Victorious Jarvan IV, JarvanIV_4.jpg, kNoRarity
+Şanlı Jarvan IV, Victorious Jarvan IV, JarvanIV_4.jpg, kRare
 Savaş Ustası Jarvan IV, Warring Kingdoms Jarvan IV, JarvanIV_5.jpg, kEpic
 Fnatic Jarvan IV, Fnatic Jarvan IV, JarvanIV_6.jpg, kNoRarity
 Sonsuz Karanlık Jarvan IV, Dark Star Jarvan IV, JarvanIV_7.jpg, kEpic
@@ -594,6 +964,7 @@ Prestij Yenilmez Jax, Prestige Conqueror Jax, Jax_21.jpg, kMythic
 Arş Hükümdarı Jax, Empyrean Jax, Jax_22.jpg, kEpic
 Neo PAX Jax, Neo PAX Jax, Jax_32.jpg, kMythic
 KOD ADI: Jax, PROJECT: Jax, Jax_33.jpg, kEpic
+Prestij Magma Ocağı Jax, Prestige Magma Chamber Jax, Jax_42.jpg, kMythic
 Metal Zırhlı Jayce, Full Metal Jayce, Jayce_1.jpg, kEpic
 Kazanova Jayce, Debonair Jayce, Jayce_2.jpg, kNoRarity
 Karanlık Güç Jayce, Forsaken Jayce, Jayce_3.jpg, kEpic
@@ -618,6 +989,7 @@ Ruh Dövüşçüsü Jhin, Soul Fighter Jhin, Jhin_36.jpg, kEpic
 Kozmik Karanlık Yok Oluş Jhin, Dark Cosmic Erasure Jhin, Jhin_37.jpg, kMythic
 Efsanebaz Jhin, Mythmaker Jhin, Jhin_47.jpg, kLegendary
 Mistik Jhin, Arcana Jhin, Jhin_55.jpg, kEpic
+Bozulmuş Yemin Jhin, Broken Covenant Jhin, Jhin_64.jpg, kEpic
 Suç Şehri Jinx, Crime City Jinx, Jinx_1.jpg, kNoRarity
 Havai Fişek Jinx, Firecracker Jinx, Jinx_2.jpg, kEpic
 Zombi Avcısı Jinx, Zombie Slayer Jinx, Jinx_3.jpg, kEpic
@@ -723,6 +1095,7 @@ Yücelik Yolu Kayle, Immortal Journey Kayle, Kayle_57.jpg, kEpic
 Arş Hükümdarı Kayle, Empyrean Kayle, Kayle_66.jpg, kEpic
 Prestij Arş Hükümdarı Kayle, Prestige Empyrean Kayle, Kayle_67.jpg, kMythic
 Ruh Çiçeği Kayle, Spirit Blossom Kayle, Kayle_78.jpg, kEpic
+Kurucu Gümüş Kayle, Founders Silver Kayle, Kayle_88.jpg, kNoRarity
 Ruh Avcısı Kayn, Soulhunter Kayn, Kayn_1.jpg, kEpic
 Uzay Serüveni Kayn, Odyssey Kayn, Kayn_2.jpg, kLegendary
 Gecenin Tırpanı Kayn, Nightbringer Kayn, Kayn_8.jpg, kEpic
@@ -756,6 +1129,7 @@ Kuçu ile Kuzu Kindred, Woof and Lamb Kindred, Kindred_22.jpg, kEpic
 DRX Kindred, DRX Kindred, Kindred_23.jpg, kEpic
 Prestij Porselen Kindred, Prestige Porcelain Kindred, Kindred_33.jpg, kMythic
 Kurt'un Seçilmişi Kindred, Chosen of the Wolf Kindred, Kindred_34.jpg, kEpic
+Kara Kâbus Kindred, Pandemonium Kindred, Kindred_45.jpg, kEpic
 Sör Kled, Sir Kled, Kled_1.jpg, kNoRarity
 Kont Kledula, Count Kledula, Kled_2.jpg, kEpic
 Yağmacı Kled, Marauder Kled, Kled_9.jpg, kEpic
@@ -781,7 +1155,7 @@ HEARTSTEEL K'Sante, HEARTSTEEL K'Sante, KSante_8.jpg, kEpic
 Günahkâr LeBlanc, Wicked LeBlanc, Leblanc_1.jpg, kNoRarity
 Prestijli LeBlanc, Prestigious LeBlanc, Leblanc_2.jpg, kNoRarity
 Aşk Avcısı LeBlanc, Mistletoe LeBlanc, Leblanc_3.jpg, kNoRarity
-Kara Kuzgun LeBlanc, Ravenborn LeBlanc, Leblanc_4.jpg, kNoRarity
+Kara Kuzgun LeBlanc, Ravenborn LeBlanc, Leblanc_4.jpg, kEpic
 Ağaç Ata LeBlanc, Elderwood LeBlanc, Leblanc_5.jpg, kEpic
 Robotik LeBlanc, Program LeBlanc, Leblanc_12.jpg, kEpic
 iG LeBlanc, iG LeBlanc, Leblanc_19.jpg, kEpic
@@ -791,6 +1165,7 @@ Prestij Cadılar Meclisi LeBlanc, Prestige Coven LeBlanc, Leblanc_33.jpg, kMythi
 Kazanova LeBlanc, Debonair LeBlanc, Leblanc_35.jpg, kEpic
 Cadı LeBlanc, Bewitching LeBlanc, Leblanc_45.jpg, kEpic
 Yükselen Efsane LeBlanc, Risen Legend LeBlanc, Leblanc_55.jpg, kMythic
+Prestij Kavurucu Kumsal LeBlanc, Prestige Sinful Shores LeBlanc, Leblanc_59.jpg, kMythic
 Geleneksel Lee Sin, Traditional Lee Sin, LeeSin_1.jpg, kNoRarity
 Tapınak Fedaisi Lee Sin, Acolyte Lee Sin, LeeSin_2.jpg, kNoRarity
 Ejder Yumruk Lee Sin, Dragon Fist Lee Sin, LeeSin_3.jpg, kEpic
@@ -827,6 +1202,7 @@ Vahşi Batılı Leona, High Noon Leona, Leona_34.jpg, kLegendary
 Kristalis Motus Leona, Crystalis Motus Leona, Leona_50.jpg, kMythic
 Savaş Aslanı Leona, Battle Lion Leona, Leona_52.jpg, kEpic
 Prestij Savaş Aslanı Leona, Prestige Battle Lion Leona, Leona_53.jpg, kMythic
+Sonsuzluğun Sureti Leona, Eternal Aspect Leona, Leona_64.jpg, kLegendary
 Ruh Çiçeği Lillia, Spirit Blossom Lillia, Lillia_1.jpg, kEpic
 Gecenin Tomurcuğu Lillia, Nightbringer Lillia, Lillia_10.jpg, kEpic
 Shan Hai Parşömenleri Lillia, Shan Hai Scrolls Lillia, Lillia_19.jpg, kEpic
@@ -842,6 +1218,7 @@ Porselen Lissandra, Porcelain Lissandra, Lissandra_23.jpg, kEpic
 Prestij Porselen Lissandra, Prestige Porcelain Lissandra, Lissandra_33.jpg, kMythic
 Uzayın Ritmi Lissandra, Space Groove Lissandra, Lissandra_34.jpg, kEpic
 Flora Fatalis Lissandra, Flora Fatalis Lissandra, Lissandra_43.jpg, kEpic
+Vahşi Batılı Locke, High Noon Locke, Locke_1.jpg, kEpic
 Silahşor Lucian, Hired Gun Lucian, Lucian_1.jpg, kNoRarity
 Şimşek Santrfor Lucian, Striker Lucian, Lucian_2.jpg, kNoRarity
 KOD ADI: Lucian, PROJECT: Lucian, Lucian_6.jpg, kEpic
@@ -924,7 +1301,7 @@ Neşeli Maokai, Festive Maokai, Maokai_3.jpg, kNoRarity
 Lanetli Maokai, Haunted Maokai, Maokai_4.jpg, kNoRarity
 Kaleci Maokai, Goalkeeper Maokai, Maokai_5.jpg, kNoRarity
 Miyavkai, Meowkai, Maokai_6.jpg, kEpic
-Şanlı Maokai, Victorious Maokai, Maokai_7.jpg, kNoRarity
+Şanlı Maokai, Victorious Maokai, Maokai_7.jpg, kRare
 Dünyalar Yıkan Maokai, Worldbreaker Maokai, Maokai_16.jpg, kEpic
 Astronot Maokai, Astronaut Maokai, Maokai_24.jpg, kEpic
 DRX Maokai, DRX Maokai, Maokai_33.jpg, kEpic
@@ -974,6 +1351,7 @@ Bozulmuş Yemin Miss Fortune, Broken Covenant Miss Fortune, MissFortune_40.jpg, 
 Prestij Bozulmuş Yemin Miss Fortune, Prestige Broken Covenant Miss Fortune, MissFortune_41.jpg, kMythic
 Porselen Miss Fortune, Porcelain Miss Fortune, MissFortune_50.jpg, kEpic
 Savaş Kraliçesi Miss Fortune, Battle Queen Miss Fortune, MissFortune_60.jpg, kEpic
+MVP T1 Miss Fortune, MVP T1 Miss Fortune, MissFortune_69.jpg, kMythic
 Volkanik Wukong, Volcanic Wukong, MonkeyKing_1.jpg, kNoRarity
 General Wukong, General Wukong, MonkeyKing_2.jpg, kNoRarity
 Yeşim Ejder Wukong, Jade Dragon Wukong, MonkeyKing_3.jpg, kNoRarity
@@ -1001,7 +1379,7 @@ Günahkâr Aşçı Morgana, Sinful Succulence Morgana, Morgana_2.jpg, kNoRarity
 Bıçakların Hanımı Morgana, Blade Mistress Morgana, Morgana_3.jpg, kNoRarity
 Karadiken Morgana, Blackthorn Morgana, Morgana_4.jpg, kEpic
 Hayalet Gelin Morgana, Ghost Bride Morgana, Morgana_5.jpg, kNoRarity
-Şanlı Morgana, Victorious Morgana, Morgana_6.jpg, kNoRarity
+Şanlı Morgana, Victorious Morgana, Morgana_6.jpg, kRare
 Ay İfriti Morgana, Lunar Wraith Morgana, Morgana_10.jpg, kNoRarity
 Cadı Morgana, Bewitching Morgana, Morgana_11.jpg, kNoRarity
 Haşmetli İmparatoriçe Morgana, Majestic Empress Morgana, Morgana_17.jpg, kEpic
@@ -1123,7 +1501,7 @@ TPA Orianna, TPA Orianna, Orianna_4.jpg, kNoRarity
 Kış Mucizesi Orianna, Winter Wonder Orianna, Orianna_5.jpg, kNoRarity
 Gönül Avcısı Orianna, Heartseeker Orianna, Orianna_6.jpg, kEpic
 Sonsuz Karanlık Orianna, Dark Star Orianna, Orianna_7.jpg, kEpic
-Şanlı Orianna, Victorious Orianna, Orianna_8.jpg, kNoRarity
+Şanlı Orianna, Victorious Orianna, Orianna_8.jpg, kRare
 Havuz Partisi Orianna, Pool Party Orianna, Orianna_11.jpg, kEpic
 Arıanna, Orbeeanna, Orianna_20.jpg, kEpic
 Yıldız Muhafızı Orianna, Star Guardian Orianna, Orianna_29.jpg, kEpic
@@ -1186,6 +1564,7 @@ Tek Göz Quinn, Corsair Quinn, Quinn_3.jpg, kNoRarity
 Gönül Avcısı Quinn, Heartseeker Quinn, Quinn_4.jpg, kNoRarity
 Gardiyan Quinn, Warden Quinn, Quinn_5.jpg, kEpic
 Yıldız Muhafızı Quinn, Star Guardian Quinn, Quinn_14.jpg, kEpic
+KOD ADI: Quinn, PROJECT: Quinn, Quinn_24.jpg, kEpic
 Kozmik Gün Rakan, Cosmic Dawn Rakan, Rakan_1.jpg, kEpic
 Muhabbet Kuşu Rakan, Sweetheart Rakan, Rakan_2.jpg, kEpic
 SSG Rakan, SSG Rakan, Rakan_3.jpg, kEpic
@@ -1209,6 +1588,7 @@ Libero Rammus, Sweeper Rammus, Rammus_8.jpg, kNoRarity
 Hextech Rammus, Hextech Rammus, Rammus_16.jpg, kMythic
 Astronot Rammus, Astronaut Rammus, Rammus_17.jpg, kEpic
 Durian Dostu Rammus, Durian Defender Rammus, Rammus_26.jpg, kEpic
+Baron Rammus, Baron Rammus, Rammus_35.jpg, kNoRarity
 Eternum Rek'Sai, Eternum Rek'Sai, RekSai_1.jpg, kEpic
 Havuz Partisi Rek'Sai, Pool Party Rek'Sai, RekSai_2.jpg, kEpic
 Kara Buz Rek'Sai, Blackfrost Rek'Sai, RekSai_9.jpg, kEpic
@@ -1246,6 +1626,7 @@ Sevimli Kedi Rengar, Pretty Kitty Rengar, Rengar_15.jpg, kEpic
 Kumların Muhafızı Rengar, Guardian of the Sands Rengar, Rengar_23.jpg, kEpic
 Işık Muhafızı Rengar, Sentinel Rengar, Rengar_30.jpg, kEpic
 İblis Çetesi Rengar, Street Demons Rengar, Rengar_40.jpg, kEpic
+Şanlı Rengar, Victorious Rengar, Rengar_49.jpg, kNoRarity
 Arınmış Riven, Redeemed Riven, Riven_1.jpg, kNoRarity
 Kızıl Elit Riven, Crimson Elite Riven, Riven_2.jpg, kNoRarity
 Savaş Tavşanı Riven, Battle Bunny Riven, Riven_3.jpg, kNoRarity
@@ -1300,7 +1681,7 @@ Havai Fişek Sejuani, Firecracker Sejuani, Sejuani_8.jpg, kEpic
 Hextech Sejuani, Hextech Sejuani, Sejuani_15.jpg, kMythic
 KOD ADI: Sejuani, PROJECT: Sejuani, Sejuani_16.jpg, kEpic
 Kara Güneş Sejuani, Solar Eclipse Sejuani, Sejuani_26.jpg, kEpic
-Şanlı Sejuani, Victorious Sejuani, Sejuani_36.jpg, kNoRarity
+Şanlı Sejuani, Victorious Sejuani, Sejuani_36.jpg, kRare
 Pug Eğitmeni Sejuani, Pug Trainer Sejuani, Sejuani_48.jpg, kEpic
 True Damage Senna, True Damage Senna, Senna_1.jpg, kEpic
 Prestij True Damage Senna, Prestige True Damage Senna, Senna_9.jpg, kMythic
@@ -1324,6 +1705,7 @@ Yıldız Muhafızı Seraphine, Star Guardian Seraphine, Seraphine_34.jpg, kEpic
 Savaş Güvercini Seraphine, Battle Dove Seraphine, Seraphine_43.jpg, kLegendary
 Minnoş Mantı Seraphine, Dumpling Darlings Seraphine, Seraphine_50.jpg, kEpic
 Havai Fişek Seraphine, Firecracker Seraphine, Seraphine_59.jpg, kEpic
+T1 Seraphine, T1 Seraphine, Seraphine_68.jpg, kEpic
 Meka Krallıkları Sett, Mecha Kingdoms Sett, Sett_1.jpg, kEpic
 Obsidiyen Ejder Sett, Obsidian Dragon Sett, Sett_8.jpg, kEpic
 Prestij Obsidiyen Ejder Sett, Prestige Obsidian Dragon Sett, Sett_9.jpg, kMythic
@@ -1349,6 +1731,7 @@ Ruh Dövüşçüsü Shaco, Soul Fighter Shaco, Shaco_43.jpg, kEpic
 Prestij Ruh Dövüşçüsü Shaco, Prestige Soul Fighter Shaco, Shaco_44.jpg, kMythic
 Dehşet Gecesi Shaco, Fright Night Shaco, Shaco_54.jpg, kEpic
 Kedi Kutusu Shaco, Cat-in-the-Box Shaco, Shaco_64.jpg, kLegendary
+Prestij Kara Kâbus Shaco, Prestige Pandemonium Shaco, Shaco_71.jpg, kMythic
 Donmuş Shen, Frozen Shen, Shen_1.jpg, kNoRarity
 Sarı Ceketli Shen, Yellow Jacket Shen, Shen_2.jpg, kNoRarity
 Cerrah Shen, Surgeon Shen, Shen_3.jpg, kNoRarity
@@ -1361,6 +1744,7 @@ Zihin Harekâtçısı Shen, PsyOps Shen, Shen_22.jpg, kEpic
 Şokbıçak Shen, Shockblade Shen, Shen_40.jpg, kEpic
 Kül Muhafızı Shen, Ashen Guardian Shen, Shen_49.jpg, kMythic
 Üç Erdem Shen, Three Honors Shen, Shen_51.jpg, kNoRarity
+Bozulmuş Yemin Shen, Broken Covenant Shen, Shen_54.jpg, kEpic
 Demirpul Shyvana, Shyvana Ironscale, Shyvana_1.jpg, kNoRarity
 Kemikpençe Shyvana, Boneclaw Shyvana, Shyvana_2.jpg, kNoRarity
 Siyahalev Shyvana, Darkflame Shyvana, Shyvana_3.jpg, kNoRarity
@@ -1391,6 +1775,7 @@ Kara Buz Sion, Blackfrost Sion, Sion_22.jpg, kEpic
 Vahşi Batılı Sion, High Noon Sion, Sion_30.jpg, kEpic
 Kozmik Paladin Sion, Cosmic Paladin Sion, Sion_40.jpg, kEpic
 Büyük Hesaplaşma Sion, Grand Reckoning Sion, Sion_49.jpg, kNoRarity
+Pizza Şefi Sion, Pizza Chef Sion, Sion_50.jpg, kEpic
 Savaşçı Prenses Sivir, Warrior Princess Sivir, Sivir_1.jpg, kNoRarity
 Muhteşem Sivir, Spectacular Sivir, Sivir_2.jpg, kNoRarity
 Avcı Sivir, Huntress Sivir, Sivir_3.jpg, kNoRarity
@@ -1398,7 +1783,7 @@ Haydut Sivir, Bandit Sivir, Sivir_4.jpg, kNoRarity
 PAX Sivir, PAX Sivir, Sivir_5.jpg, kNoRarity
 Kar Fırtınası Sivir, Snowstorm Sivir, Sivir_6.jpg, kNoRarity
 Gardiyan Sivir, Warden Sivir, Sivir_7.jpg, kNoRarity
-Şanlı Sivir, Victorious Sivir, Sivir_8.jpg, kNoRarity
+Şanlı Sivir, Victorious Sivir, Sivir_8.jpg, kRare
 Neo PAX Sivir, Neo PAX Sivir, Sivir_9.jpg, kMythic
 Ayın Elemanı Sivir, Pizza Delivery Sivir, Sivir_10.jpg, kEpic
 Kanlı Ay Sivir, Blood Moon Sivir, Sivir_16.jpg, kEpic
@@ -1659,6 +2044,7 @@ Prestij Havai Fişek Vayne (2022), Prestige Firecracker Vayne (2022), Vayne_33.j
 Şafağın Arbaleti Vayne, Dawnbringer Vayne, Vayne_44.jpg, kEpic
 Ejder Hâkimi Vayne, Dragonmancer Vayne, Vayne_55.jpg, kEpic
 Yükselen Efsane Vayne, Risen Legend Vayne, Vayne_64.jpg, kMythic
+İblisin Laneti Vayne, Demoncursed Vayne, Vayne_67.jpg, kLegendary
 Ak Büyücü Veigar, White Mage Veigar, Veigar_1.jpg, kNoRarity
 Curling Veigar, Curling Veigar, Veigar_2.jpg, kNoRarity
 Grisakal Veigar, Veigar Greybeard, Veigar_3.jpg, kNoRarity
@@ -1674,12 +2060,14 @@ Astronot Veigar, Astronaut Veigar, Veigar_32.jpg, kEpic
 Canavar Terbiyecisi Veigar, Monster Tamer Veigar, Veigar_41.jpg, kEpic
 Kral Vızzgar, King Beegar, Veigar_51.jpg, kEpic
 Dehşet Gecesi Veigar, Fright Night Veigar, Veigar_60.jpg, kLegendary
+Prestij Magma Ocağı Veigar, Prestige Magma Chamber Veigar, Veigar_67.jpg, kMythic
 Savaş Makinesi Vel'Koz, Battlecast Vel'Koz, Velkoz_1.jpg, kEpic
 Işık Dalgası Vel'Koz, Arclight Vel'Koz, Velkoz_2.jpg, kEpic
 Ben de İnsanım Vel'Koz, Definitely Not Vel'Koz, Velkoz_3.jpg, kNoRarity
 Zebani Vel'Koz, Infernal Vel'Koz, Velkoz_4.jpg, kEpic
 Kara Buz Vel'Koz, Blackfrost Vel'Koz, Velkoz_11.jpg, kEpic
 Bal'Koz, Bee'Koz, Velkoz_20.jpg, kEpic
+Spagetti Vel'Koz, Spaghetti alla Vel'Koz, Velkoz_29.jpg, kLegendary
 Şafağın Gölgesi Vex, Dawnbringer Vex, Vex_1.jpg, kEpic
 Arş Hükümdarı Vex, Empyrean Vex, Vex_10.jpg, kEpic
 Yıldız Gözlemcisi Vex, Stargazer Vex, Vex_20.jpg, kEpic
@@ -1784,6 +2172,7 @@ Kozmik Muhafız Xin Zhao, Cosmic Defender Xin Zhao, XinZhao_20.jpg, kEpic
 Yağmacı Xin Zhao, Marauder Xin Zhao, XinZhao_27.jpg, kEpic
 Havai Fişek Xin Zhao, Firecracker Xin Zhao, XinZhao_36.jpg, kEpic
 Alacakaranlık İmtihanları Xin Zhao, Trials of Twilight Xin Zhao, XinZhao_47.jpg, kEpic
+T1 Xin Zhao, T1 Xin Zhao, XinZhao_53.jpg, kEpic
 Vahşi Batılı Yasuo, High Noon Yasuo, Yasuo_1.jpg, kNoRarity
 KOD ADI: Yasuo, PROJECT: Yasuo, Yasuo_2.jpg, kEpic
 Kanlı Ay Yasuo, Blood Moon Yasuo, Yasuo_3.jpg, kNoRarity
@@ -1823,6 +2212,7 @@ Ruh Çiçeği Yorick, Spirit Blossom Yorick, Yorick_30.jpg, kEpic
 Sonsuz Karanlık Yorick, Dark Star Yorick, Yorick_40.jpg, kEpic
 Vahşi Batılı Yorick, High Noon Yorick, Yorick_50.jpg, kEpic
 Ruh Çiçeği Kaplıcası Yunara, Spirit Blossom Springs Yunara, Yunara_1.jpg, kEpic
+T1 Yunara, T1 Yunara, Yunara_10.jpg, kEpic
 Akademi Müdiresi Yuumi, Battle Principal Yuumi, Yuumi_1.jpg, kEpic
 Gönül Avcısı Yuumi, Heartseeker Yuumi, Yuumi_11.jpg, kEpic
 Balmi, Yuubee, Yuumi_19.jpg, kEpic
